@@ -83,13 +83,13 @@ theme = "initio"
     footer = true
     sharethis = true
     network = "linkedin"
- # [[params.social]]
-	# title = "tumblr"
-	# url = "https://nickname.tumblr.com"
- #    icon = "fab fa-tumblr-square"
- #    footer = false
- #    sharethis = false
- #    network = "tumblr"
+[[params.social]]
+	title = "telegram"
+	url = "https://t.me/BoBacTbli"
+    icon = "fab fa-telegram-plane"
+    footer = true
+    sharethis = false
+    network = ""
 [[params.social]]
 	title = "github"
 	url = "https://github.com/izmalk"
