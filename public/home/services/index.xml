@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services on Vladimir Izmalkov</title>
+    <link>http://izmalkov.net/home/services/</link>
+    <description>Recent content in Services on Vladimir Izmalkov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="http://izmalkov.net/home/services/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Analytics</title>
+      <link>http://izmalkov.net/home/services/service4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://izmalkov.net/home/services/service4/</guid>
+      <description>&lt;p&gt;I am efficient in learning new technologies and processing vast amounts of data. Have a lot of experience with structuring, formalising and simplifying information.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Documentation engineering</title>
+      <link>http://izmalkov.net/home/services/service1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://izmalkov.net/home/services/service1/</guid>
+      <description>&lt;p&gt;With my years of experience in software engineering and technical communication I can solve most problems with documentation.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Passion</title>
+      <link>http://izmalkov.net/home/services/service3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://izmalkov.net/home/services/service3/</guid>
+      <description>&lt;p&gt;My deepest passion in learning new technologies, products, user experiences. I am eager to learn, whether it&amp;rsquo;s new framework, new hardware architecture or new web-interface.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Team Leadership</title>
+      <link>http://izmalkov.net/home/services/service2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://izmalkov.net/home/services/service2/</guid>
+      <description>&lt;p&gt;I had two chances to lead a team in my life. And both times I have created from scratch cross-functional teams of highly-skilled professionals that I can be proud of.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vladimir Izmalkov</title>
+    <link>http://izmalkov.net/</link>
+    <description>Recent content on Vladimir Izmalkov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 17 Jun 2013 12:00:00 +0000</lastBuildDate><atom:link href="http://izmalkov.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Download original template</title>
+      <link>http://izmalkov.net/home/downloads/download1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://izmalkov.net/home/downloads/download1/</guid>
+      <description>A simple, nice-looking call to action box. Boxing is about respect. getting it for yourself, and taking it away from the other guy. no, this is mount everest.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://izmalkov.net/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://izmalkov.net/about/</guid>
+      <description>Geek. Technology evangelist. Curious researcher. Passionate for learning, teaching and enhancing user experience through a storytelling.
+Work experience I have been in Documentation since 2011.
+Started as a junior researcher in All-Russian Research Institute of Civil Defence and Emergencies (VNII GOChS for short).
+I had my postgraduate studies and after obtaining a PhD degree I had a chance to start a new department from scratch.
+In 2019 I got recruited by VK (Mail.</description>
+    </item>
+    
+    <item>
+      <title>Vivamus Lacus Mauris</title>
+      <link>http://izmalkov.net/post/vivamus-lacus-mauris/</link>
+      <pubDate>Mon, 17 Jun 2013 12:00:00 +0000</pubDate>
+      
+      <guid>http://izmalkov.net/post/vivamus-lacus-mauris/</guid>
+      <description>111 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, rerum voluptates veniam. Esse, nihil, ea, eaque, quos cum id tempore voluptate nisi nemo debitis impedit officiis culpa repellat voluptatum in aperiam error quo minima ratione ex pariatur maxime eligendi dolore nesciunt molestiae enim alias atque commodi delectus perferendis. Blanditiis, iste placeat nostrum in! Eligendi, omnis, unde, quos ullam nesciunt molestias quis a saepe nisi distinctio molestiae voluptate obcaecati officiis consequuntur similique aspernatur rerum sequi placeat iure quaerat itaque libero officia recusandae ad corrupti aperiam cum beatae.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://izmalkov.net/home/subheader/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://izmalkov.net/home/subheader/</guid>
+      <description>My passion is Information Technology. I find it most interesting to learn new technologies and design documents.
+You can learn more about my Education, Work experience or read a Summary.
+Also there is a Portfolio section you might wanna check.</description>
+    </item>
+    
+    <item>
+      <title>Analytics</title>
+      <link>http://izmalkov.net/home/services/service4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://izmalkov.net/home/services/service4/</guid>
+      <description>&lt;p&gt;I am efficient in learning new technologies and processing vast amounts of data. Have a lot of experience with structuring, formalising and simplifying information.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Documentation engineering</title>
+      <link>http://izmalkov.net/home/services/service1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://izmalkov.net/home/services/service1/</guid>
+      <description>&lt;p&gt;With my years of experience in software engineering and technical communication I can solve most problems with documentation.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Download HUGO template</title>
+      <link>http://izmalkov.net/home/downloads/download2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://izmalkov.net/home/downloads/download2/</guid>
+      <description>Another simple, nice-looking call to action box. Boxing is about respect. getting it for yourself, and taking it away from the other guy. no, this is mount everest.</description>
+    </item>
+    
+    <item>
+      <title>Passion</title>
+      <link>http://izmalkov.net/home/services/service3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://izmalkov.net/home/services/service3/</guid>
+      <description>&lt;p&gt;My deepest passion in learning new technologies, products, user experiences. I am eager to learn, whether it&amp;rsquo;s new framework, new hardware architecture or new web-interface.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Team Leadership</title>
+      <link>http://izmalkov.net/home/services/service2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://izmalkov.net/home/services/service2/</guid>
+      <description>&lt;p&gt;I had two chances to lead a team in my life. And both times I have created from scratch cross-functional teams of highly-skilled professionals that I can be proud of.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
