@@ -6,14 +6,62 @@
     <description>Recent content in Posts on Vladimir Izmalkov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 17 Jun 2013 12:00:00 +0000</lastBuildDate><atom:link href="http://izmalkov.net/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Aug 2022 23:53:01 +0300</lastBuildDate><atom:link href="http://izmalkov.net/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Vivamus Lacus Mauris</title>
+      <title>Portfolio</title>
+      <link>http://izmalkov.net/post/portfolio/</link>
+      <pubDate>Thu, 25 Aug 2022 23:53:01 +0300</pubDate>
+      
+      <guid>http://izmalkov.net/post/portfolio/</guid>
+      <description>This will be a page with links to multiple examples of my dinest work. Unfortunately, it is not ready yet =D.
+You see, most of my current documents are under NDA so I will try and do some test exercises without any confidential materials and publish it here.
+But for now I would like to publish a link for one example of my open source contribution.</description>
+    </item>
+    
+    <item>
+      <title>Summary</title>
+      <link>http://izmalkov.net/post/summary/</link>
+      <pubDate>Thu, 25 Aug 2022 23:25:50 +0300</pubDate>
+      
+      <guid>http://izmalkov.net/post/summary/</guid>
+      <description>RESUME (recommended)
+CV (outdated, sorry)</description>
+    </item>
+    
+    <item>
+      <title>Work experience</title>
+      <link>http://izmalkov.net/post/exp/</link>
+      <pubDate>Thu, 25 Aug 2022 23:25:41 +0300</pubDate>
+      
+      <guid>http://izmalkov.net/post/exp/</guid>
+      <description>I have been in Documentation since 2011.
+Started as a junior researcher in All-Russian Research Institute of Civil Defence and Emergencies (VNII GOChS for short).
+I had my postgraduate studies and after obtaining a PhD degree I had a chance to start a new department from scratch.
+In 2019 I got recruited by VK (Mail.Ru at the time) to join its B2B unit. I joined the Tarantool team as a Senior Technical writer.</description>
+    </item>
+    
+    <item>
+      <title>Education</title>
+      <link>http://izmalkov.net/post/education/</link>
+      <pubDate>Thu, 25 Aug 2022 23:20:30 +0300</pubDate>
+      
+      <guid>http://izmalkov.net/post/education/</guid>
+      <description>I have two higher educations with the greatest technical university of Russia: Bauman Moscow State Technical University.
+Master&amp;rsquo;s degree in Spaceship engineering.
+Bachelor&amp;rsquo;s degree in Computer science.
+I also have PhD in Technology with the study on the reliability of automated systems in emergencies. I got it at All-Russian Research Institute for Civil Defense and Emergencies (or VNII GOChS for short).</description>
+    </item>
+    
+    <item>
+      <title>Very first post to this blog</title>
       <link>http://izmalkov.net/post/vivamus-lacus-mauris/</link>
       <pubDate>Mon, 17 Jun 2013 12:00:00 +0000</pubDate>
       
       <guid>http://izmalkov.net/post/vivamus-lacus-mauris/</guid>
-      <description>111 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, rerum voluptates veniam. Esse, nihil, ea, eaque, quos cum id tempore voluptate nisi nemo debitis impedit officiis culpa repellat voluptatum in aperiam error quo minima ratione ex pariatur maxime eligendi dolore nesciunt molestiae enim alias atque commodi delectus perferendis. Blanditiis, iste placeat nostrum in! Eligendi, omnis, unde, quos ullam nesciunt molestias quis a saepe nisi distinctio molestiae voluptate obcaecati officiis consequuntur similique aspernatur rerum sequi placeat iure quaerat itaque libero officia recusandae ad corrupti aperiam cum beatae.</description>
+      <description>This is a very first blog post here. As this site is mostly under construction.
+I am trying to create content here as soon as possible. But it is hard to do when all you have is some scraps of time between work and sleep.
+As of now I am still working of portal features and looking for a better ways to visualise my experience and education here.
+Also have a grand plan for content.</description>
     </item>
     
   </channel>
