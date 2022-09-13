@@ -1,4 +1,4 @@
 
 *.html
-public/*
+public/**
 *.zip
