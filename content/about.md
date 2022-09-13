@@ -7,7 +7,9 @@ weight = 10
 
 ![about](../images/about_me_light.jpg)
 
-Geek. Technology evangelist. Curious researcher. Passionate for learning, teaching and enhancing user experience through a storytelling.
+Geek. Technology evangelist. Curious researcher.
+
+Passionate for learning, teaching and enhancing user experience through a storytelling.
 
 ### Work experience
 
@@ -29,4 +31,4 @@ I have two higher educations with the greatest technical university of Russia: *
 
 2. Bachelor's degree in Computer science.
 
-I also have PhD in Technology with the study on the reliability of automated systems in emergencies.
+I also have **PhD in Technology** with the study on the reliability of automated systems in emergencies. I got it at All-Russian Research Institute for Civil Defense and Emergencies (or VNII GOChS for short).
