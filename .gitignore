@@ -3,3 +3,6 @@
 public/**
 *.zip
 public/
+*.xml
+*.iml
+.idea/**

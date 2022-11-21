@@ -1,2 +1,3 @@
-# web-portal
-Personal web portal
+# Web-portal
+
+Personal web portal. Built with Hugo.
