@@ -2,13 +2,20 @@
 title = "Documentation engineering"
 +++
 
-With my years of experience in software engineering and technical communication I can solve most problems with documentation.
+Every word is a bridge, and every page is an invitation to a better user experience.
 
 <!--more-->
 
-Documentation is a part of User experience. In case of technical audiences it is usually a critical part.
+It's more than just crafting guides and manuals; it's about sculpting the user experience itself.
 
-Good technical communication can showcase your product and improve user experience. You want users being able to solve a problem with your product? You'd better ensure your product does not create another problem for them. The easier the path for a typical user experience the lesser number of users will find a way to loose the right way, get bad experience and even drop the product with frustration and negative attitude.
+Imagine your product as a journey. Documentation is the map that guides users along the path, ensuring they not only reach their destination but also enjoy the ride.
 
-Good technical documentation for a sophisticated product requires a lot of engineering. Usually that means spending many hours of work trying to shorten the path, to mark all obstacles and to ensure all kinds of users would be able to follow.
-There is no one silver bullet as one requires subject knowledge, writing skills and a lot of user experience debugging practice to provide a universal "fit-for-all" documents.
+Effective technical communication requires more than just accurately following grammar rules and style guides. It's about engineering UX in a very special way, optimising for a targeted audience.
+
+The goal is simple: You want users to follow the path to success using your product. The easier the path, the fewer the pitfalls the happier the users.
+
+But engineering exceptional technical documentation is no small feat. It's a delicate process that involves hours of refining, obstacle mapping, and user-centric design. It's about crafting documents that fit seamlessly into various user personas. There's no magic formula; it takes subject expertise, finely honed writing skills, and an in-depth understanding of user experiences to create documents that truly serve all.
+
+In a world of diverse products and even more diverse users, documentation engineering is the key to ensuring that your users not only navigate your product effortlessly but also advocate for it. It's where technology meets empathy, where complexity is transformed into clarity, and where every user finds the right way without ever losing their way.
+
+Welcome to the realm of Documentation Engineering, where every word is a bridge, and every page is an invitation to a better user experience.

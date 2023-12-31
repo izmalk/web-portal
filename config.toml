@@ -5,17 +5,17 @@ theme = "initio"
 
 [params]
     name = "Vladimir Izmalkov"
-    description = "Documentation engineer"
-    email = "admin@izmalk.ru"
-    phone = "+7 903 225 22 11"
-    address = "Moscow, Russia"
-    year = 2022
+    description = "Documentation engineer | Technical writer | Technical communications professional | Ph.D."
+    email = "vladimir@izmalkov.uk"
+    phone = "+44 77 602 40 604"
+    address = "London, United Kingdom"
+    year = 2023
     avatar = "images/guy.jpg"
     avatarclass = "circle"
     background = ""
     banner = "images/background.jpg"
     favicon = "images/favicon.ico"
-    DateForm = "August 2, 2022"
+    DateForm = "October 10, 2023"
     author = "Sergey Pozhilov (GetTemplate.com)"
 
     showSubheader = true
