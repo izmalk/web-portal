@@ -2,85 +2,83 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vladimir Izmalkov</title>
-    <link>http://izmalkov.net/</link>
+    <link>https://izmalk.com/</link>
     <description>Recent content on Vladimir Izmalkov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Aug 2022 23:53:01 +0300</lastBuildDate><atom:link href="http://izmalkov.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Dec 2023 23:25:50 +0300</lastBuildDate><atom:link href="https://izmalk.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Download original template</title>
-      <link>http://izmalkov.net/home/downloads/download1/</link>
+      <link>https://izmalk.com/home/downloads/download1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://izmalkov.net/home/downloads/download1/</guid>
+      <guid>https://izmalk.com/home/downloads/download1/</guid>
       <description>A simple, nice-looking call to action box. Boxing is about respect. getting it for yourself, and taking it away from the other guy. no, this is mount everest.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>http://izmalkov.net/about/</link>
+      <link>https://izmalk.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://izmalkov.net/about/</guid>
-      <description>Geek. Technology evangelist. Curious researcher. Documentation engineer.
+      <guid>https://izmalk.com/about/</guid>
+      <description>Geek. Technology evangelist. Curious researcher. Documentation engineer. Technical communicator.
 Passionate for IT, learning, teaching, and improving user experience through storytelling.
-Work experience I have been working in Documentation since 2011.
-Started as a junior researcher at the All-Russian Research Institute of Civil Defence and Emergencies (VNII GOChS for short).
-I had my postgraduate studies and after obtaining a PhD, I had a chance to start a new department from scratch.
-In 2019 I got recruited by VK (Mail.</description>
+Work experience My first job was a part-time role as a junior software developer during my University years.
+After graduation from University I got into my post-graduate study in a research institute.
+I later worked at that institute amassing total of 8 years with them.
+In 2019 I joined VK (ex.</description>
+    </item>
+    
+    <item>
+      <title>Summary</title>
+      <link>https://izmalk.com/post/summary/</link>
+      <pubDate>Sun, 10 Dec 2023 23:25:50 +0300</pubDate>
+      
+      <guid>https://izmalk.com/post/summary/</guid>
+      <description>Find a summary in my Resume.
+Additional information is available in my LinkedIn profile.
+If you need more information, feel free to contact me directly. My preferred methods of communication are Telegram, WhatsApp, and E-mail.</description>
+    </item>
+    
+    <item>
+      <title>Work experience</title>
+      <link>https://izmalk.com/post/exp/</link>
+      <pubDate>Sun, 10 Dec 2023 23:25:41 +0300</pubDate>
+      
+      <guid>https://izmalk.com/post/exp/</guid>
+      <description>I have been working in IT and technical communication since 2008.
+My first job was at my University, where I worked as a part-time technician, documenting educational projects and events and supporting some IT systems. I also worked as a part-time software developer during my university days.
+After graduation, I joined the All-Russian Research Institute for Civil Defense and Emergencies as a post-graduate. I had my postgraduate studies, and after obtaining a PhD, I had a chance to start a new department in the same Research institute from scratch.</description>
+    </item>
+    
+    <item>
+      <title>Education</title>
+      <link>https://izmalk.com/post/education/</link>
+      <pubDate>Sun, 10 Dec 2023 23:20:30 +0300</pubDate>
+      
+      <guid>https://izmalk.com/post/education/</guid>
+      <description>I graduated from the greatest technical university of Russia (Bauman Moscow State Technical University) with two degrees:
+Master&amp;rsquo;s degree in Spacecraft engineering. Bachelor&amp;rsquo;s degree in Computer science. My first choice was a Spacecraft engineering degree, as I desired space exploration and engineering. In my later years at the university, I realized that my true passion is information technology and computer science. That&amp;rsquo;s why I got a second degree from the same university.</description>
     </item>
     
     <item>
       <title>Portfolio</title>
-      <link>http://izmalkov.net/post/portfolio/</link>
+      <link>https://izmalk.com/post/portfolio/</link>
       <pubDate>Thu, 25 Aug 2022 23:53:01 +0300</pubDate>
       
-      <guid>http://izmalkov.net/post/portfolio/</guid>
+      <guid>https://izmalk.com/post/portfolio/</guid>
       <description>This will be a page with links to multiple examples of my dinest work. Unfortunately, it is not ready yet =D.
 You see, most of my current documents are under NDA so I will try and do some test exercises without any confidential materials and publish it here.
 But for now I would like to publish a link for one example of my open source contribution.</description>
     </item>
     
     <item>
-      <title>Summary</title>
-      <link>http://izmalkov.net/post/summary/</link>
-      <pubDate>Thu, 25 Aug 2022 23:25:50 +0300</pubDate>
-      
-      <guid>http://izmalkov.net/post/summary/</guid>
-      <description>RESUME (recommended)
-CV (outdated, sorry)</description>
-    </item>
-    
-    <item>
-      <title>Work experience</title>
-      <link>http://izmalkov.net/post/exp/</link>
-      <pubDate>Thu, 25 Aug 2022 23:25:41 +0300</pubDate>
-      
-      <guid>http://izmalkov.net/post/exp/</guid>
-      <description>I have been in Documentation since 2011.
-Started as a junior researcher in All-Russian Research Institute of Civil Defence and Emergencies (VNII GOChS for short).
-I had my postgraduate studies and after obtaining a PhD degree I had a chance to start a new department from scratch.
-In 2019 I got recruited by the VK (Mail.Ru at the time) to join its B2B unit. I joined the Tarantool team as a Senior Technical writer.</description>
-    </item>
-    
-    <item>
-      <title>Education</title>
-      <link>http://izmalkov.net/post/education/</link>
-      <pubDate>Thu, 25 Aug 2022 23:20:30 +0300</pubDate>
-      
-      <guid>http://izmalkov.net/post/education/</guid>
-      <description>I have two higher educations with the greatest technical university of Russia: Bauman Moscow State Technical University.
-Master&amp;rsquo;s degree in Spaceship engineering.
-Bachelor&amp;rsquo;s degree in Computer science.
-I also have PhD in Technology with the study on the reliability of automated systems in emergencies. I got it at All-Russian Research Institute for Civil Defense and Emergencies (or VNII GOChS for short).</description>
-    </item>
-    
-    <item>
       <title>Very first post to this blog</title>
-      <link>http://izmalkov.net/post/vivamus-lacus-mauris/</link>
+      <link>https://izmalk.com/post/vivamus-lacus-mauris/</link>
       <pubDate>Mon, 17 Jun 2013 12:00:00 +0000</pubDate>
       
-      <guid>http://izmalkov.net/post/vivamus-lacus-mauris/</guid>
+      <guid>https://izmalk.com/post/vivamus-lacus-mauris/</guid>
       <description>This is a very first blog post here. As this site is mostly under construction.
 I am trying to create content here as soon as possible. But it is hard to do when all you have is some scraps of time between work and sleep.
 As of now I am still working of portal features and looking for a better ways to visualise my experience and education here.
@@ -89,57 +87,58 @@ Also have a grand plan for content.</description>
     
     <item>
       <title></title>
-      <link>http://izmalkov.net/home/subheader/</link>
+      <link>https://izmalk.com/home/subheader/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://izmalkov.net/home/subheader/</guid>
-      <description>My passion is Information Technology. I find it most interesting to learn new technologies and design documents.
-You can learn more about my Education, Work experience or read a Summary (Resume).
-Also there is a Portfolio section you might wanna check.</description>
+      <guid>https://izmalk.com/home/subheader/</guid>
+      <description>Experienced Technical Writer &amp;amp; Documentation Engineer Over 15 years in IT: software developer, researcher, research manager, IT manager, Head of IT department, and technical writer.
+I specialize in developer-oriented technical documentation for sophisticated products and services: cloud platforms, XaaS, DBMS, etc.
+Software engineer experience First-hand developer experience. Excellent understanding of software development lifecycle (SDLC), tools (Git, IDEs), and agile methodology.
+I prefer working with lightweight markup languages, static site generators, and docs-as-code approach.</description>
     </item>
     
     <item>
       <title>Analytics</title>
-      <link>http://izmalkov.net/home/services/service4/</link>
+      <link>https://izmalk.com/home/services/service4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://izmalkov.net/home/services/service4/</guid>
+      <guid>https://izmalk.com/home/services/service4/</guid>
       <description>&lt;p&gt;I am efficient in learning new technologies and processing vast amounts of data. Have a lot of experience with structuring, formalising and simplifying information.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Documentation engineering</title>
-      <link>http://izmalkov.net/home/services/service1/</link>
+      <link>https://izmalk.com/home/services/service1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://izmalkov.net/home/services/service1/</guid>
-      <description>&lt;p&gt;With my years of experience in software engineering and technical communication I can solve most problems with documentation.&lt;/p&gt;</description>
+      <guid>https://izmalk.com/home/services/service1/</guid>
+      <description>&lt;p&gt;Every word is a bridge, and every page is an invitation to a better user experience.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Download HUGO template</title>
-      <link>http://izmalkov.net/home/downloads/download2/</link>
+      <link>https://izmalk.com/home/downloads/download2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://izmalkov.net/home/downloads/download2/</guid>
+      <guid>https://izmalk.com/home/downloads/download2/</guid>
       <description>Another simple, nice-looking call to action box. Boxing is about respect. getting it for yourself, and taking it away from the other guy. no, this is mount everest.</description>
     </item>
     
     <item>
       <title>Passion</title>
-      <link>http://izmalkov.net/home/services/service3/</link>
+      <link>https://izmalk.com/home/services/service3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://izmalkov.net/home/services/service3/</guid>
+      <guid>https://izmalk.com/home/services/service3/</guid>
       <description>&lt;p&gt;My deepest passion in learning new technologies, products, user experiences. I am eager to learn, whether it&amp;rsquo;s new framework, new hardware architecture or new web-interface.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Team Leadership</title>
-      <link>http://izmalkov.net/home/services/service2/</link>
+      <link>https://izmalk.com/home/services/service2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://izmalkov.net/home/services/service2/</guid>
+      <guid>https://izmalk.com/home/services/service2/</guid>
       <description>&lt;p&gt;I had two chances to lead a team in my life. And both times I have created from scratch cross-functional teams of highly-skilled professionals that I can be proud of.&lt;/p&gt;</description>
     </item>
     

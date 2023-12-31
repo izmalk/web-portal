@@ -2,62 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Vladimir Izmalkov</title>
-    <link>http://izmalkov.net/post/</link>
+    <link>https://izmalk.com/post/</link>
     <description>Recent content in Posts on Vladimir Izmalkov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Aug 2022 23:53:01 +0300</lastBuildDate><atom:link href="http://izmalkov.net/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Dec 2023 23:25:50 +0300</lastBuildDate><atom:link href="https://izmalk.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Summary</title>
+      <link>https://izmalk.com/post/summary/</link>
+      <pubDate>Sun, 10 Dec 2023 23:25:50 +0300</pubDate>
+      
+      <guid>https://izmalk.com/post/summary/</guid>
+      <description>Find a summary in my Resume.
+Additional information is available in my LinkedIn profile.
+If you need more information, feel free to contact me directly. My preferred methods of communication are Telegram, WhatsApp, and E-mail.</description>
+    </item>
+    
+    <item>
+      <title>Work experience</title>
+      <link>https://izmalk.com/post/exp/</link>
+      <pubDate>Sun, 10 Dec 2023 23:25:41 +0300</pubDate>
+      
+      <guid>https://izmalk.com/post/exp/</guid>
+      <description>I have been working in IT and technical communication since 2008.
+My first job was at my University, where I worked as a part-time technician, documenting educational projects and events and supporting some IT systems. I also worked as a part-time software developer during my university days.
+After graduation, I joined the All-Russian Research Institute for Civil Defense and Emergencies as a post-graduate. I had my postgraduate studies, and after obtaining a PhD, I had a chance to start a new department in the same Research institute from scratch.</description>
+    </item>
+    
+    <item>
+      <title>Education</title>
+      <link>https://izmalk.com/post/education/</link>
+      <pubDate>Sun, 10 Dec 2023 23:20:30 +0300</pubDate>
+      
+      <guid>https://izmalk.com/post/education/</guid>
+      <description>I graduated from the greatest technical university of Russia (Bauman Moscow State Technical University) with two degrees:
+Master&amp;rsquo;s degree in Spacecraft engineering. Bachelor&amp;rsquo;s degree in Computer science. My first choice was a Spacecraft engineering degree, as I desired space exploration and engineering. In my later years at the university, I realized that my true passion is information technology and computer science. That&amp;rsquo;s why I got a second degree from the same university.</description>
+    </item>
+    
     <item>
       <title>Portfolio</title>
-      <link>http://izmalkov.net/post/portfolio/</link>
+      <link>https://izmalk.com/post/portfolio/</link>
       <pubDate>Thu, 25 Aug 2022 23:53:01 +0300</pubDate>
       
-      <guid>http://izmalkov.net/post/portfolio/</guid>
+      <guid>https://izmalk.com/post/portfolio/</guid>
       <description>This will be a page with links to multiple examples of my dinest work. Unfortunately, it is not ready yet =D.
 You see, most of my current documents are under NDA so I will try and do some test exercises without any confidential materials and publish it here.
 But for now I would like to publish a link for one example of my open source contribution.</description>
     </item>
     
     <item>
-      <title>Summary</title>
-      <link>http://izmalkov.net/post/summary/</link>
-      <pubDate>Thu, 25 Aug 2022 23:25:50 +0300</pubDate>
-      
-      <guid>http://izmalkov.net/post/summary/</guid>
-      <description>RESUME (recommended)
-CV (outdated, sorry)</description>
-    </item>
-    
-    <item>
-      <title>Work experience</title>
-      <link>http://izmalkov.net/post/exp/</link>
-      <pubDate>Thu, 25 Aug 2022 23:25:41 +0300</pubDate>
-      
-      <guid>http://izmalkov.net/post/exp/</guid>
-      <description>I have been in Documentation since 2011.
-Started as a junior researcher in All-Russian Research Institute of Civil Defence and Emergencies (VNII GOChS for short).
-I had my postgraduate studies and after obtaining a PhD degree I had a chance to start a new department from scratch.
-In 2019 I got recruited by the VK (Mail.Ru at the time) to join its B2B unit. I joined the Tarantool team as a Senior Technical writer.</description>
-    </item>
-    
-    <item>
-      <title>Education</title>
-      <link>http://izmalkov.net/post/education/</link>
-      <pubDate>Thu, 25 Aug 2022 23:20:30 +0300</pubDate>
-      
-      <guid>http://izmalkov.net/post/education/</guid>
-      <description>I have two higher educations with the greatest technical university of Russia: Bauman Moscow State Technical University.
-Master&amp;rsquo;s degree in Spaceship engineering.
-Bachelor&amp;rsquo;s degree in Computer science.
-I also have PhD in Technology with the study on the reliability of automated systems in emergencies. I got it at All-Russian Research Institute for Civil Defense and Emergencies (or VNII GOChS for short).</description>
-    </item>
-    
-    <item>
       <title>Very first post to this blog</title>
-      <link>http://izmalkov.net/post/vivamus-lacus-mauris/</link>
+      <link>https://izmalk.com/post/vivamus-lacus-mauris/</link>
       <pubDate>Mon, 17 Jun 2013 12:00:00 +0000</pubDate>
       
-      <guid>http://izmalkov.net/post/vivamus-lacus-mauris/</guid>
+      <guid>https://izmalk.com/post/vivamus-lacus-mauris/</guid>
       <description>This is a very first blog post here. As this site is mostly under construction.
 I am trying to create content here as soon as possible. But it is hard to do when all you have is some scraps of time between work and sleep.
 As of now I am still working of portal features and looking for a better ways to visualise my experience and education here.

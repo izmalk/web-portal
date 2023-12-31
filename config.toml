@@ -1,12 +1,12 @@
-baseURL = "http://izmalkov.net/"
+baseURL = "https://izmalk.com/"
 languageCode = "en"
 title = "Vladimir Izmalkov"
 theme = "initio"
 
 [params]
     name = "Vladimir Izmalkov"
-    description = "Documentation engineer | Technical writer | Technical communications professional | Ph.D."
-    email = "vladimir@izmalkov.uk"
+    description = "Documentation engineer"
+    email = "job@izmalk.uk"
     phone = "+44 77 602 40 604"
     address = "London, United Kingdom"
     year = 2023
@@ -15,7 +15,7 @@ theme = "initio"
     background = ""
     banner = "images/background.jpg"
     favicon = "images/favicon.ico"
-    DateForm = "October 10, 2023"
+    DateForm = "October 2, 2023"
     author = "Sergey Pozhilov (GetTemplate.com)"
 
     showSubheader = true
@@ -33,6 +33,18 @@ theme = "initio"
     name = "home"
     url = "/"
     weight = 1
+[[menu.main]]
+    name = "summary"
+    url = "/post/summary"
+    weight = 2
+[[menu.main]]
+    name = "education"
+    url = "/post/education"
+    weight = 3
+[[menu.main]]
+    name = "work experience"
+    url = "/post/exp"
+    weight = 4
 [[menu.main]]
     name = "blog"
     url = "/post/"
@@ -99,7 +111,7 @@ theme = "initio"
     network = ""
 [[params.social]]
 	title = "email"
-	url = "mailto:admin@izmalk.ru"
+	url = "mailto:job@izmalk.uk"
     icon = "fas fa-envelope-square"
     footer = false
     sharethis = true
