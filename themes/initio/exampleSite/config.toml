@@ -1,4 +1,4 @@
-baseURL = "izmalkov.net"
+baseURL = "izmalk.com"
 languageCode = "en"
 title = "Title"
 theme = "hugo-initio"
@@ -7,15 +7,15 @@ theme = "hugo-initio"
     name = "Vladimir Izmalkov"
     description = "Documentation engineer"
     email = "admin@izmalk.ru"
-    phone = "+7 903 225 22 11"
+    phone = "+44 77 602 40 604"
     address = "Moscow, Russia"
-    year = 2022
+    year = 2023
     avatar = "images/guy.jpg"
     avatarclass = "circle"
     background = ""
     banner = "images/bg_head.jpg"
     favicon = "images/gt_favicon.png"
-    DateForm = "August 2, 2022"
+    DateForm = "31 Decemer, 2023"
     author = "Sergey Pozhilov (GetTemplate.com)"
 
     showSubheader = true
