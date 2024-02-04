@@ -6,7 +6,36 @@
     <description>Recent content in Posts on Vladimir Izmalkov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 Dec 2023 23:25:50 +0300</lastBuildDate><atom:link href="https://izmalk.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Feb 2024 10:31:05 +0000</lastBuildDate><atom:link href="https://izmalk.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lightweight Markup Languages for Docs-as-Code</title>
+      <link>https://izmalk.com/post/lightweight-markup-languages/</link>
+      <pubDate>Sun, 04 Feb 2024 10:31:05 +0000</pubDate>
+      
+      <guid>https://izmalk.com/post/lightweight-markup-languages/</guid>
+      <description>In the innovative landscape of technical writing, the Docs-as-Code approach revolutionizes how we create, manage, and publish documentation. Central to this paradigm shift are three lightweight markup languages: Markdown, reStructuredText, and AsciiDoc. Each brings its unique strengths to the forefront, enabling seamless integration of documentation into the software development workflow.
+Markdown stands out for its simplicity and widespread adoption. From GitHub repositories to blogging platforms, its straightforward syntax ensures that documentation is easily readable by humans and machines alike, making it the go-to choice for quick, effective content creation.</description>
+    </item>
+    
+    <item>
+      <title>Technical writing: Balancing Inspiration with Precision</title>
+      <link>https://izmalk.com/post/balance/</link>
+      <pubDate>Sun, 21 Jan 2024 20:24:07 +0000</pubDate>
+      
+      <guid>https://izmalk.com/post/balance/</guid>
+      <description>📝✨ In the world of sophisticated open-source products, we often find ourselves walking a tightrope between two seemingly conflicting goals: crafting comprehensive and accurate documentation and ensuring that it’s engaging and inspiring for our readers. This balancing act presents a unique set of challenges that I&amp;rsquo;ve come to appreciate in my journey as a technical writer.
+🔍 Precision vs. Engagement: The core challenge lies in presenting technical information in a precise, comprehensive, yet captivating way.</description>
+    </item>
+    
+    <item>
+      <title>Embracing the Docs-as-Code Approach in Software Documentation</title>
+      <link>https://izmalk.com/post/docs-as-code/</link>
+      <pubDate>Sun, 14 Jan 2024 20:14:17 +0000</pubDate>
+      
+      <guid>https://izmalk.com/post/docs-as-code/</guid>
+      <description>As a technical writer with more than a decade of experience in software development, I&amp;rsquo;ve come to embrace the Docs-as-Code methodology as my preferred approach. This technique, borrowing best practices from software development, transforms the way we handle documentation, treating it much like we do code. It usually involves storing the content in a Git repository as a text file. Our user-facing documentation needs to undergo a building process to create the output format(s) needed: HTML (web page), PDF, .</description>
+    </item>
+    
     <item>
       <title>Summary</title>
       <link>https://izmalk.com/post/summary/</link>
