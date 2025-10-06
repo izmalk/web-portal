@@ -29,6 +29,10 @@ theme = "initio"
     showFooterTextWidget = false
     showFooterFormWidget = true
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [[menu.main]]
     name = "home"
     url = "/"
