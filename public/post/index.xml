@@ -2,94 +2,88 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Vladimir Izmalkov</title>
-    <link>https://izmalk.com/post/</link>
+    <link>http://localhost:1313/post/</link>
     <description>Recent content in Posts on Vladimir Izmalkov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 04 Feb 2024 10:31:05 +0000</lastBuildDate><atom:link href="https://izmalk.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Dec 2025 14:35:04 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mentorship</title>
+      <link>http://localhost:1313/post/mentorship/</link>
+      <pubDate>Tue, 30 Dec 2025 14:35:04 +0000</pubDate>
+      <guid>http://localhost:1313/post/mentorship/</guid>
+      <description>I provide free mentorship for aspiring and motivated technical writers of all seniority levels.&#xA;You can book a session for free on ADPlist. I use this platform to manage my calendar and booking.&#xA;Before you book a slot, consider the following information:&#xA;All mentorship is completely free. All mentorship is done by me personally. Please respect my time and effort: I&amp;rsquo;m not here to work instead of you. You will be doing the work, and I will be guiding you.</description>
+    </item>
+    <item>
+      <title>The Future of Documentation with AI</title>
+      <link>http://localhost:1313/post/ai/</link>
+      <pubDate>Mon, 11 Mar 2024 09:14:08 +0000</pubDate>
+      <guid>http://localhost:1313/post/ai/</guid>
+      <description>🚀 The Future of Documentation: Ultra-Fast UX Meets AI Integration 🚀&#xA;The demand for quick, efficient learning solutions has never been higher. As a professional technical writer, I’ve observed a significant shift towards ultra-fast learning—a modern trend where documentation is optimized for the fastest possible user experience (UX). This isn’t about the traditional, comprehensive journey through learning materials. Instead, it’s about delivering concise, immediately actionable knowledge with good navigation—perfect for the professional on the run.</description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>http://localhost:1313/post/git/</link>
+      <pubDate>Mon, 04 Mar 2024 11:27:01 +0000</pubDate>
+      <guid>http://localhost:1313/post/git/</guid>
+      <description>💪The Power of Git for Technical Writers&#xA;Git is a formidable tool known for its capacity to track changes and manage versions across all file types, especially plain text documents. For technical writers, Git opens up a world of possibilities, significantly boosting the efficiency and quality of documentation workflows while providing a dependable reference for software product details. Let’s delve into the top reasons why Git is so beneficial for technical writers.</description>
+    </item>
     <item>
       <title>Lightweight Markup Languages for Docs-as-Code</title>
-      <link>https://izmalk.com/post/lightweight-markup-languages/</link>
+      <link>http://localhost:1313/post/lightweight-markup-languages/</link>
       <pubDate>Sun, 04 Feb 2024 10:31:05 +0000</pubDate>
-      
-      <guid>https://izmalk.com/post/lightweight-markup-languages/</guid>
-      <description>In the innovative landscape of technical writing, the Docs-as-Code approach revolutionizes how we create, manage, and publish documentation. Central to this paradigm shift are three lightweight markup languages: Markdown, reStructuredText, and AsciiDoc. Each brings its unique strengths to the forefront, enabling seamless integration of documentation into the software development workflow.
-Markdown stands out for its simplicity and widespread adoption. From GitHub repositories to blogging platforms, its straightforward syntax ensures that documentation is easily readable by humans and machines alike, making it the go-to choice for quick, effective content creation.</description>
+      <guid>http://localhost:1313/post/lightweight-markup-languages/</guid>
+      <description>In the innovative landscape of technical writing, the Docs-as-Code approach revolutionizes how we create, manage, and publish documentation. Central to this paradigm shift are three lightweight markup languages: Markdown, reStructuredText, and AsciiDoc. Each brings its unique strengths to the forefront, enabling seamless integration of documentation into the software development workflow.&#xA;Markdown stands out for its simplicity and widespread adoption. From GitHub repositories to blogging platforms, its straightforward syntax ensures that documentation is easily readable by humans and machines alike, making it the go-to choice for quick, effective content creation.</description>
     </item>
-    
     <item>
       <title>Technical writing: Balancing Inspiration with Precision</title>
-      <link>https://izmalk.com/post/balance/</link>
+      <link>http://localhost:1313/post/balance/</link>
       <pubDate>Sun, 21 Jan 2024 20:24:07 +0000</pubDate>
-      
-      <guid>https://izmalk.com/post/balance/</guid>
-      <description>📝✨ In the world of sophisticated open-source products, we often find ourselves walking a tightrope between two seemingly conflicting goals: crafting comprehensive and accurate documentation and ensuring that it’s engaging and inspiring for our readers. This balancing act presents a unique set of challenges that I&amp;rsquo;ve come to appreciate in my journey as a technical writer.
-🔍 Precision vs. Engagement: The core challenge lies in presenting technical information in a precise, comprehensive, yet captivating way.</description>
+      <guid>http://localhost:1313/post/balance/</guid>
+      <description>📝✨ In the world of sophisticated open-source products, we often find ourselves walking a tightrope between two seemingly conflicting goals: crafting comprehensive and accurate documentation and ensuring that it’s engaging and inspiring for our readers. This balancing act presents a unique set of challenges that I&amp;rsquo;ve come to appreciate in my journey as a technical writer.&#xA;🔍 Precision vs. Engagement: The core challenge lies in presenting technical information in a precise, comprehensive, yet captivating way.</description>
     </item>
-    
     <item>
       <title>Embracing the Docs-as-Code Approach in Software Documentation</title>
-      <link>https://izmalk.com/post/docs-as-code/</link>
+      <link>http://localhost:1313/post/docs-as-code/</link>
       <pubDate>Sun, 14 Jan 2024 20:14:17 +0000</pubDate>
-      
-      <guid>https://izmalk.com/post/docs-as-code/</guid>
+      <guid>http://localhost:1313/post/docs-as-code/</guid>
       <description>As a technical writer with more than a decade of experience in software development, I&amp;rsquo;ve come to embrace the Docs-as-Code methodology as my preferred approach. This technique, borrowing best practices from software development, transforms the way we handle documentation, treating it much like we do code. It usually involves storing the content in a Git repository as a text file. Our user-facing documentation needs to undergo a building process to create the output format(s) needed: HTML (web page), PDF, .</description>
     </item>
-    
     <item>
       <title>Summary</title>
-      <link>https://izmalk.com/post/summary/</link>
+      <link>http://localhost:1313/post/summary/</link>
       <pubDate>Sun, 10 Dec 2023 23:25:50 +0300</pubDate>
-      
-      <guid>https://izmalk.com/post/summary/</guid>
-      <description>Find a summary in my Resume.
-Additional information is available in my LinkedIn profile.
-If you need more information, feel free to contact me directly. My preferred methods of communication are Telegram, WhatsApp, and E-mail.</description>
+      <guid>http://localhost:1313/post/summary/</guid>
+      <description>Find a summary in my Resume.&#xA;Additional information is available in my LinkedIn profile.&#xA;If you need more information, feel free to contact me directly. My preferred methods of communication are Telegram, WhatsApp, and E-mail.</description>
     </item>
-    
     <item>
       <title>Work experience</title>
-      <link>https://izmalk.com/post/exp/</link>
+      <link>http://localhost:1313/post/exp/</link>
       <pubDate>Sun, 10 Dec 2023 23:25:41 +0300</pubDate>
-      
-      <guid>https://izmalk.com/post/exp/</guid>
-      <description>I have been working in IT and technical communication since 2008.
-My first job was at my University, where I worked as a part-time technician, documenting educational projects and events and supporting some IT systems. I also worked as a part-time software developer during my university days.
-After graduation, I joined the All-Russian Research Institute for Civil Defense and Emergencies as a post-graduate. I had my postgraduate studies, and after obtaining a PhD, I had a chance to start a new department in the same Research institute from scratch.</description>
+      <guid>http://localhost:1313/post/exp/</guid>
+      <description>I have been working in IT and technical communication since 2008.&#xA;My first job was at my University, where I worked as a part-time technician, documenting educational projects and events and supporting some IT systems. I also worked as a part-time software developer during my university days.&#xA;After graduation, I joined the All-Russian Research Institute for Civil Defense and Emergencies as a post-graduate. I had my postgraduate studies, and after obtaining a PhD, I had a chance to start a new department in the same Research institute from scratch.</description>
     </item>
-    
     <item>
       <title>Education</title>
-      <link>https://izmalk.com/post/education/</link>
+      <link>http://localhost:1313/post/education/</link>
       <pubDate>Sun, 10 Dec 2023 23:20:30 +0300</pubDate>
-      
-      <guid>https://izmalk.com/post/education/</guid>
-      <description>I graduated from the greatest technical university of Russia (Bauman Moscow State Technical University) with two degrees:
-Master&amp;rsquo;s degree in Spacecraft engineering. Bachelor&amp;rsquo;s degree in Computer science. My first choice was a Spacecraft engineering degree, as I desired space exploration and engineering. In my later years at the university, I realized that my true passion is information technology and computer science. That&amp;rsquo;s why I got a second degree from the same university.</description>
+      <guid>http://localhost:1313/post/education/</guid>
+      <description>I graduated from the greatest technical university of Russia (Bauman Moscow State Technical University) with two degrees:&#xA;Master&amp;rsquo;s degree in Spacecraft engineering. Bachelor&amp;rsquo;s degree in Computer science. My first choice was a Spacecraft engineering degree, as I desired space exploration and engineering. In my later years at the university, I realized that my true passion is information technology and computer science. That&amp;rsquo;s why I got a second degree from the same university.</description>
     </item>
-    
     <item>
       <title>Portfolio</title>
-      <link>https://izmalk.com/post/portfolio/</link>
+      <link>http://localhost:1313/post/portfolio/</link>
       <pubDate>Thu, 25 Aug 2022 23:53:01 +0300</pubDate>
-      
-      <guid>https://izmalk.com/post/portfolio/</guid>
-      <description>This will be a page with links to multiple examples of my dinest work. Unfortunately, it is not ready yet =D.
-You see, most of my current documents are under NDA so I will try and do some test exercises without any confidential materials and publish it here.
-But for now I would like to publish a link for one example of my open source contribution.</description>
+      <guid>http://localhost:1313/post/portfolio/</guid>
+      <description>This will be a page with links to multiple examples of my dinest work. Unfortunately, it is not ready yet =D.&#xA;You see, most of my current documents are under NDA so I will try and do some test exercises without any confidential materials and publish it here.&#xA;But for now I would like to publish a link for one example of my open source contribution.</description>
     </item>
-    
     <item>
       <title>Very first post to this blog</title>
-      <link>https://izmalk.com/post/vivamus-lacus-mauris/</link>
+      <link>http://localhost:1313/post/vivamus-lacus-mauris/</link>
       <pubDate>Mon, 17 Jun 2013 12:00:00 +0000</pubDate>
-      
-      <guid>https://izmalk.com/post/vivamus-lacus-mauris/</guid>
-      <description>This is a very first blog post here. As this site is mostly under construction.
-I am trying to create content here as soon as possible. But it is hard to do when all you have is some scraps of time between work and sleep.
-As of now I am still working of portal features and looking for a better ways to visualise my experience and education here.
-Also have a grand plan for content.</description>
+      <guid>http://localhost:1313/post/vivamus-lacus-mauris/</guid>
+      <description>This is a very first blog post here. As this site is mostly under construction.&#xA;I am trying to create content here as soon as possible. But it is hard to do when all you have is some scraps of time between work and sleep.&#xA;As of now I am still working of portal features and looking for a better ways to visualise my experience and education here.&#xA;Also have a grand plan for content.</description>
     </item>
-    
   </channel>
 </rss>

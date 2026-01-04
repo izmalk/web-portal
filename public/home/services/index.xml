@@ -2,45 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Services on Vladimir Izmalkov</title>
-    <link>https://izmalk.com/home/services/</link>
+    <link>http://localhost:1313/home/services/</link>
     <description>Recent content in Services on Vladimir Izmalkov</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://izmalk.com/home/services/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="http://localhost:1313/home/services/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Analytics</title>
-      <link>https://izmalk.com/home/services/service4/</link>
+      <link>http://localhost:1313/home/services/service4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://izmalk.com/home/services/service4/</guid>
+      <guid>http://localhost:1313/home/services/service4/</guid>
       <description>&lt;p&gt;I am efficient in learning new technologies and processing vast amounts of data. Have a lot of experience with structuring, formalising and simplifying information.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Documentation engineering</title>
-      <link>https://izmalk.com/home/services/service1/</link>
+      <link>http://localhost:1313/home/services/service1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://izmalk.com/home/services/service1/</guid>
+      <guid>http://localhost:1313/home/services/service1/</guid>
       <description>&lt;p&gt;Every word is a bridge, and every page is an invitation to a better user experience.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Passion</title>
-      <link>https://izmalk.com/home/services/service3/</link>
+      <link>http://localhost:1313/home/services/service3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://izmalk.com/home/services/service3/</guid>
+      <guid>http://localhost:1313/home/services/service3/</guid>
       <description>&lt;p&gt;My deepest passion in learning new technologies, products, user experiences. I am eager to learn, whether it&amp;rsquo;s new framework, new hardware architecture or new web-interface.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Team Leadership</title>
-      <link>https://izmalk.com/home/services/service2/</link>
+      <link>http://localhost:1313/home/services/service2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://izmalk.com/home/services/service2/</guid>
+      <guid>http://localhost:1313/home/services/service2/</guid>
       <description>&lt;p&gt;I had two chances to lead a team in my life. And both times I have created from scratch cross-functional teams of highly-skilled professionals that I can be proud of.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -53,6 +53,10 @@ theme = "initio"
     name = "blog"
     url = "/post/"
     weight = 5
+[[menu.main]]
+    name = "Mentorship"
+    url = "/post/mentorship"
+    weight = 5
 
 # [params.disqus]
 #     site = "hugo-initio-site.disqus.com"

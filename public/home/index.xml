@@ -2,21 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homes on Vladimir Izmalkov</title>
-    <link>https://izmalk.com/home/</link>
+    <link>http://localhost:1313/home/</link>
     <description>Recent content in Homes on Vladimir Izmalkov</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://izmalk.com/home/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="http://localhost:1313/home/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://izmalk.com/home/subheader/</link>
+      <link>http://localhost:1313/home/subheader/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://izmalk.com/home/subheader/</guid>
-      <description>Experienced Technical Writer &amp;amp; Documentation Engineer Over 15 years in IT: software developer, researcher, research manager, IT manager, Head of IT department, and technical writer.
-I specialize in developer-oriented technical documentation for sophisticated products and services: cloud platforms, XaaS, DBMS, etc.
-Software engineer experience First-hand developer experience. Excellent understanding of software development lifecycle (SDLC), tools (Git, IDEs), and agile methodology.
-I prefer working with lightweight markup languages, static site generators, and docs-as-code approach.</description>
+      <guid>http://localhost:1313/home/subheader/</guid>
+      <description>Experienced Technical Writer &amp;amp; Documentation Engineer Over 15 years in IT: software developer, researcher, research manager, IT manager, Head of IT department, and technical writer.&#xA;I specialize in developer-oriented technical documentation for sophisticated products and services: cloud platforms, XaaS, DBMS, etc.&#xA;Software engineer experience First-hand developer experience. Excellent understanding of software development lifecycle (SDLC), tools (Git, IDEs), and agile methodology.&#xA;I prefer working with lightweight markup languages, static site generators, and docs-as-code approach.</description>
     </item>
-    
   </channel>
 </rss>
