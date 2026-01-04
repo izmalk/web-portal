@@ -13,24 +13,28 @@ Before you book a slot, consider the following information:
 
 * All mentorship is completely free.
 * All mentorship is done by me personally.
-* Please respect my time and effort: I'm not here to work instead of you.
-  You will be doing the work, and I will be guiding you.
-  The work can be your real-life documentation-related work,
-  or just working on improving yourself and your public profile.
-* This can be a single mentorship session if you have specific questions
-or want to try whether mentorship works for you.
-* However, I recommend considering one of the following specialized mentorship programs.
+* Please respect my time and effort:
+  * Attend all meetings or cancel at least 24h ina advance.
+  * I'm not here to work instead of you.
+    You will be doing the work, and I will be guiding you.
+  * The work can be your real-life documentation-related work,
+    or just improving yourself and your public profile.
+* I recommend applying for one of the following goal-oriented mentorship programs (see below).
+  * However, a single mentorship session is available too if you have specific questions.
 
-Everything is completely free of charge but will require some time and effort
-commitment from both you and me.
+There are three main programs I use for mentoring:
 
-For that reason, before enrolling into a mentorship programme,
+* Career start
+* Docs-as-code
+* AI-assisted technical writing
+
+Before enrolling into a mentorship programme,
 you need to check that you meet the following common and specific prerequisites,
 and then book a screening call (one hour) with me
 via [ADPlist](https://adplist.org/mentors/vladimir).
 
-The mentorship sessions are booked in advance outside of ADPlist
-for those who are selected to join one of the programs.
+Most sessions are conducted via Google Meet calls and booked in advance in Google Calendar
+either directly or via ADPlist.
 
 ## Common prerequisites
 
@@ -98,7 +102,7 @@ strong consistency and progress.
 **Mentor**: [Vladimir Izmalkov](https://adplist.org/mentors/vladimir)  
 Estimated duration: ~5 months  
 Format: Bi-weekly live sessions (1 hour) + structured asynchronous work  
-Time commitment: ~2-3 hours per week (Mentee self-study & assignments)  
+Time commitment: ~2-3 hours per week (mentee self-study & assignments)  
 
 #### Specific prerequisites & selection criteria
 
