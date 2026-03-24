@@ -17,3 +17,9 @@ other relevant topics.
 * Oct 2024: [Technical Writing Workshop for Beginners](https://www.youtube.com/watch?v=S1MAK6CbYlE).
 * Mar 2024: [Docs-as-code overview in Russian](https://www.youtube.com/watch?v=vGBJXoVAemI).
 * 
+
+## Publications
+
+* Communicator - The Technical WRiter's Skill Tree
+* Communicator - Interview
+* 
