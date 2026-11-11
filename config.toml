@@ -1,5 +1,5 @@
 baseURL = "https://izmalk.com/"
-languageCode = "en"
+locale = "en"
 title = "Vladimir Izmalkov"
 theme = "initio"
 
@@ -17,6 +17,7 @@ theme = "initio"
     favicon = "images/favicon.ico"
     DateForm = "October 2, 2023"
     author = "Sergey Pozhilov (GetTemplate.com)"
+    siteAuthor = "Vladimir Izmalkov"
 
     showSubheader = true
     showServices = true
