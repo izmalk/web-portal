@@ -20,7 +20,7 @@
 	
 	
   
-  <link rel="stylesheet" href="http://localhost:1313/css/styles.min.d63ffd40872d4bea8e0a81e803a3832b220835652cc542c0f4f164a3ea264af9acd33f12591a05dfa9725b1e5cb7cae452bbf9acb031175430ffc5dea5abd386.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/styles.min.c188052ddaceb7b87868b990a47613f40a21a1c8faed6c4edcb403b98b219ab96bbaaf42a54d5ed17fc43ba6727db5396df1ea936f6790def47589f4fcc4b557.css">
 
    
   
@@ -116,6 +116,222 @@
 		<div class="row topspace">
 			<div class="col-sm-8 col-sm-offset-2">
 
+        
+				<article class="post">
+					<header class="entry-header">
+						<div class="entry-meta">
+               <span class="posted-on">
+                  <time class="entry-date published" datetime="October 12, 121212">November 12, 2026</time>
+               </span>
+						</div>
+						<h1 class="entry-title">
+						  <a href="http://localhost:1313/post/busyrebar/" rel="bookmark">BusyRebar: a LED screen repeater for the BUSY Bar</a>
+						</h1>
+					</header>
+					<div class="entry-content">
+						<p>My <a href="https://busy.app/">BUSY Bar</a> belongs on my desk. That is where I can reach its buttons, use its timers, and read the secondary (black&amp;white) display. But the best position for me to reach is not necessarily the best position for someone else to see its beautiful main (color) screen.</p>
+<p>Turning it towards the doorway makes it less convenient to use. Moving it outside the room would defeat the point of having it on my desk. So I want another screen that could show the same status somewhere more visible, near the entrance to my home office room, ideally, outside of it.</p>
+<p>That became <strong>BusyRebar</strong>: a wireless LED matrix repeater for the BUSY Bar. The name comes from “BUSY Bar repeater”.</p>
+<p>The project uses a 64×32 RGB LED panel, a Pimoroni Interstate 75 W, and a Python script on a Linux host. The code and setup reference are in the <a href="https://github.com/izmalk/busyrebar">BusyRebar repository</a>.</p>
+<p><img src="/images/busy-led.jpg" alt="BusyRebar LED panel showing the BUSY Bar screen"></p>
+<h2 id="how-it-works"><strong>How it works</strong></h2>
+<p>The repeater has two main components: repeater Python script running on a Linux host and LED panel with a controller.</p>
+<p>The BUSY Bar needs to be configured for Wi-Fi and HTTP access. The host machine runs <code>repeater.py</code> that fetches a screen frame through <code>busylib</code> (<a href="https://pypi.org/project/busylib/">PyPI</a>), transforms the image with Pillow, applies a brightness setting, and sends the resulting pixels over the local network. The LED panel controller (Interstate 75 W) runs <code>main.py</code>, receives those pixels over Wi-Fi, and draws them on the matrix.</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">Component</th>
+					<th style="text-align: left">Job</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">BUSY Bar</td>
+					<td style="text-align: left">Supplies the source screen image through its local HTTP API</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">Linux host</td>
+					<td style="text-align: left">Fetches, resizes, and dims each frame</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">Interstate 75 W</td>
+					<td style="text-align: left">Receives a UDP datagram and renders its pixels</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">64×32 HUB75 matrix</td>
+					<td style="text-align: left">Shows the repeated image</td>
+			</tr>
+	</tbody>
+</table>
+<p>Keeping image processing on the host makes it easy to experiment with scaling and brightness without changing the receiver. The trade-off is that the host must stay running and awake for the display to update.</p>
+<p>Each outgoing frame contains 64 × 32 × 3 = <strong>6,144 bytes</strong>: one byte each for red, green, and blue at every pixel. The bridge sends it to the panel’s IP address on UDP port <code>4048</code>.</p>
+<p>The script pauses for 0.25 seconds after each fetch-and-send cycle. That gives it a nominal ceiling of four updates per second; fetching and processing take additional time. It is a periodically refreshed copy of the screen, so there is some delay and fast animations will lose frames.</p>
+<h2 id="the-awkward-part-image-resizing-from-72-pixels-into-64"><strong>The awkward part: image resizing from 72 pixels into 64</strong></h2>
+<p>The BUSY Bar’s main display is 72×16 pixels. Most Led matrix panels have sizes in a power of 2. The panel used here is 64×32: narrower, but twice as tall as BusyBar main (color) screen. There is no way to fit all 72 columns into 64 columns while keeping every pixel unchanged.</p>
+<p>The script offers two ways to deal with that, see below.</p>
+<h3 id="optionally-crop-then-scale"><strong>Optionally crop, then scale</strong></h3>
+<p>The BUSY Bar&rsquo;s 72×16 display resolution must be adapted to fit the LED panel&rsquo;s 64×32 matrix. The script handles this by optionally cropping outer pixels before scaling the image to the target size.<br>
+If <code>ENABLE_CROP = True</code>, the script crops columns from each side, removing outer details to keep central elements larger.<br>
+The image is then scaled using bilinear or nearest-neighbor interpolation to fit the target dimensions (e.g., 64×32) and centered using vertical and horizontal offsets.</p>
+<h2 id="bill-of-materials"><strong>Bill of materials</strong></h2>
+<p>The core hardware combination I’ve got is a <strong>P4 64×32 HUB75 RGB matrix</strong> and a <strong>Pimoroni Interstate 75 W with RP2350</strong>. P4 means a 4 mm pixel pitch; the panel size is 256×128 mm which makes it easy to read from a far.</p>
+<p>You will also need:</p>
+<ul>
+<li>BUSY Bar.</li>
+<li>The LED panel’s own default power cable.</li>
+<li>A reliable 5 V power supply.</li>
+<li>A long USB-C cable.</li>
+<li>Any machine (Raspberry Pi?) to run the bridge (the <a href="http://repeater.py">repeater.py</a> script).</li>
+<li>A 2.4 GHz Wi-Fi network.</li>
+<li>Optionally, smoked grey acrylic sheet and a plastic case for mounting hardware.</li>
+</ul>
+<h3 id="assembly"><strong>Assembly</strong></h3>
+<p>Assembly is very simple: connect Interstate 75 W to the LED panel, including the power connection, then plug in a USB Type-C cable to power it up.</p>
+<p>Power demand depends on the panel, brightness, and displayed content. The most common symptoms of power deficit are the panel’s controller restarts and/or failing to connect to your Wi-Fi.</p>
+<p>A supply that works for sparse text is not proof that it will handle a full white screen or additional panels. My single 64x32 panel setup works with 5V / 2A power adapter, consuming about 0.25A during usual work (not full brightness).</p>
+<p><img src="/images/busy-power.jpg" alt="BusyRebar LED panel power consumption measurement"></p>
+<p>Do the first test on the bench, where the connectors and board are accessible. If the board restarts when the LEDs light up, inspect the power supply, cable, and connections before assuming the problem is Wi-Fi.</p>
+<h2 id="getting-the-software-running"><strong>Getting the software running</strong></h2>
+<p>The repository contains two scripts: <a href="https://github.com/izmalk/busyrebar/blob/main/main.py"><code>main.py</code></a> for the receiver and <a href="https://github.com/izmalk/busyrebar/blob/main/repeater.py"><code>repeater.py</code></a> for the host. Use those files for the full code; the steps below focus on what needs configuring.</p>
+<h3 id="enable-local-access-to-the-busy-bar"><strong>Enable local access to the BUSY Bar</strong></h3>
+<p>Enable HTTP API access over Wi-Fi in the BUSY Bar’s local web interface and note its Wi-Fi IP address and API credential. The repository calls this credential an API PIN and stores it in <code>BUSYBAR_TOKEN</code>.</p>
+<p>The <a href="https://docs.busy.app/bar/dev/http-api">BUSY Bar HTTP API documentation</a> explains how to enable access through the USB web interface at <code>http://10.0.4.20</code>. Current documentation calls the Wi-Fi credential a password. Use the credential configured on your device.</p>
+<p>A DHCP reservation on the router helps keep the BUSY Bar’s address stable.</p>
+<h3 id="set-up-the-receiver"><strong>Set up the receiver</strong></h3>
+<p>Install Pimoroni’s MicroPython firmware for the <strong>Interstate 75 W (RP2350)</strong> from its <a href="https://github.com/pimoroni/interstate75/releases/latest">firmware releases</a>. Choose the <code>i75w_rp2350</code> build for this board. The firmware includes the display support used by the script. Pimoroni provides the <a href="https://github.com/pimoroni/interstate75#installation">installation instructions</a>.</p>
+<p>In <code>main.py</code>, configure:</p>
+<ul>
+<li><code>WIFI_SSID</code> and <code>WIFI_PASSWORD</code>.</li>
+<li>The IP address, subnet mask, gateway, and DNS address in <code>wlan.ifconfig(...)</code>.</li>
+<li><code>UDP_PORT</code>, if you want to change it from <code>4048</code>.</li>
+</ul>
+<p>The supplied receiver uses <code>192.168.1.231</code>. Treat that as an example: choose an unused address appropriate to your network and keep it from conflicting with addresses your router assigns. A router reservation alone does not change the script’s hardcoded network configuration.</p>
+<p>Save <code>main.py</code> to the board and restart it. Three big circles show how far startup has progressed:</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">Circle</th>
+					<th style="text-align: left">Meaning</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">Green</td>
+					<td style="text-align: left">The script has started and can draw on the panel</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">Blue</td>
+					<td style="text-align: left">Wi-Fi has connected</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">White</td>
+					<td style="text-align: left">The receiver has received its first 6,144-byte datagram</td>
+			</tr>
+	</tbody>
+</table>
+<p>The white circle stays visible for 1.5 seconds before the script draws the first frame. These indicators are useful when the panel is running away from a serial console.</p>
+<p>The receiver also attempts to set <code>wlan.config(pm=0xa11140)</code> to disable Wi-Fi power saving. The call is wrapped in <code>try/except</code>, so the script continues if the firmware rejects it. Its presence does not guarantee that every connection problem is solved.</p>
+<h3 id="start-the-bridge"><strong>Start the bridge</strong></h3>
+<p>On the Linux host, clone the project and install its dependencies in a virtual environment:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git clone https://github.com/izmalk/busyrebar.git ~/busyrebar
+</span></span><span style="display:flex;"><span>cd ~/busyrebar
+</span></span><span style="display:flex;"><span>python3 -m venv .venv
+</span></span><span style="display:flex;"><span>.venv/bin/python -m pip install Pillow requests busylib
+</span></span></code></pre></div><p>Edit the configuration at the top of <code>repeater.py</code>:</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">Setting</th>
+					<th style="text-align: left">Value to use</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><code>BUSYBAR_IP</code></td>
+					<td style="text-align: left">Your BUSY Bar’s local IP address</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>BUSYBAR_TOKEN</code></td>
+					<td style="text-align: left">Its Wi-Fi HTTP API credential</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>PANEL_IP</code></td>
+					<td style="text-align: left">The receiver address configured in <code>main.py</code></td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><code>PANEL_PORT</code></td>
+					<td style="text-align: left">The receiver’s UDP port, normally <code>4048</code></td>
+			</tr>
+	</tbody>
+</table>
+<p>Run the bridge in a terminal first:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>.venv/bin/python repeater.py
+</span></span></code></pre></div><p>Watch for errors in the terminal and the white dot on the panel. Then change the BUSY Bar screen or start a timer to check that the image updates.</p>
+<h3 id="check-the-brightness-schedule"><strong>Check the brightness schedule</strong></h3>
+<p>The bridge adjusts RGB values using the Linux host’s local time:</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: left">Time</th>
+					<th style="text-align: left">Brightness multiplier</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">00:00–06:59</td>
+					<td style="text-align: left"><code>0.0</code> — black frames</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">07:00–07:59</td>
+					<td style="text-align: left"><code>0.4</code></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">08:00–20:59</td>
+					<td style="text-align: left"><code>0.25</code></td>
+			</tr>
+			<tr>
+					<td style="text-align: left">21:00–23:59</td>
+					<td style="text-align: left"><code>0.4</code></td>
+			</tr>
+	</tbody>
+</table>
+<p>These are software multipliers, not calibrated measurements of light output. Adjust them in <code>get_scheduled_brightness()</code> for the panel’s position and any acrylic cover. If you test overnight, the black image may simply be the schedule working as written.</p>
+<h2 id="running-it-in-the-background"><strong>Running it in the background</strong></h2>
+<p>Once the manual test works, a <code>systemd</code> user service can keep the bridge running on a Linux host that uses systemd. This service definition is an addition to the setup; it is not included in the repository.</p>
+<p>Create <code>~/.config/systemd/user/busyrebar.service</code> with:</p>
+<pre tabindex="0"><code>[Unit]
+Description=BusyRebar LED panel bridge
+
+[Service]
+Type=simple
+WorkingDirectory=%h/busyrebar
+ExecStart=%h/busyrebar/.venv/bin/python -u %h/busyrebar/repeater.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
+</code></pre><p>Stop the manually running bridge with Ctrl+C, then enable the service:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>systemctl --user daemon-reload
+</span></span><span style="display:flex;"><span>systemctl --user enable --now busyrebar.service
+</span></span></code></pre></div><p>To run the user service from boot and keep it running after logout, enable <a href="https://www.freedesktop.org/software/systemd/man/latest/loginctl.html">user lingering</a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo loginctl enable-linger <span style="color:#e6db74">&#34;</span>$USER<span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p>Inspect the logs or restart after changing the configuration with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>journalctl --user -u busyrebar.service -f
+</span></span><span style="display:flex;"><span>systemctl --user restart busyrebar.service
+</span></span></code></pre></div><p>The bridge catches fetch-and-send errors and retries on subsequent iterations. The service does not make the host stay awake: if it suspends, the display stops receiving updates.</p>
+<h2 id="finishing-the-panel"><strong>Finishing the panel</strong></h2>
+<p>Smoked grey acrylic is an option for making the bare LED panel less conspicuous. It can hide the unlit LED packages and improve the apparent contrast, while also reducing the light reaching the viewer. Try a sample in front of the running display before choosing the tint or fixing it in place.</p>
+<h2 id="what-this-version-does-and-what-it-still-needs"><strong>What this version does, and what it still needs</strong></h2>
+<p>BusyRebar keeps the image processing in one Python file and the receiver small enough to follow. That makes it straightforward to change the crop, move the image, or adjust brightness.</p>
+<p>There are also limits to the current implementation. If frames stop arriving, the panel keeps displaying the last image. There is no stale-frame timeout or explicit Wi-Fi reconnection loop. The overnight blanking is part of the normal fetch-and-send cycle, so a failed fetch can also prevent a new black frame from being sent.</p>
+<p>Those are useful improvements for a future version: show a clear disconnected state, reconnect automatically, and make blanking independent of a successful screen fetch. The receiver also accepts incoming frame-sized datagrams without checking who sent them, so this version is intended for a trusted local network.</p>
+<p>For now, the idea remains simple: leave the BUSY Bar where its controls are useful, and put a copy of its screen where other people can see it. The resizing is imperfect and the extra host is a dependency, but the two-script design makes both the behaviour and the compromises easy to inspect.</p>
+<p>The code is available in the <a href="https://github.com/izmalk/busyrebar">BusyRebar repository</a>.<br>
+If you give BusyRebar a try, any feedback and feature requests are always welcome!</p>
+
+					</div>
+				</article>
         
 				<article class="post">
 					<header class="entry-header">
@@ -569,26 +785,6 @@ That&rsquo;s why I got a second degree from the same university.</p>
 <li><strong>PhD in Technology</strong> with a special topic on the Reliability of single emergency number systems in Russia.</li>
 </ol>
 <p>My career continued with the research institute, as I became a researcher and later a Head of a Research department for Automated systems.</p>
-
-					</div>
-				</article>
-        
-				<article class="post">
-					<header class="entry-header">
-						<div class="entry-meta">
-               <span class="posted-on">
-                  <time class="entry-date published" datetime="October 25, 252511">August 25, 2022</time>
-               </span>
-						</div>
-						<h1 class="entry-title">
-						  <a href="http://localhost:1313/post/portfolio/" rel="bookmark">Portfolio</a>
-						</h1>
-					</header>
-					<div class="entry-content">
-						<p>This will be a page with links to multiple examples of my dinest work.
-Unfortunately, it is not ready yet =D.</p>
-<p>You see, most of my current documents are under NDA so I will try and do some test exercises without any confidential materials and publish it here.</p>
-<p>But for now I would like to publish a <a href="https://github.com/tarantool/doc/blame/3c348038efb765f87d2162e0542d3a17092d3c1d/doc/reference/reference_rock/vshard/vshard_architecture.rst">link</a> for one example of my open source contribution.</p>
 
 					</div>
 				</article>

@@ -10,7 +10,7 @@
 		
 		
 		
-			<lastBuildDate>Tue, 30 Dec 2025 14:35:04 +0000</lastBuildDate>
+			<lastBuildDate>Thu, 12 Nov 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
 			<item>
@@ -26,6 +26,13 @@
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/about/</guid>
 				<description>&lt;p&gt;&lt;img src=&#34;../images/about_me_light.jpg&#34; alt=&#34;about&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Geek. Technology evangelist. Curious researcher. Documentation engineer. Technical communicator.&lt;/p&gt;&#xA;&lt;p&gt;Passionate for IT, learning, teaching, and improving user experience through storytelling.&lt;/p&gt;&#xA;&lt;h2 id=&#34;work-experience&#34;&gt;Work experience&lt;/h2&gt;&#xA;&lt;p&gt;My first job was a part-time role as a junior software developer during my University years.&lt;/p&gt;&#xA;&lt;p&gt;After graduation from University I got into my post-graduate study in a research institute.&lt;/p&gt;&#xA;&lt;p&gt;I later worked at that institute amassing total of 8 years with them.&lt;/p&gt;&#xA;&lt;p&gt;In 2019 I joined VK (ex. Mail.Ru Group) as a Senior Technical Writer of a Tarantool database.&#xA;I was participating in numeroues activities, including some side projects at the time and was promoted twice to become a Team Leader for two cross-functional documentation teams.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>BusyRebar: a LED screen repeater for the BUSY Bar</title>
+				<link>http://localhost:1313/post/busyrebar/</link>
+				<pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/post/busyrebar/</guid>
+				<description>&lt;p&gt;My &lt;a href=&#34;https://busy.app/&#34;&gt;BUSY Bar&lt;/a&gt; belongs on my desk. That is where I can reach its buttons, use its timers, and read the secondary (black&amp;amp;white) display. But the best position for me to reach is not necessarily the best position for someone else to see its beautiful main (color) screen.&lt;/p&gt;&#xA;&lt;p&gt;Turning it towards the doorway makes it less convenient to use. Moving it outside the room would defeat the point of having it on my desk. So I want another screen that could show the same status somewhere more visible, near the entrance to my home office room, ideally, outside of it.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Mentorship</title>

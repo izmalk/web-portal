@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Tue, 30 Dec 2025 14:35:04 +0000</lastBuildDate>
+			<lastBuildDate>Thu, 12 Nov 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>BusyRebar: a LED screen repeater for the BUSY Bar</title>
+				<link>http://localhost:1313/post/busyrebar/</link>
+				<pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/post/busyrebar/</guid>
+				<description>&lt;p&gt;My &lt;a href=&#34;https://busy.app/&#34;&gt;BUSY Bar&lt;/a&gt; belongs on my desk. That is where I can reach its buttons, use its timers, and read the secondary (black&amp;amp;white) display. But the best position for me to reach is not necessarily the best position for someone else to see its beautiful main (color) screen.&lt;/p&gt;&#xA;&lt;p&gt;Turning it towards the doorway makes it less convenient to use. Moving it outside the room would defeat the point of having it on my desk. So I want another screen that could show the same status somewhere more visible, near the entrance to my home office room, ideally, outside of it.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Mentorship</title>
 				<link>http://localhost:1313/post/mentorship/</link>
