@@ -1,10 +1,7 @@
 
-*.html
-public/**
-*.zip
+# Build output (covers generated .html/.xml too)
 public/
-*.xml
+*.zip
 *.iml
 .idea/**
 .DS_Store
-/public
