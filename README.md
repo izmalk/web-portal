@@ -39,5 +39,6 @@ git pull
 
 ## Content layout
 
-- `content/posts/` — blog posts (shown on the front page and in the Posts menu).
-- `content/about/`, `content/summary/`, `content/education/`, `content/experience/`, `content/mentorship/` — single pages (`_index.md` with `layout: single`), linked from the sidebar menu.
+- `content/posts/` — blog posts, shown on the front page and linked from the Blog menu at `/posts/`. The sidebar keeps this as a single link using Poison's `HasChildren = false` setting.
+- `content/about/`, `content/work-profile/`, `content/mentorship/` — standalone pages linked as About me, Work profile and Mentorship in the sidebar. Work profile uses `layout: profile` for a title-only header.
+- Work profile combines Summary, Education and Work experience. Their old URLs (`/summary/`, `/education/`, `/work-experience/`) redirect to `/work-profile/` through Hugo aliases.

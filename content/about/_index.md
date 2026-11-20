@@ -1,53 +1,38 @@
 +++
-title = "About"
+title = "About me"
 layout = "single"
 +++
 
-![Vladimir Izmalkov](/images/about_me_light.jpg)
+{{< profile-intro src="/images/about_me_light.jpg" alt="Vladimir Izmalkov" >}}
 
-Geek. Technology evangelist. Curious researcher. Documentation engineer. Technical communicator.
+I'm a documentation engineer and technical writer with over 15 years in IT. I help people understand complex software and use it with confidence.
 
-Passionate for IT, learning, teaching, and improving user experience through storytelling.
+I'm curious about technology and enjoy learning, tinkering, teaching and sharing what I discover. My work draws on experience in software development, research and team leadership.
+
+{{< /profile-intro >}}
+
+I like to think of myself as a **pathfinder** through rough UX terrain. I explore unfamiliar systems, uncover bugs and hidden traps, and help clear a route for the people who follow. Documentation is the map I leave behind, so users can find their footing and enjoy the journey.
 
 ## What I do
 
-I'm an experienced technical writer and documentation engineer with over 15 years in IT: software developer, researcher, research manager, IT manager, Head of IT department, and technical writer.
+I specialize in developer documentation for complex products, including cloud platforms, databases and services.
 
-I specialize in developer-oriented technical documentation for sophisticated products and services: cloud platforms, XaaS, DBMS, etc.
+Good documentation starts with understanding the people who will use it. I research audiences and user journeys, talk to subject-matter experts, and organize information around the tasks readers need to complete.
 
-**Software engineer experience.** First-hand developer experience: excellent understanding of the software development lifecycle (SDLC), tools (Git, IDEs), and agile methodology. I prefer working with lightweight markup languages, static site generators, and the docs-as-code approach.
+I prefer a docs-as-code approach, using Git, lightweight markup languages and static site generators. I use reader feedback and metrics to improve documentation over time.
 
-**Documentation engineering.** Information architecture, complexity management, knowledge management, tutorial design, and much more. It's not just about writing: researching the target audience and user journeys, information surveys and expert interviews, prototyping, structuring, designing, and optimizing documentation systems, as well as gathering feedback and metrics.
+## How I work
 
-**Scientific background.** Ph.D. in Technology, research experience, scientific publications, and research management experience. I was Head of a research department in an information and communication research center and led international projects for the World Bank Group and UNDP.
+**An engineering perspective.** My software development background helps me understand technical decisions and work closely with engineers throughout the software development lifecycle.
 
-**Leadership and teamwork.** Over 5 years of team leadership experience: leading cross-functional documentation teams, designing and delivering developer- and user-oriented content, building and testing documentation systems, and supporting processes in engineering teams. I have experience developing style guides, recruiting, teaching, and managing technical writers, analysts, QA professionals, and DevOps/DocOps specialists.
+**A researcher's approach.** I draw on my scientific background to investigate complex topics, evaluate information and explain how things work.
 
-I take full ownership of the tasks, ensuring that projects and milestones are completed precisely and on time.
+**Team leadership.** I have over five years of experience leading cross-functional documentation teams. My work includes hiring, mentoring, developing style guides and improving collaboration across technical writing, engineering, QA and DevOps.
 
-I'm here to turn complexity into clarity. Feel free to contact me to discuss how I can add value to your product.
+I take ownership of documentation from initial research through publication and ongoing improvement.
 
-## Work experience
+## Get in touch
 
-My first job was a part-time role as a junior software developer during my University years.
+For my résumé and career details, see my [work profile]({{< ref "/work-profile" >}}).
 
-After graduation from University I got into my post-graduate study in a research institute.
-
-I later worked at that institute amassing total of 8 years with them.
-
-In 2019 I joined VK (ex. Mail.Ru Group) as a Senior Technical Writer of a Tarantool database.
-I was participating in numerous activities, including some side projects at the time and was promoted twice to become a Team Leader for two cross-functional documentation teams.
-
-In 2022 I left Russia. I landed a job at Vaticle LTD to work as their first Technical writer in a team of talented software engineers in their office in London, United Kingdom.
-
-See the [Work experience]({{< ref "/work-experience" >}}) page or [LinkedIn profile](https://www.linkedin.com/in/vaizmalkov/) for more details.
-
-## Education
-
-I have three degrees:
-
-1. Master's degree in Spacecraft Engineering.
-2. Bachelor's degree in Computer science.
-3. Ph.D. in Technology.
-
-See the [Education]({{< ref "/education" >}}) page or [LinkedIn profile](https://www.linkedin.com/in/vaizmalkov/) for more details.
+If you'd like to discuss documentation for your product, [email me](mailto:job@izmalk.uk).

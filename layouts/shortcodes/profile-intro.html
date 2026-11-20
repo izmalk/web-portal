@@ -1,0 +1,8 @@
+<div class="profile-intro">
+  <figure class="profile-portrait">
+    <img src="{{ .Get "src" | relURL }}" alt="{{ .Get "alt" }}" width="1024" height="766" decoding="async">
+  </figure>
+  <div class="profile-intro-text">
+    {{ .Page.RenderString (dict "display" "block") .Inner }}
+  </div>
+</div>
