@@ -35,7 +35,7 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
     ]
 
     # Links to your socials.  Comment or delete any you don't need/use.
-    email_url = "mailto://job@izmalk.uk"
+    email_url = "mailto:job@izmalk.uk"
     github_url = "https://github.com/izmalk"
     linkedin_url = "https://www.linkedin.com/in/vaizmalkov"
     telegram_url = "https://t.me/BoBacTbli"
