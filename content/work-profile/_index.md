@@ -9,9 +9,17 @@ aliases:
 
 ## Summary
 
-I'm a documentation engineer and technical writer with a background in software development, research and team leadership. I've worked in IT and technical communication since 2008, documenting products ranging from cloud platforms to databases.
+I'm a technical writer and documentation engineer with over 15 years of experience across academia, large enterprises and technology startups. I create developer documentation for complex products and build automation that improves quality, strengthens consistency and makes documentation workflows more efficient. My priorities are user success and a positive user experience: helping users accomplish their goals with confidence and minimal friction.
 
-You can [download my résumé](/my_resume.pdf) for a concise overview or visit my [LinkedIn profile](https://www.linkedin.com/in/vaizmalkov/) for more detail.
+My experience covers cloud platforms (OpenStack, AWS and GCP), NoSQL databases (Tarantool, TypeDB, OpenSearch), SaaS products and security certification processes. I use a docs-as-code workflow based on Git and pull requests, collaborating closely with architects, engineers, DevOps and SRE teams.
+
+I've led cross-functional documentation teams of up to 15 people, including technical writers, analysts and DocOps specialists. I've mentored writers and built workflows that connect documentation with product strategy. I treat documentation as part of the product experience, using feedback and testing to keep improving it.
+
+My portfolio includes product guides, tutorials and references; terms of reference, technical specifications and feasibility studies; acceptance and test documentation; technical and financial bids; knowledge base articles and scientific publications.
+
+I value long-term collaboration and the opportunity to grow with a team and its products. I'm based in the UK on a Skilled Worker visa and require visa sponsorship.
+
+[Download my résumé](/my_resume.pdf) · [View my LinkedIn profile](https://www.linkedin.com/in/vaizmalkov/)
 
 ## Work experience
 
