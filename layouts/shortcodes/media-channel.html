@@ -1,0 +1,11 @@
+<aside class="media-channel" aria-label="My YouTube channel">
+  <svg class="media-channel-icon" viewBox="0 0 48 48" width="48" height="48" fill="none" aria-hidden="true">
+    <rect x="2" y="8" width="44" height="32" rx="8" stroke="currentColor" stroke-width="2" />
+    <path d="M20 16L33 24L20 32Z" fill="currentColor" />
+  </svg>
+  <div>
+    <p class="media-entry-meta">My YouTube channel</p>
+    <p class="media-channel-name"><a href="{{ .Get "url" }}">{{ .Get "name" }}</a></p>
+    <p class="media-channel-handle">{{ .Get "handle" }}</p>
+  </div>
+</aside>

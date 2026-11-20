@@ -1,127 +1,95 @@
 baseURL = "https://izmalk.com/"
-locale = "en"
+languageCode = "en-us"
 title = "Vladimir Izmalkov"
-theme = "initio"
+theme = "poison"
+[pagination]
+    pagerSize = 10
+pluralizelisttitles = false   # removes the automatically appended "s" on sidebar entries
 
-[params]
-    name = "Vladimir Izmalkov"
-    description = "Documentation engineer"
-    email = "job@izmalk.uk"
-    phone = "+44 77 602 40 604"
-    address = "London, United Kingdom"
-    year = 2023
-    avatar = "images/guy.jpg"
-    avatarclass = "circle"
-    background = ""
-    banner = "images/background.jpg"
-    favicon = "images/favicon.ico"
-    DateForm = "October 2, 2023"
-    author = "Sergey Pozhilov (GetTemplate.com)"
-    siteAuthor = "Vladimir Izmalkov"
-
-    showSubheader = true
-    showServices = true
-    showRecentWorks = false
-    showDownloads = false
-    showClients = false
-
-    showFooterContact = true
-    showFooterFollowMe = true
-    showFooterTextWidget = false
-    showFooterFormWidget = true
-
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'
-
-[[menu.main]]
-    name = "home"
-    url = "/"
-    weight = 1
-[[menu.main]]
-    name = "summary"
-    url = "/post/summary"
-    weight = 2
-[[menu.main]]
-    name = "education"
-    url = "/post/education"
-    weight = 3
-[[menu.main]]
-    name = "work experience"
-    url = "/post/exp"
-    weight = 4
-[[menu.main]]
-    name = "blog"
-    url = "/post/"
-    weight = 5
-[[menu.main]]
-    name = "Mentorship"
-    url = "/post/mentorship"
-    weight = 5
-
-# [params.disqus]
-#     site = "hugo-initio-site.disqus.com"
-
-# [params.sharethis]
-#     property = "123456789012345678901234"
-#     custom = true
-
+# Google Analytics is injected by the theme in production builds
+# (see themes/poison/layouts/partials/head/scripts.html).
 [params.google.analytics]
     trackerID = "G-03S8GTWJM8"
 
-# [[params.social]]
-# 	title = "facebook"
-# 	url = "https://www.facebook.com/nickname"
-#     icon = "fab fa-facebook-square"
-#     footer = true
-#     sharethis = true
-#     network = "facebook"
-# [[params.social]]
-# 	title = "twitter"
-# 	url = "https://twitter.com/nickname"
-#     icon = "fab fa-twitter-square"
-#     footer = true
-#     sharethis = true
-#     network = "twitter"
-# [[params.social]]
-# 	title = "instagram"
-# 	url = "https://www.instagram.com/nickname"
-#     icon = "fab fa-instagram"
-#     footer = true
-#     sharethis = false
-#     network = ""
-# [[params.social]]
-# 	title = "google+"
-# 	url = "https://plus.google.com/+nickname"
-#     icon = "fab fa-google-plus-square"
-#     footer = false
-#     sharethis = true
-#     network = "googleplus"
-[[params.social]]
-	title = "linkedin"
-	url = "https://www.linkedin.com/in/vaizmalkov"
-    icon = "fab fa-linkedin"
-    footer = true
-    sharethis = true
-    network = "linkedin"
-[[params.social]]
-	title = "telegram"
-	url = "https://t.me/BoBacTbli"
-    icon = "fab fa-telegram-plane"
-    footer = true
-    sharethis = false
-    network = ""
-[[params.social]]
-	title = "github"
-	url = "https://github.com/izmalk"
-    icon = "fab fa-github"
-    footer = true
-    sharethis = false
-    network = ""
-[[params.social]]
-	title = "email"
-	url = "mailto:job@izmalk.uk"
-    icon = "fas fa-envelope-square"
-    footer = false
-    sharethis = true
-    network = "email"
+[params]
+    brand = "Vladimir Izmalkov"           # name of your site - appears in the sidebar
+    brand_image = "/images/guy.jpg"        # path to the image shown in the sidebar
+    description = "Documentation engineer. Technical writer, mentor, and team leader with 15+ years in IT."
+    dark_mode = true                       # optional - defaults to false
+    favicon = "/favicon.ico"               # path to favicon
+
+    front_page_content = ["posts"]         # page bundles listed on the front page
+
+    # MENU PLACEHOLDER
+    # Menu dict keys:
+        # Name:         The name to display on the menu.
+        # URL:          The directory relative to the content directory.
+        # HasChildren:  If the directory's files should be listed.  Default is true.
+        # Limit:        If the files should be listed, how many should be shown.
+    menu = [
+        {Name = "Home", URL = "/", HasChildren = false},
+        {Name = "About me", URL = "/about/", HasChildren = false},
+        {Name = "Work profile", URL = "/work-profile/", HasChildren = false},
+        {Name = "Public profile", URL = "/public-profile/", HasChildren = false},
+        {Name = "Portfolio", URL = "/portfolio/", HasChildren = false},
+        {Name = "Mentorship", URL = "/mentorship/", HasChildren = false},
+        {Name = "Blog", URL = "/posts/", HasChildren = false},
+    ]
+
+    # Links to your socials.  Comment or delete any you don't need/use.
+    email_url = "mailto:job@izmalk.uk"
+    github_url = "https://github.com/izmalk"
+    linkedin_url = "https://www.linkedin.com/in/vaizmalkov"
+    telegram_url = "https://t.me/BoBacTbli"
+
+    # NOTE: If you don't want to use RSS, comment or delete the following lines
+    # Adds an RSS icon to the end of the socials which links to {{ .Site.BaseURL }}/index.xml
+    rss_icon = true
+    # Which section the RSS icon links to, defaults to all content. See https://gohugo.io/templates/rss/#section-rss
+    rss_section = "posts"
+
+    # Dark slate sidebar in both modes, with the original emerald portrait ring.
+    moon_sun_background_color = "#5C636B"
+    moon_sun_color = "#EEF0F1"
+    sidebar_a_color = "#EEF0F1"
+    sidebar_bg_color = "#262F39"
+    sidebar_h1_color = "#F3F4F4"
+    sidebar_img_border_color = "#55C995"
+    sidebar_p_color = "#B4C1CE"
+    sidebar_socials_color = "#EEF0F1"
+
+    # Light mode: near-white page with slate text and a deeper emerald for links.
+    code_color = "#283440"
+    code_background_color = "#EDF2F8"
+    code_block_color = "#EDF0F2"
+    code_block_background_color = "#262F39"
+    content_bg_color = "#F7F9FC"
+    date_color = "#526579"
+    link_color = "#126B45"
+    list_color = "#435569"
+    post_title_color = "#283440"
+    table_border_color = "#CCD6E0"
+    table_stripe_color = "#EDF2F8"
+    text_color = "#283440"
+
+    # Dark mode: slate page with the original emerald accents.
+    code_color_dark = "#E0E7EF"
+    code_background_color_dark = "#222D39"
+    code_block_color_dark = "#EDF0F2"
+    code_block_background_color_dark = "#262F39"
+    content_bg_color_dark = "#181E25"
+    date_color_dark = "#A6B5C6"
+    link_color_dark = "#55C995"
+    list_color_dark = "#BECBD8"
+    post_title_color_dark = "#E7EDF4"
+    table_border_color_dark = "#45576A"
+    table_stripe_color_dark = "#222D39"
+    text_color_dark = "#E0E7EF"
+
+[taxonomies]
+    series = 'series'
+    tags = 'tags'
+
+[markup]
+    [markup.highlight]
+        noClasses = false

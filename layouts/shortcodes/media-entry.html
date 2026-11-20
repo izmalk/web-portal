@@ -1,0 +1,18 @@
+{{- $url := .Get "url" -}}
+<article class="media-entry{{ if not (.Get "video") }} media-entry-text{{ end }}">
+  {{ with .Get "video" }}
+    <a class="media-thumbnail" href="{{ $url }}" tabindex="-1" aria-hidden="true">
+      <img src="{{ printf "/images/public-profile/%s.jpg" . | relURL }}" alt="" width="320" height="180" loading="lazy" decoding="async">
+      <span class="media-play">
+        <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M5 2L14 8L5 14Z" fill="currentColor" /></svg>
+      </span>
+    </a>
+  {{ end }}
+  <div class="media-entry-copy">
+    <p class="media-entry-meta">{{ .Get "source" }}{{ with .Get "format" }} · {{ . }}{{ end }}{{ with .Get "language" }} <span class="media-language">{{ . }}</span>{{ end }}</p>
+    <h3 class="media-entry-title"><a href="{{ $url }}">{{ .Get "title" }}</a></h3>
+    <div class="media-entry-description">
+      {{ .Page.RenderString (dict "display" "block") .Inner }}
+    </div>
+  </div>
+</article>

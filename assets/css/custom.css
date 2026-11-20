@@ -1,0 +1,402 @@
+/*
+ * Site-specific overrides for the Poison theme.
+ *
+ * This file shadows the theme's empty assets/css/custom.css and is
+ * bundled LAST in the CSS pipeline, so rules here win at equal
+ * specificity. See themes/poison/layouts/partials/head/stylesheets.html.
+ */
+
+/* Palette values come from config.toml. Structural dividers remain grey. */
+body {
+    --sidebar-divider-color: #5D6E80;
+    --toc-divider-color: #95A4B4;
+    --accent-soft: color-mix(in srgb, var(--link-color) 9%, var(--bkg-color));
+}
+
+body.dark-theme {
+    --toc-divider-color: #5D6E80;
+}
+
+/* ------------------------------------------------------------------ */
+/* Sidebar: compact layout so the menu fits without scrollbars         */
+/* ------------------------------------------------------------------ */
+
+/* Tighter vertical rhythm (theme default: 2rem 1rem) */
+.sidebar {
+    padding: 1.25rem 1rem;
+    box-shadow: inset -2px 0 0 var(--sidebar-divider-color);
+    /* Never show a horizontal scrollbar in the sidebar: the vertical
+       one shrinks the content box below the fixed 16rem sticky width,
+       which would otherwise trigger horizontal scrolling as well. */
+    overflow-x: hidden;
+}
+
+/* Theme default: 1em margins around the toggle button */
+.btn-light-dark {
+    margin: 0.25em;
+}
+
+/* Brand name: the theme cascades .sidebar-about h1 { font-size: 1.5em }
+   through the nested h1 > a > h1 markup, which multiplies to ~45px text.
+   That is sized for short names like "Poison"; "Vladimir Izmalkov"
+   wraps to multiple lines and blows up the sidebar height. */
+.sidebar-about h1 {
+    font-size: 1.25em;
+}
+
+/* Smaller avatar (theme default: 180px circle) */
+.sidebar-about img {
+    height: 120px;
+    width: 120px;
+    border-width: 3px;
+}
+
+/* The sidebar description inherits the root font size (20px on wide
+   viewports), which wraps the tagline into four tall lines. */
+.sidebar-about .lead {
+    font-size: 0.85em;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+/* Tighter menu spacing (theme defaults: 2rem nav margins, 1em heading
+   margins) */
+.sidebar-nav {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.heading {
+    margin-top: 0.4em;
+}
+
+/* ------------------------------------------------------------------ */
+/* Right-side TOC: distinguish sections from their subsections         */
+/* ------------------------------------------------------------------ */
+
+/* Match the grey sidebar divider while keeping the guide visible in each mode. */
+.article-toc nav > ul {
+    border-left: 2px solid var(--toc-divider-color);
+    padding-left: 0.75em;
+}
+
+.article-toc nav > ul > li {
+    margin-left: 0;
+    margin-top: 0.4em;
+    line-height: 1.3;
+}
+
+.article-toc nav > ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Keep long TOCs inside their column and its scrollable area. */
+.article-toc .toc-wrapper {
+    position: static;
+    padding-inline-end: 0.75rem;
+}
+
+#TableOfContents a {
+    display: block;
+    padding: 0.2rem 0.35rem;
+    line-height: 1.4;
+    border-radius: 0.15rem;
+    overflow-wrap: anywhere;
+    text-underline-offset: 0.15em;
+}
+
+/* Top-level items represent the page's h2 sections. */
+#TableOfContents > ul > li {
+    margin-top: 0.65rem;
+}
+
+#TableOfContents > ul > li:first-child {
+    margin-top: 0;
+}
+
+#TableOfContents > ul > li > a {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+/* Nested items represent h3 headings, with room for further levels. */
+#TableOfContents ul ul {
+    margin: 0.25rem 0 0.5rem 0.35rem;
+    padding-left: 0.7rem;
+    border-left: 1px solid var(--table-border-color);
+}
+
+#TableOfContents ul ul li {
+    margin: 0.15rem 0 0;
+}
+
+#TableOfContents ul ul a {
+    color: var(--list-color);
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+/* Style the active link itself so emphasis cannot spread to its children. */
+#TableOfContents li.active > a {
+    color: var(--link-color);
+    background-color: var(--accent-soft);
+    font-weight: 400;
+}
+
+#TableOfContents a:hover,
+#TableOfContents a:focus-visible {
+    color: var(--link-color);
+}
+
+/* ------------------------------------------------------------------ */
+/* Emerald accents: links, current navigation, and editorial rules      */
+/* ------------------------------------------------------------------ */
+
+.reading-time {
+    color: var(--date-color);
+}
+
+.content p a,
+.read-more-link a {
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: 1px;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--link-color);
+    outline-offset: 4px;
+}
+
+.sidebar a:focus-visible,
+.sidebar button:focus-visible {
+    outline-color: var(--sidebar-img-border-color);
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a[aria-current="page"] {
+    color: var(--sidebar-img-border-color);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.post-title a:hover,
+.article-toc a:hover {
+    color: var(--link-color);
+}
+
+.post-title::after {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 2px;
+    margin-top: 0.7rem;
+    margin-bottom: 0.9rem;
+    background-color: var(--link-color);
+}
+
+.content h2 {
+    border-left: 2px solid var(--link-color);
+    padding-left: 0.6rem;
+}
+
+.content blockquote {
+    border-left-color: var(--link-color);
+    background-color: var(--accent-soft);
+}
+
+.tags li a {
+    color: var(--link-color);
+    border: 1px solid color-mix(in srgb, var(--link-color) 40%, var(--bkg-color));
+    background-color: var(--accent-soft);
+}
+
+/* A compact portrait and introduction for profile pages. */
+.profile-intro {
+    display: grid;
+    gap: 1.25rem;
+    margin: 1rem 0 2rem;
+    align-items: center;
+}
+
+.profile-portrait {
+    width: 11rem;
+    max-width: 100%;
+    aspect-ratio: 4 / 5;
+    margin: 0;
+    overflow: hidden;
+    justify-self: center;
+    border: 1px solid var(--table-border-color);
+    border-radius: 0.2rem;
+}
+
+.profile-portrait img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    object-position: 55% center;
+    /* Reduce the original headroom while keeping the source photo reusable. */
+    transform: scale(1.15);
+    transform-origin: center bottom;
+}
+
+.profile-intro-text > :last-child {
+    margin-bottom: 0;
+}
+
+/* Public profile: a channel feature and a compact list of appearances. */
+.media-channel {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    margin: 1.5rem 0 2.25rem;
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--table-border-color);
+    border-left: 3px solid var(--link-color);
+    border-radius: 0.2rem;
+    background-color: var(--accent-soft);
+}
+
+.media-channel-icon {
+    flex: 0 0 2.4rem;
+    color: var(--link-color);
+}
+
+.media-channel .media-channel-name {
+    margin: 0.1rem 0;
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.media-channel .media-channel-handle {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--date-color);
+}
+
+.media-entry {
+    display: grid;
+    grid-template-columns: 8.5rem minmax(0, 1fr);
+    gap: 1.1rem;
+    align-items: start;
+    padding: 1.3rem 0;
+    border-bottom: 1px solid var(--table-border-color);
+}
+
+.media-entry-text {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.media-thumbnail {
+    position: relative;
+    display: block;
+    aspect-ratio: 16 / 9;
+    margin-top: 0.2rem;
+    overflow: hidden;
+    border: 1px solid var(--table-border-color);
+    border-radius: 0.2rem;
+    background-color: var(--accent-soft);
+}
+
+.media-thumbnail img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+.media-play {
+    position: absolute;
+    right: 0.3rem;
+    bottom: 0.3rem;
+    display: grid;
+    place-items: center;
+    width: 1.65rem;
+    height: 1.3rem;
+    border-radius: 0.15rem;
+    color: var(--sidebar-a-color);
+    background-color: var(--sidebar-bg-color);
+}
+
+.media-entry-meta {
+    margin: 0 0 0.3rem;
+    color: var(--date-color);
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.media-language {
+    display: inline-block;
+    margin-left: 0.4rem;
+    padding: 0.05rem 0.35rem;
+    border: 1px solid var(--table-border-color);
+    border-radius: 0.15rem;
+}
+
+.content .media-entry-title {
+    margin: 0 0 0.45rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.media-entry-title a {
+    color: var(--text-color);
+}
+
+.media-entry-title a:hover,
+.media-entry-title a:focus-visible {
+    color: var(--link-color);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+.media-entry-description p {
+    margin: 0 0 0.6rem;
+}
+
+.media-entry-description > :last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 36em) {
+    .media-entry {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.8rem;
+    }
+
+    .media-thumbnail {
+        width: 100%;
+        max-width: 20rem;
+    }
+
+    .media-channel {
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 75em) {
+    .profile-intro {
+        grid-template-columns: minmax(0, 1fr) 11rem;
+        column-gap: 1.5rem;
+    }
+
+    .profile-portrait {
+        order: 1;
+    }
+}
+
+/* The theme stacks the sidebar above the page on mobile. */
+@media (max-width: 48em) {
+    .sidebar {
+        box-shadow: inset 0 -2px 0 var(--sidebar-divider-color);
+    }
+}
