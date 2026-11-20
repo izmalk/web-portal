@@ -45,4 +45,14 @@ git pull
 
 - `content/posts/` — blog posts, shown on the front page and linked from the Blog menu at `/posts/`. The sidebar keeps this as a single link using Poison's `HasChildren = false` setting.
 - `content/about/`, `content/work-profile/`, `content/mentorship/` — standalone pages linked as About me, Work profile and Mentorship in the sidebar. Work profile uses `layout: profile` for a title-only header.
+- `content/public-profile/` — the YouTube channel, talks, podcasts, workshops, courses and interviews at `/public-profile/`. Uses `layout: profile` and the section TOC.
+- `content/portfolio/` — the Portfolio page at `/portfolio/`, currently showing a work-in-progress notice. Uses `layout: profile` with the TOC hidden.
 - Work profile combines Summary, Education and Work experience. Their old URLs (`/summary/`, `/education/`, `/work-experience/`) redirect to `/work-profile/` through Hugo aliases.
+
+To add a Public profile appearance, copy a `media-entry` shortcode in
+`content/public-profile/_index.md` into the relevant section. Its parameters are
+`title`, `source`, `format` and `url`; `language` and `video` are optional. The
+shortcode body is Markdown, including descriptions and additional links. For a
+YouTube thumbnail, set `video` to the video ID and save its image as
+`static/images/public-profile/<video-id>.jpg`. Existing thumbnails are the videos'
+public YouTube previews, stored locally so the page needs no embedded player.

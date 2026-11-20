@@ -18,10 +18,12 @@
                 </li>
             {{ end }}
 
+            {{ $sectionFound := false }}
             {{ range $sections }}
                 {{ $trimmedURL := (lower (strings.TrimSuffix "/" (strings.TrimPrefix "/" $menu_item.URL))) }}
                 {{/* Match the content directory so section titles can be renamed. */}}
                 {{ if eq (lower .Section) $trimmedURL }}
+                    {{ $sectionFound = true }}
                     <li class="heading">
                         <a href="{{ $menu_item.URL }}"{{ if eq $currentPath $menu_item.URL }} aria-current="page"{{ end }}>{{ $menu_item.Name }}</a>
                     </li>
@@ -37,6 +39,8 @@
                     {{ end }}
                 {{ end }}
             {{ end }}
+            {{/* A section takes priority over a tag or series with the same name. */}}
+            {{ if not $sectionFound }}
             {{ range $name, $taxonomy := $taxonomies }}
                 {{ if eq (lower $name) (lower $menu_item.Name) }}
                     <li class="heading">
@@ -60,6 +64,7 @@
                         {{ end }}
                     {{ end }}
                 {{ end }}
+            {{ end }}
             {{ end }}
         {{ end }}
 
