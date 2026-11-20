@@ -29,6 +29,10 @@ ring are styled in `assets/css/custom.css`. The site-level
 navigation highlight. Hugo includes these customizations in the normal build;
 the `design-preview` files are only the earlier comparison galleries.
 
+`assets/js/toc.js` overrides the theme's TOC tracking. It follows the section at
+the top of the reading area, supports both the desktop content pane and window
+scrolling, and preserves explicit anchor selections until scrolling resumes.
+
 The Poison theme lives in `themes/poison` (cloned from <https://github.com/lukeorth/poison>).
 To pull future theme updates:
 
