@@ -80,7 +80,12 @@ scoped styles in `assets/css/custom.css`. It inherits the site's slate and
 emerald palette, supports light and dark mode, and switches from a two-column
 catalogue to a single column when space is limited. Each project has a cover,
 summary, resource links, full description, optional image gallery, and navigation
-to the next project. The catalogue and count update automatically.
+to the next project in its category. The catalogue has two sections with jump
+links and automatic counts: **Documentation and texts** and **Tools and
+automation**. Their labels and descriptions live in `data/portfolio.yaml`.
+Kafka, OpenSearch, TypeDB, VK Private Cloud, and Tarantool Data Grid belong to
+the first section, followed by the BusyRebar blog post. Ulwazi and the other
+tools belong to the second section.
 
 Project pages keep the header, hero, description, and Gallery in the reading
 column. On wide screens, the local contents list stays beside that column and
@@ -95,9 +100,12 @@ hugo new content portfolio/my-project/index.md --kind portfolio
 ```
 
 Edit the new `content/portfolio/my-project/index.md`. Set `title`, `description`,
-`category`, `role`, and `links`, and use `weight` to control its position (lower
-numbers appear first). Keep `draft: true` until it is ready; `hugo server -D`
-includes drafts in the local preview. Set `draft: false` to include the project
+`collection`, `category`, `role`, and `links`. Set `collection: documentation`
+for documentation and texts or `collection: tools` for tools and automation;
+an omitted or other value defaults to tools. `category` remains the short
+descriptive label on each card. Use `weight` to control the position within a
+collection (lower numbers appear first). Keep `draft: true` until it is ready;
+`hugo server -D` includes drafts in the local preview. Set `draft: false` to include the project
 in a normal build.
 
 Save images in the same folder as `index.md`, then set `image` and `image_alt`.
@@ -117,10 +125,15 @@ gallery:
 To make a screenshot-based cover, set `cover_source` to a local PNG, JPEG, or
 WebP in the project's folder. Hugo places the unaltered screenshot inside the
 shared SVG frame at build time. Set `cover_label`, `cover_alt`, `cover_caption`,
-and optionally `cover_note` and `cover_accent` to describe and style it. The
+and optionally `cover_note`, `cover_accent`, and `cover_badge` to describe and
+style it. The badge defaults to “Open source”; documentation entries use
+“Documentation”. Use `cover_fit: contain` to show the entire screenshot when cropping would hide an
+important detail, such as a progress bar. The
 original `image` remains the fallback when `cover_source` is omitted or missing;
-all six original `cover.svg` illustrations are preserved. Captures are embedded
+the original `cover.svg` illustrations are preserved. Captures are embedded
 in the generated SVG, so covers are self-contained and make no remote requests.
+Generated cover paths include a digest of the render data so changes to a
+screenshot, label, or framing option also update a running Hugo preview.
 
 ```yaml
 image: cover.svg
@@ -137,14 +150,25 @@ documentation. Their cover captures are genuine; the surrounding graphics and
 the separate workflow diagrams are illustrative. Image sources:
 
 - Ulwazi and Kafka `site.webp`: the linked published documentation, captured in November 2026.
+- OpenSearch `site.webp`: the linked version 2 documentation, captured in November 2026.
+- TypeDB `site.webp`: the supplied Wayback Machine snapshot of the documentation overview, dated 15 June 2024. The card and detail page link to that archive.
+- VK Private Cloud `screenshot.webp` and `project-quotas.webp`: the supplied administrator guide (12 August 2022), p.161; the former is a full-page render of the quota-management procedure, the latter an excerpt showing the administrator portal's resource quotas. `test-methodology.webp`: the supplied test programme and methodology (25 August 2022), p.44.
+- Tarantool Data Grid `screenshot.webp` and `interface.webp`: the supplied release 1.0 documentation (2 November 2020), printed p.43 / PDF page 45; the former is a full-page render, the latter an interface excerpt. `domain-model.webp`: printed p.3 / PDF page 5 of the same document.
 - STAT `source-preview.webp`: [the annotated tutorial example](https://github.com/izmalk/stat/blob/main/examples/sample-page.md?plain=1), captured from GitHub on 21 November 2026.
-- Release Notes Builder `source-preview.webp`: [the committed Revision 248 example](https://github.com/izmalk/release-notes-builder/blob/main/examples/205-248.md), captured from GitHub on 21 November 2026.
-- Scanner `source-preview.png`: `starter_pack_scanner/pics/main-screen.png` in its source repository.
+- Release Notes Builder `generated-notes.webp`: [the generated Charmed Apache Kafka example](https://github.com/izmalk/release-notes-builder/blob/main/release-notes/charmed-apache-kafka-rev777.md), captured from GitHub in November 2026. Revision 777 is a placeholder used by the example, not a real release revision.
+- Scanner `progress-bar.png` (cover) and `source-preview.png` (gallery): `starter_pack_scanner/pics/progress-bar.png` and `starter_pack_scanner/pics/main-screen.png` in its source repository.
 - Auditor `source-preview.png`: `hero-image.png` in its source repository.
+- BusyRebar reuses `/images/busy-led.jpg` and `/images/busy-power.jpg` from the existing build post; no additional image copies are needed.
 
-The STAT and release-note captures show repository examples, rather than a new
-execution or a claim of newly published output. Prototype descriptions can be
-expanded with personal project decisions and outcomes before publication.
+The STAT capture shows annotated tutorial source; the release-note capture shows
+a generated example stored in the repository. Prototype
+descriptions can be expanded with personal project decisions and outcomes before
+publication.
+
+The supplied Private Cloud and TDG PDFs are source material only: their original
+files are not stored in the site. Selected pages and excerpts were rendered
+directly to WebP images. Their entries distinguish the historical samples from
+the substantially newer live documentation linked for context.
 
 Tags and filtering remain future additions. Each page already supplies a title
 and description to the theme's existing canonical, sitemap, and social metadata;

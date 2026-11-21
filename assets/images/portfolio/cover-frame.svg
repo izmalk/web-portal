@@ -22,12 +22,12 @@
     <path d="M84 125h1032a13 13 0 0 1 13 13v24H71v-24a13 13 0 0 1 13-13" fill="#263843"/>
     <path d="M94 143h72" stroke="{{ .accent }}" stroke-width="3" stroke-linecap="round" opacity=".9"/>
     <text x="1099" y="150" fill="#bfccd5" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="end">{{ .label | htmlEscape }}</text>
-    <image x="72" y="162" width="1056" height="466" href="{{ .screenshot | safeURL }}" preserveAspectRatio="xMidYMin slice" clip-path="url(#screen)"/>
+    <image x="72" y="162" width="1056" height="466" href="{{ .screenshot | safeURL }}" preserveAspectRatio="{{ .fit }}" clip-path="url(#screen)"/>
     <rect x="71" y="125" width="1058" height="504" rx="13" fill="none" stroke="{{ .accent }}" stroke-opacity=".3"/>
   </g>
   <rect x="938" y="605" width="211" height="48" rx="8" fill="#17242c" stroke="{{ .accent }}" stroke-opacity=".65"/>
   <path d="M959 619v19h17m-12-15h16m-16 6h12" fill="none" stroke="{{ .accent }}" stroke-width="2"/>
-  <text x="995" y="636" fill="{{ .accent }}" font-family="Arial, Helvetica, sans-serif" font-size="21">Open source</text>
+  <text x="995" y="636" fill="{{ .accent }}" font-family="Arial, Helvetica, sans-serif" font-size="21">{{ .badge | htmlEscape }}</text>
   <path d="M64 681h1072" stroke="#34444d"/>
   <text x="64" y="717" fill="#a7bac7" font-family="Arial, Helvetica, sans-serif" font-size="21">{{ .note | htmlEscape }}</text>
 </svg>

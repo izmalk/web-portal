@@ -3,6 +3,8 @@ title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 description: "A short description of the project and who it helps."
 draft: true
 weight: 70
+# Catalogue section: documentation or tools. Other values default to tools.
+collection: "tools"
 category: "Documentation engineering"
 role: "Author"
 # Optional: role_label: "Project context" for a project type rather than a role.
@@ -11,7 +13,9 @@ role: "Author"
 # image_alt: "Describe what the image shows."
 # Optional: frame a real screenshot; image remains the illustration fallback.
 # cover_source: screenshot.webp
+# cover_fit: contain # Optional: show the whole screenshot instead of cropping.
 # cover_label: "Project screenshot"
+# cover_badge: "Open source" # Use "Documentation" for documentation samples.
 # cover_alt: "The project interface, framed with decorative artwork."
 # cover_caption: "Describe the source of the screenshot."
 # cover_accent: "#67D7A5"

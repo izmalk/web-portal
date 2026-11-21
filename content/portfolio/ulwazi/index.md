@@ -2,6 +2,7 @@
 title: "Ulwazi"
 description: "A Sphinx theme built on the Vanilla Framework, bringing a consistent reading experience to technical documentation."
 weight: 10
+collection: "tools"
 featured: true
 category: "Documentation design"
 role: "Main maintainer and author"

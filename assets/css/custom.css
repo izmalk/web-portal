@@ -758,9 +758,42 @@ button:focus-visible {
     color: var(--date-color);
 }
 
+.portfolio-collections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.portfolio-collections a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    min-height: 2.75rem;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid var(--project-border);
+    border-radius: 0.4rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.portfolio-collections a:hover,
+.portfolio-collections a:focus-visible {
+    border-color: var(--link-color);
+    background: var(--project-surface);
+}
+
+.portfolio-collection {
+    scroll-margin-top: 1.5rem;
+}
+
+.portfolio-collection + .portfolio-collection {
+    margin-top: 3rem;
+}
+
 .portfolio-collection-heading {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
     gap: 1rem;
     margin-bottom: 1.1rem;
@@ -772,8 +805,16 @@ button:focus-visible {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 400;
+    line-height: 1.25;
+}
+
+.portfolio-collection-heading p {
+    margin: 0.5rem 0 0;
+    color: var(--date-color);
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .portfolio-count {

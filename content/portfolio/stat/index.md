@@ -2,6 +2,7 @@
 title: "STAT"
 description: "Spread Tutorial Automated Testing: run the commands in a tutorial to help documentation keep pace with the product."
 weight: 30
+collection: "tools"
 category: "Documentation testing"
 role: "Personal project"
 role_label: "Project context"

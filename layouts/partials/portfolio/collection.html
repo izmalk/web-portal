@@ -1,0 +1,5 @@
+{{- $key := "tools" -}}
+{{- if eq .Params.collection "documentation" -}}
+  {{- $key = "documentation" -}}
+{{- end -}}
+{{- return (merge (index site.Data.portfolio $key) (dict "key" $key)) -}}

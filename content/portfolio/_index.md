@@ -4,6 +4,8 @@ description: "Selected projects by Vladimir Izmalkov: documentation, open-source
 hideToc: true
 ---
 
-Selected projects in documentation engineering, developer experience, and open source.
+This is a catalogue of selected projects in documentation engineering, developer experience,
+and open source. It's not everything I did, but a curated list of achievements.
 
-I write documentation and build the tools behind it. Explore the projects below for a closer look at the work, the ideas, and the source.
+For your convenience, I separated examples of my work into categories for written content
+(documentation and other text) and tools/automation.

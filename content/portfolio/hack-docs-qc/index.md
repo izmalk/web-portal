@@ -2,6 +2,7 @@
 title: "How-to Auditor"
 description: "An AI-assisted review skill that evaluates how-to guides against explicit documentation quality criteria."
 weight: 60
+collection: "tools"
 category: "AI-assisted review"
 role: "Hackathon project"
 role_label: "Project context"
