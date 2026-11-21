@@ -23,6 +23,11 @@ portrait ring. Light mode uses a near-white page with the same dark slate sideba
 The sun/moon button switches modes and remembers your choice; new visitors start
 in dark mode, as configured by `params.dark_mode`.
 
+Site credits stay at the bottom of the desktop sidebar, outside its scrolling
+navigation. On mobile they appear in a fixed bottom bar, with page space reserved
+so the last content and links remain reachable. The shared markup lives in
+`layouts/partials/sidebar/footer.html`; the theme's credit text stays unchanged.
+
 Palette values live in `config.toml`. Editorial rules, dividers and the portrait
 ring are styled in `assets/css/custom.css`. The site-level
 `layouts/partials/sidebar/menu.html` override marks the current page for its green

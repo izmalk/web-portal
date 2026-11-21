@@ -25,10 +25,40 @@ body.dark-theme {
 .sidebar {
     padding: 1.25rem 1rem;
     box-shadow: inset -2px 0 0 var(--sidebar-divider-color);
-    /* Never show a horizontal scrollbar in the sidebar: the vertical
-       one shrinks the content box below the fixed 16rem sticky width,
-       which would otherwise trigger horizontal scrolling as well. */
     overflow-x: hidden;
+}
+
+/* Keep the credits outside the scrolling navigation on short screens. */
+.sidebar-footer {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: none;
+    padding-top: 0.75rem;
+    background-color: var(--sidebar-bg-color);
+}
+
+.sidebar-footer .footnote {
+    margin: 0;
+}
+
+@media (min-width: 48em) {
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        height: 100dvh;
+        overflow-y: hidden;
+    }
+
+    .sidebar .sidebar-sticky {
+        flex: 1 1 auto;
+        min-height: 0;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        scrollbar-width: thin;
+    }
 }
 
 /* Theme default: 1em margins around the toggle button */
@@ -596,8 +626,36 @@ button:focus-visible {
 
 /* The theme stacks the sidebar above the page on mobile. */
 @media (max-width: 48em) {
+    body {
+        /* Reserve room for the fixed two- or three-line credits and safe area. */
+        padding-bottom: calc(6rem + env(safe-area-inset-bottom));
+    }
+
     .sidebar {
+        display: block;
+        width: auto;
+        height: auto;
+        overflow: visible;
         box-shadow: inset 0 -2px 0 var(--sidebar-divider-color);
+    }
+
+    .sidebar .sidebar-sticky {
+        overflow: visible;
+    }
+
+    .sidebar-footer {
+        position: fixed;
+        inset-inline: 0;
+        bottom: 0;
+        z-index: 2;
+        padding: 0.65rem 1.25rem calc(0.65rem + env(safe-area-inset-bottom));
+        border-top: 1px solid var(--sidebar-divider-color);
+        text-align: center;
+    }
+
+    .sidebar-footer .footnote {
+        font-size: 0.875rem;
+        line-height: 1.4;
     }
 }
 
@@ -1193,8 +1251,7 @@ button:focus-visible {
     }
 
     .portfolio-page .sidebar-about .lead,
-    .portfolio-page .sidebar .social,
-    .portfolio-page .sidebar .footnote {
+    .portfolio-page .sidebar .social {
         display: none;
     }
 
