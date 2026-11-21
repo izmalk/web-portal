@@ -1,0 +1,17 @@
+<aside class="sidebar" aria-label="Site navigation">
+  <div class="container sidebar-sticky">
+    {{ partial "light_dark.html" . }}
+    <div class="sidebar-about">
+      <a class="portfolio-identity" href="{{ site.Home.RelPermalink }}">
+        {{ with or .Site.Params.remote_brand_image .Site.Params.brand_image }}
+        <img src="{{ . | relURL }}" alt="Vladimir Izmalkov" width="120" height="120">
+        {{ end }}
+        <span class="portfolio-brand">{{ .Site.Params.brand }}</span>
+      </a>
+      <p class="lead">{{ .Site.Params.description }}</p>
+    </div>
+    {{ partial "sidebar/menu.html" . }}
+    {{ partial "sidebar/socials.html" . }}
+    {{ partial "sidebar/copyright.html" . }}
+  </div>
+</aside>

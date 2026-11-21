@@ -25,7 +25,7 @@
                 {{ if eq (lower .Section) $trimmedURL }}
                     {{ $sectionFound = true }}
                     <li class="heading">
-                        <a href="{{ $menu_item.URL }}"{{ if eq $currentPath $menu_item.URL }} aria-current="page"{{ end }}>{{ $menu_item.Name }}</a>
+                        <a href="{{ $menu_item.URL }}"{{ if eq $currentPath $menu_item.URL }} aria-current="page"{{ else if and (eq $.Section "portfolio") (hasPrefix $currentPath $menu_item.URL) }} class="is-current-section"{{ end }}>{{ $menu_item.Name }}</a>
                     </li>
                     {{ if $menu_item.HasChildren }}
                         <li class="sub-heading">

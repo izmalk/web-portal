@@ -57,7 +57,7 @@ git pull
 - `content/posts/` — blog posts, shown on the front page and linked from the Blog menu at `/posts/`. The sidebar keeps this as a single link using Poison's `HasChildren = false` setting.
 - `content/about/`, `content/work-profile/`, `content/mentorship/` — standalone pages linked as About me, Work profile and Mentorship in the sidebar. Work profile uses `layout: profile` for a title-only header.
 - `content/public-profile/` — the YouTube channel, talks, podcasts, workshops, courses and interviews at `/public-profile/`. Uses `layout: profile` and the section TOC.
-- `content/portfolio/` — the Portfolio page at `/portfolio/`, currently showing a work-in-progress notice. Uses `layout: profile` with the TOC hidden.
+- `content/portfolio/` — the project catalogue at `/portfolio/`. Each project is a Markdown page bundle with its own detail page and local images.
 - Work profile combines Summary, Education and Work experience. Their old URLs (`/summary/`, `/education/`, `/work-experience/`) redirect to `/work-profile/` through Hugo aliases.
 
 To add a Public profile appearance, copy a `media-entry` shortcode in
@@ -67,3 +67,50 @@ shortcode body is Markdown, including descriptions and additional links. For a
 YouTube thumbnail, set `video` to the video ID and save its image as
 `static/images/public-profile/<video-id>.jpg`. Existing thumbnails are the videos'
 public YouTube previews, stored locally so the page needs no embedded player.
+
+## Portfolio
+
+The portfolio uses `layouts/portfolio/` and `layouts/partials/portfolio/`, with
+scoped styles in `assets/css/custom.css`. It inherits the site's slate and
+emerald palette, supports light and dark mode, and switches from a two-column
+catalogue to a single column when space is limited. Each project has a cover,
+summary, resource links, full description, optional image gallery, and navigation
+to the next project. The catalogue and count update automatically.
+
+To add a project:
+
+```shell
+hugo new content portfolio/my-project/index.md --kind portfolio
+```
+
+Edit the new `content/portfolio/my-project/index.md`. Set `title`, `description`,
+`category`, `role`, and `links`, and use `weight` to control its position (lower
+numbers appear first). Keep `draft: true` until it is ready; `hugo server -D`
+includes drafts in the local preview. Set `draft: false` to include the project
+in a normal build.
+
+Save images in the same folder as `index.md`, then set `image` and `image_alt`.
+An omitted image uses a built-in cover. A `gallery` accepts any number of images;
+each entry has `image`, `alt`, and an optional `caption`. Gallery images open at
+full size in a new tab. For example:
+
+```yaml
+image: cover.webp
+image_alt: "The project's documentation home page."
+gallery:
+  - image: editor.webp
+    alt: "The editor displaying a documentation review."
+    caption: "Reviewing a guide in the editor."
+```
+
+The six initial entries use descriptions grounded in their public repositories
+and documentation. SVG covers and diagrams are conceptual illustrations. The
+Ulwazi and Kafka `site.webp` images are captures of the linked documentation
+sites from November 2026. The scanner and auditor `source-preview.png` images
+come from their source repositories (`starter_pack_scanner/pics/main-screen.png`
+and `hero-image.png`, respectively). These prototype descriptions can be expanded
+with personal project decisions and outcomes before publication.
+
+Tags and filtering remain future additions. Each page already supplies a title
+and description to the theme's existing canonical, sitemap, and social metadata;
+the prototype adds no SEO service or dependency.

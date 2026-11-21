@@ -1,0 +1,18 @@
+{{ $page := .page }}
+<article class="project-card{{ if $page.Params.featured }} project-card-featured{{ end }}" aria-labelledby="project-{{ $page.File.ContentBaseName | urlize }}-{{ .index }}">
+  <a class="project-cover" href="{{ $page.RelPermalink }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ partial "portfolio/image-url.html" (dict "page" $page "image" $page.Params.image) }}" alt="{{ $page.Params.image_alt | default (printf "Illustration for %s" $page.Title) }}" width="1200" height="750"{{ if gt .index 1 }} loading="lazy"{{ else }} fetchpriority="high"{{ end }} decoding="async">
+  </a>
+  <div class="project-card-body">
+    <div class="project-category-row">
+      {{ with $page.Params.category }}<p class="project-category">{{ . }}</p>{{ end }}
+      {{ if $page.Params.featured }}<span class="project-featured-label">Featured</span>{{ end }}
+    </div>
+    <h3 id="project-{{ $page.File.ContentBaseName | urlize }}-{{ .index }}"><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h3>
+    <p class="project-summary">{{ $page.Description }}</p>
+    <div class="project-card-footer">
+      {{ partial "portfolio/links.html" $page }}
+      <a class="project-read-more" href="{{ $page.RelPermalink }}">Read more<span class="portfolio-sr-only"> about {{ $page.Title }}</span></a>
+    </div>
+  </div>
+</article>

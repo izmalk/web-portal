@@ -1,0 +1,14 @@
+{{- $page := .page -}}
+{{- $url := "images/portfolio/default-cover.svg" | relURL -}}
+{{- with .image -}}
+  {{- if or (hasPrefix . "/") (hasPrefix . "https://") -}}
+    {{- $url = . | relURL -}}
+  {{- else -}}
+    {{- with $page.Resources.GetMatch . -}}
+      {{- $url = .RelPermalink -}}
+    {{- else -}}
+      {{- warnf "Portfolio: image %q is missing in %s; using the default cover" . $page.File.Path -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $url -}}

@@ -1,0 +1,25 @@
+{{ define "main" }}
+<header class="portfolio-intro">
+  <p class="portfolio-eyebrow">Selected work</p>
+  <h1 class="portfolio-title">{{ .Title }}</h1>
+  <div class="portfolio-intro-copy">{{ .Content }}</div>
+</header>
+
+{{ $projects := .RegularPages.ByWeight }}
+<section aria-labelledby="collection-title">
+  <div class="portfolio-collection-heading">
+    <h2 id="collection-title">The collection</h2>
+    <span class="portfolio-count">{{ len $projects }} {{ if eq (len $projects) 1 }}project{{ else }}projects{{ end }}</span>
+  </div>
+  <div class="portfolio-grid">
+    {{ range $index, $project := $projects }}
+      {{ partial "portfolio/card.html" (dict "page" $project "index" $index) }}
+    {{ end }}
+  </div>
+</section>
+
+<footer class="portfolio-endnote">
+  <p>Curious about the person behind the projects?</p>
+  <a href="{{ "work-profile/" | relURL }}">Explore my work profile</a>
+</footer>
+{{ end }}

@@ -1,0 +1,7 @@
+{{ with .Params.links }}
+<ul class="project-links" aria-label="Project resources">
+  {{ range . }}
+  <li><a href="{{ .url }}">{{ .label }}</a></li>
+  {{ end }}
+</ul>
+{{ end }}
