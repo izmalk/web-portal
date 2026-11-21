@@ -4,8 +4,8 @@
 (() => {
     function initializeToc() {
         const toc = document.getElementById("TableOfContents");
-        const article = document.querySelector("main.content .post");
-        if (!toc || !article) return;
+        const sections = document.querySelector("main.content .posts, main.content .post");
+        if (!toc || !sections) return;
 
         function headingId(hash) {
             try {
@@ -15,17 +15,17 @@
             }
         }
 
-        // Use only headings represented in the TOC, in document order.
+        // Track linked sections: headings in articles, or post previews on the home page.
         const entries = Array.from(toc.querySelectorAll("a[href]"), link => {
             const heading = document.getElementById(headingId(link.hash));
             const item = link.closest("li");
-            return heading && article.contains(heading) && item
+            return heading && sections.contains(heading) && item
                 ? { link, heading, item } : null;
         }).filter(Boolean);
         if (!entries.length) return;
 
         const entriesById = new Map(entries.map(entry => [entry.heading.id, entry]));
-        const content = article.closest("main.content");
+        const content = sections.closest("main.content");
         const label = document.getElementById("contents");
         if (label) label.textContent = "Contents";
 
@@ -121,7 +121,7 @@
         });
 
         if ("ResizeObserver" in window) {
-            new ResizeObserver(scheduleUpdate).observe(article);
+            new ResizeObserver(scheduleUpdate).observe(sections);
         }
         if (document.fonts) document.fonts.ready.then(scheduleUpdate);
 

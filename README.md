@@ -32,6 +32,9 @@ the `design-preview` files are only the earlier comparison galleries.
 `assets/js/toc.js` overrides the theme's TOC tracking. It follows the section at
 the top of the reading area, supports both the desktop content pane and window
 scrolling, and preserves explicit anchor selections until scrolling resumes.
+The home page uses the same tracker for its post previews: “Posts on this page”
+links jump to previews on the current pagination page, while post titles and
+“Read More” open the full posts. Its template override is `layouts/index.html`.
 
 The Mentorship page includes an emerald ADPList impact card. On wide, tall
 screens it sits beneath the contents in the right column; on smaller screens it

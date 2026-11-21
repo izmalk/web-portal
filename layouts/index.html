@@ -1,0 +1,39 @@
+{{ define "main" -}}
+<div class="posts">
+    {{ $frontPageTypes := default (slice "posts") .Site.Params.front_page_content }}
+    {{ range (.Paginate (where .Site.RegularPages "Type" "in" $frontPageTypes)).Pages }}
+    <article class="post" id="post-{{ .File.UniqueID }}">
+        {{ partial "post/info.html" . }}
+        {{ if or (.Site.Params.noSummary) (.Params.noSummary) }}
+        {{ .Content }}
+        {{ else }}
+        {{ .Summary }}
+        {{ if .Truncated }}
+        <div class="read-more-link">
+            <a href="{{ .RelPermalink }}">Read More…</a>
+        </div>
+        {{ end }}
+        {{ end }}
+    </article>
+    {{- end }}
+</div>
+{{ partial "pagination.html" . }}
+{{- end }}
+{{ define "sidebar" }}
+    {{ $pages := .Paginator.Pages }}
+    {{ if $pages }}
+    <div class="article-toc{{ if .Site.Params.layoutReverse }} layout-reverse{{ end }}">
+        <div class="toc-wrapper">
+            <h4>Posts on this page</h4>
+            <nav id="TableOfContents" aria-label="Posts on this page">
+                <ul>
+                    {{/* Include the current page URL because the theme's base URL is the home page. */}}
+                    {{ range $pages }}
+                    <li><a href="{{ $.Paginator.URL }}#post-{{ .File.UniqueID }}">{{ .Title }}</a></li>
+                    {{ end }}
+                </ul>
+            </nav>
+        </div>
+    </div>
+    {{ end }}
+{{ end }}
