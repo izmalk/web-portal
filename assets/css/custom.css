@@ -383,6 +383,205 @@ button:focus-visible {
     }
 }
 
+/* Mentorship: the selected emerald card with cumulative ADPList figures. */
+.mentorship-impact-inline {
+    width: 100%;
+    max-width: 380px;
+    margin: 1.25rem 0 1.75rem auto;
+}
+
+.mentorship-rail,
+.mentorship-impact-sidebar {
+    display: none;
+}
+
+.mentorship-impact {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid var(--table-border-color);
+    border-radius: 16px;
+    background-color: var(--bkg-color);
+    box-shadow: 0 4px 19px rgba(142, 151, 158, 0.12);
+}
+
+.mentorship-impact-body {
+    position: relative;
+    isolation: isolate;
+    padding: 1.15rem 1.25rem 1rem;
+    overflow: hidden;
+    background: linear-gradient(135deg,
+        color-mix(in srgb, var(--link-color) 15%, var(--bkg-color)),
+        color-mix(in srgb, var(--link-color) 5%, var(--bkg-color)));
+}
+
+.mentorship-impact-body::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: -6rem;
+    bottom: -6rem;
+    width: 11rem;
+    height: 11rem;
+    border: 1.25rem solid color-mix(in srgb, var(--link-color) 10%, transparent);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.mentorship-impact-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.mentorship-impact-header p {
+    margin: 0;
+    color: var(--date-color);
+    font-size: 0.875rem;
+}
+
+.mentorship-impact-header a {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.mentorship-impact-intro {
+    margin: 0 0 0.15rem;
+    font-size: 1rem;
+}
+
+.mentorship-impact-total {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.45rem;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.mentorship-impact-total strong {
+    color: var(--link-color);
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    font-variant-numeric: tabular-nums;
+}
+
+.mentorship-impact-total span {
+    font-size: 1.2rem;
+}
+
+.mentorship-impact-reach {
+    margin: 0.55rem 0 0.8rem;
+    font-size: 1.15rem;
+}
+
+.mentorship-impact-reach strong {
+    color: var(--link-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.mentorship-impact-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+    margin: 0 0 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--table-border-color);
+}
+
+.mentorship-impact-details > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.mentorship-impact-details dt {
+    color: var(--date-color);
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+.mentorship-impact-details dd {
+    order: -1;
+    margin: 0 0 0.1rem;
+    color: var(--link-color);
+    font-size: 1.35rem;
+    font-weight: 500;
+    line-height: 1.2;
+    font-variant-numeric: tabular-nums;
+}
+
+.mentorship-impact-details a {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+.mentorship-impact-date {
+    margin: 0;
+    color: var(--date-color);
+    font-size: 0.875rem;
+}
+
+.content .mentorship-impact-footer,
+.mentorship-impact-footer {
+    margin: 0;
+    padding: 0.65rem 1.25rem;
+    border-top: 1px solid var(--table-border-color);
+    font-size: 0.875rem;
+}
+
+.mentorship-impact-footer a {
+    color: var(--link-color);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+}
+
+@media (min-width: 100em) {
+    .mentorship-rail {
+        display: flex;
+        flex: 0 0 360px;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 360px;
+        height: 100dvh;
+        margin-left: auto;
+        padding: 5rem 1rem 1.25rem 0;
+    }
+
+    .mentorship-rail .article-toc {
+        flex: 1 1 auto;
+        width: auto;
+        min-height: 0;
+        max-height: none;
+        margin: 0;
+    }
+}
+
+/* Keep the card in the article when a short window cannot fit both panels. */
+@media (min-width: 100em) and (min-height: 48em) {
+    .mentorship-impact-inline {
+        display: none;
+    }
+
+    .mentorship-impact-sidebar {
+        display: block;
+        flex: 0 0 auto;
+    }
+}
+
+@media (max-width: 36em) {
+    .mentorship-impact-body {
+        padding: 1rem;
+    }
+
+    .content .mentorship-impact-footer {
+        padding: 0.65rem 1rem;
+    }
+}
+
 @media (min-width: 75em) {
     .profile-intro {
         grid-template-columns: minmax(0, 1fr) 11rem;

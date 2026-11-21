@@ -33,6 +33,14 @@ the `design-preview` files are only the earlier comparison galleries.
 the top of the reading area, supports both the desktop content pane and window
 scrolling, and preserves explicit anchor selections until scrolling resumes.
 
+The Mentorship page includes an emerald ADPList impact card. On wide, tall
+screens it sits beneath the contents in the right column; on smaller screens it
+appears after the introductory booking link. Both positions use the same
+`layouts/partials/mentorship/impact.html` partial and CSS visibility rules.
+The figures are a fixed snapshot: update `data/mentorship.yaml`, including
+`as_of`, when refreshing the totals. Bookings and reviews are separate counts;
+the review count links to ADPList's public reviews widget.
+
 The Poison theme lives in `themes/poison` (cloned from <https://github.com/lukeorth/poison>).
 To pull future theme updates:
 

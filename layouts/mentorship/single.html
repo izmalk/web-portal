@@ -1,0 +1,24 @@
+{{ define "main" -}}
+<div class="post mentorship-page">
+  {{ partial "post/info.html" . }}
+  {{ .Content }}
+  {{ if .Site.Params.listmonk }}
+    {{ partial "post/listmonk_email_newsletters.html" . }}
+  {{ end }}
+  {{ partial "post/navigation.html" . }}
+  {{ if or .Site.Params.remark42 .Site.Config.Services.Disqus.Shortname }}
+    {{ partial "post/comments.html" . }}
+  {{ end }}
+</div>
+{{- end }}
+
+{{ define "sidebar" }}
+<aside class="mentorship-rail" aria-label="Mentorship contents and impact">
+  {{ if and (not .Params.hideToc) (not .Site.Params.hideToc) }}
+    {{ partial "table_of_contents.html" . }}
+  {{ end }}
+  <div class="mentorship-impact-sidebar">
+    {{ partial "mentorship/impact.html" . }}
+  </div>
+</aside>
+{{ end }}
