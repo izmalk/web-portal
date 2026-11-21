@@ -2,6 +2,9 @@
 
 Personal web portal. Built with [Hugo](https://gohugo.io) using the [Poison](https://github.com/lukeorth/poison) theme.
 
+Agent guidance is in [AGENTS.md](AGENTS.md). Portfolio structure and editorial
+conventions are in [PORTFOLIO.md](PORTFOLIO.md).
+
 To build and serve via local web-server:
 
 ```shell
