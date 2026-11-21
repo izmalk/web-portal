@@ -23,7 +23,7 @@ I value long-term collaboration and the opportunity to grow with a team and its 
 
 ## Work experience
 
-### Canonical: Technical Author prof.III (specialist)
+### Canonical: Technical Author (prof. III, specialist) {#canonical-technical-author-profiii-specialist}
 
 In 2024, I joined [Canonical](https://canonical.com/), the open-source software company behind Ubuntu. I work with the Data Platform team, documenting products including:
 
@@ -32,18 +32,18 @@ In 2024, I joined [Canonical](https://canonical.com/), the open-source software 
 - Charmed OpenSearch.
 - Charmed Valkey.
 
-For the documentation practice, I'm driving Canonical's documentation theme development
-([Ulwazi](https://github.com/canonical/ulwazi)),
-as well as actively developing automation for tutorial testing,
-deterministic reference documentation generation, and design improvements.
+I also drive development of Canonical's documentation theme,
+[Ulwazi](https://github.com/canonical/ulwazi). My work includes automating tutorial
+tests, generating reference documentation deterministically and improving
+documentation design.
 
-### TypeDB (ex Vaticle): Senior Technical Writer
+### TypeDB (formerly Vaticle): Senior Technical Writer {#typedb-ex-vaticle-senior-technical-writer}
 
 In November 2022, I joined [Vaticle](https://typedb.com/) as a Senior Technical Writer and moved to the UK. As the company's first documentation specialist, I worked with the engineering team on documentation for TypeDB.
 
 My work covered installation guides, quick starts, developer guides, tutorials and API references for open-source, enterprise and cloud products. I also collaborated with engineers on CI/CD automation, documentation tests and API reference generation.
 
-### VK (ex Mail.Ru Group): Documentation Lead
+### VK (formerly Mail.Ru Group): Documentation Lead {#vk-ex-mailru-group-documentation-lead}
 
 I joined Mail.Ru Group, later renamed VK, in 2019 as a Senior Technical Writer on the Tarantool team. I documented an open-source, in-memory transactional database with a built-in Lua application server, writing in English and translating the documentation into Russian.
 
@@ -55,7 +55,7 @@ In 2022, my responsibilities expanded to a second documentation team, covering b
 
 My career began in 2008 while I was studying at [Bauman Moscow State Technical University](https://bmstu.ru/). I worked part-time as a technician and software developer, documenting educational projects and events and supporting IT systems.
 
-After graduation, I joined the [All-Russian Research Institute for Civil Defense and Emergencies](https://vniigochs.ru/) for postgraduate study and later, work. Over eight years at the institute, I progressed from junior researcher to a head of research department for automated systems, helping establish my own department after completing my PhD.
+After graduation, I joined the [All-Russian Research Institute for Civil Defense and Emergencies](https://vniigochs.ru/) for postgraduate study and later worked there. Over eight years at the institute, I progressed from junior researcher to head of a research department focused on automated systems. I helped establish the department after completing my PhD.
 
 Research strengthened my documentation skills, attention to detail and understanding of the software development lifecycle. I found technical communication especially rewarding because it brought together my research background, technical knowledge and interest in explaining complex systems.
 
@@ -66,15 +66,15 @@ I earned two degrees from [Bauman Moscow State Technical University](https://bms
 - Master's degree in Spacecraft Engineering.
 - Bachelor's degree in Computer Science.
 
-I initially chose spacecraft engineering because of my interest in space exploration and high-tech. During my studies, my interests shifted toward IT, leading me to complete a second degree in computer science.
+I initially chose spacecraft engineering because of my interest in space exploration and advanced technology. During my studies, my interests shifted towards IT, leading me to complete a second degree in computer science.
 
 I then completed postgraduate studies at the [All-Russian Research Institute for Civil Defense and Emergencies](https://vniigochs.ru/), earning a **PhD in Technology**. My research focused on the reliability of single emergency number systems in Russia.
 
 ## Professional community
 
-I joined the [Institute of Scientific and Technical Communications](https://istc.org.uk/) in 2023. I lead its London area Group and organize our monthly meetings.
+I joined the [Institute of Scientific and Technical Communicators](https://istc.org.uk/) in 2023. I lead its London Area Group and organise our monthly meetings.
 
-Regularly participating in meetups for the Write the Docs London group.
+I also regularly attend Write the Docs London meetups.
 
 ## Get in touch
 

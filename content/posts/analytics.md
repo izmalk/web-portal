@@ -5,10 +5,10 @@ draft: false
 tags: ["analytics", "information-architecture"]
 ---
 
-I am efficient in learning new technologies and processing vast amounts of data. I have a lot of experience with structuring, formalising, and simplifying information.
+I learn new technologies quickly and work confidently with large amounts of information. I have extensive experience in structuring, formalising and simplifying complex material.
 
 <!--more-->
 
-Working with information means much more than just collecting facts. It starts with a survey: researching the target audience, mapping user journeys, and interviewing experts. Then comes the design: prototyping, structuring, and optimising the documentation system so that every piece of content has a purpose and a place.
+Working with information starts with research: identifying the target audience, mapping user journeys and interviewing experts. Then comes the design: prototyping, structuring and optimising the documentation system so that every piece of content has a purpose and a place.
 
-I apply the same analytical approach to complexity management and knowledge management: breaking large topics into digestible pieces, reusing content instead of duplicating it, and building feedback and metrics loops that show whether the documentation actually helps users succeed.
+I apply the same analytical approach to managing complexity and knowledge: breaking large topics into manageable pieces, reusing content and establishing feedback loops and metrics that show whether the documentation helps users succeed.

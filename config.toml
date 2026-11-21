@@ -1,5 +1,6 @@
 baseURL = "https://izmalk.com/"
-languageCode = "en-us"
+languageCode = "en-gb"
+defaultContentLanguage = "en-gb"
 title = "Vladimir Izmalkov"
 theme = "poison"
 [pagination]
@@ -14,7 +15,7 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
 [params]
     brand = "Vladimir Izmalkov"           # name of your site - appears in the sidebar
     brand_image = "/images/guy.jpg"        # path to the image shown in the sidebar
-    description = "Documentation engineer. Technical writer, mentor, and team leader with 15+ years in IT."
+    description = "Documentation engineer. Technical writer, mentor and team leader with 15+ years in IT."
     dark_mode = true                       # optional - defaults to false
     favicon = "/favicon.ico"               # path to favicon
 

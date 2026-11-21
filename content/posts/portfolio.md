@@ -5,9 +5,8 @@ draft: false
 tags: ["portfolio"]
 ---
 
-This will be a page with links to multiple examples of my finest work.
-Unfortunately, it is not ready yet =D.
+This page will eventually link to a selection of my work. It isn't ready yet.
 
-You see, most of my current documents are under NDA, so I will try and do some test exercises without any confidential materials and publish them here.
+Most of the documentation I currently work on is covered by non-disclosure agreements, so I plan to create sample projects using material I can share publicly.
 
-But for now, I would like to publish a [link](https://github.com/tarantool/doc/blame/3c348038efb765f87d2162e0542d3a17092d3c1d/doc/reference/reference_rock/vshard/vshard_architecture.rst) to one example of my open-source contribution.
+For now, here's [an example of my open-source documentation work](https://github.com/tarantool/doc/blame/3c348038efb765f87d2162e0542d3a17092d3c1d/doc/reference/reference_rock/vshard/vshard_architecture.rst).

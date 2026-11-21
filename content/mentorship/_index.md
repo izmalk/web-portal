@@ -3,79 +3,78 @@ title: "Mentorship"
 layout: single
 ---
 
-I provide free mentorship for aspiring and motivated technical writers of all seniority levels.
+I offer free mentorship to aspiring technical writers and experienced writers who want to develop their skills.
 
-You can book a session for free on [ADPlist](https://adplist.org/mentors/vladimir).
-I use this platform to manage my calendar and booking.
+You can book a session through [ADPlist](https://adplist.org/mentors/vladimir),
+which I use to manage bookings and availability.
 
-Before you book a slot, consider the following information:
+Before booking, please keep the following in mind:
 
-* All mentorship is completely free.
-* All mentorship is done by me personally.
+* All sessions are free and conducted by me personally.
 * Please respect my time and effort:
-  * Attend all meetings or cancel at least 24h in advance.
-  * I'm not here to work instead of you.
-    You will be doing the work, and I will be guiding you.
-  * The work can be your real-life documentation-related work,
-    or just improving yourself and your public profile.
-* I recommend applying for one of the following goal-oriented mentorship programs (see below).
-  * However, a single mentorship session is available too if you have specific questions.
+  * Attend each session or cancel at least 24 hours in advance.
+  * You are responsible for the work; my role is to guide you.
+  * We can focus on a real documentation project, your professional development
+    or your public profile.
+* For ongoing support, I recommend one of the mentorship programmes below.
+  You can also book a single session to discuss specific questions.
 
-There are three main programs I use for mentoring:
+I offer three mentorship programmes:
 
 * Career start
 * Docs-as-code
 * AI-assisted technical writing
 
-Before enrolling into a mentorship programme,
-you need to check that you meet the following common and specific prerequisites,
-and then book a screening call (one hour) with me
-via [ADPlist](https://adplist.org/mentors/vladimir).
+Before enrolling in a programme, check that you meet both the common prerequisites
+and the requirements for your chosen programme. Then book a one-hour screening
+call through [ADPlist](https://adplist.org/mentors/vladimir).
 
-Most sessions are conducted via Google Meet calls and booked in advance in Google Calendar
-either directly or via ADPlist.
+Most sessions take place on Google Meet and are scheduled in advance through
+Google Calendar or ADPlist.
 
 ## Common prerequisites
 
-For all the programs below, the following common prerequisites are required:
+All programmes have the following prerequisites:
 
-* English or Russian language proficiency for working and collaboration:
-  * Verbal: conversational.
-  * Written: reading and writing technical text with minimal external help.
-* Personal computer user skills with any OS: enough to work with files,
-  text editors, web browsers, and occasional command line tools.
-* Aspiration to work as a technical writer or any other documentation-specific role.
+* Enough English or Russian to collaborate:
+  * Speaking: conversational proficiency.
+  * Reading and writing: ability to work with technical text with minimal external help.
+* Basic computer skills on any operating system: working with files,
+  text editors, web browsers and occasional command-line tools.
+* An interest in working as a technical writer or in another documentation role.
 
-### Career start (Technical Writer)
+## Mentorship programmes
 
-**Mentor**: [Vladimir Izmalkov](https://adplist.org/mentors/vladimir)  
-**Estimated duration**: 4 months  
-**Format**: Bi-weekly synchronous sessions + structured asynchronous work  
-**Commitment**: ~2-3 hours per week (Mentee self-study & assignments)  
+### Career start (technical writer)
 
-#### Specific prerequisites & selection criteria
+**Mentor**: [Vladimir Izmalkov](https://adplist.org/mentors/vladimir)\
+**Estimated duration**: 4 months\
+**Format**: One live session every two weeks, with structured independent work\
+**Time commitment**: Approximately 2–3 hours per week for self-study and assignments
 
-To ensure the highest impact, admission to this program is selective.
+#### Specific prerequisites and selection criteria {#specific-prerequisites--selection-criteria}
+
+Admission is selective so that the programme can provide useful, focused support.
 Applicants must meet the following criteria:
 
-* **Demonstrated Writing Aptitude**
+* **Demonstrated writing ability**:
   Applicants must submit one of the following:
-  * a portfolio of technical writing samples,
-  * a technical blog with several substantial posts, or
+  * a portfolio of technical writing samples;
+  * a technical blog with several substantial posts; or
   * evidence of meaningful open-source documentation contributions.
-* **Technical Curiosity**
+* **Technical curiosity**:
   Applicants should demonstrate a basic understanding of software development concepts,
   or equivalent familiarity with another professional or scientific domain
   (for example, biology, astronomy, mechanical engineering).
 
-#### Program objectives
+#### Programme objectives {#program-objectives}
 
 By the end of the programme, mentees will:
 
 1. Build a solid foundation in skills for creating and improving technical documentation.
 2. Understand what day-to-day work as a technical writer involves,
    including expectations and professional standards.
-3. Leave with a personalized development plan to strengthen skills and gain relevant experience.
+3. Leave with a personalised development plan to strengthen skills and gain relevant experience.
 
 #### Curriculum
 
@@ -84,49 +83,48 @@ The curriculum includes the following topics:
 1. Introduction to technical writing (1 hour online, 5 hours self-study)
 2. Tooling overview (2 hours online, 3 hours self-study)
 3. Documentation types (2 hours online, 5 hours self-study)
-4. Documentation processes (1 hour, 2 hours self-study)
-5. Soft-skills (1 hour online, 2 hours self-study)
+4. Documentation processes (1 hour online, 2 hours self-study)
+5. Soft skills (1 hour online, 2 hours self-study)
 6. Job hunting (2 hours online, 5 hours self-study)
 
 #### Flexibility
 
-Time for online sessions can be booked in advance,
-either in the evening hours or during weekends (UTC timezone).
+Online sessions can be booked in advance for evenings or weekends (UTC).
 
-Session pacing (length and frequency) may be adjusted by request for mentees who demonstrate
-strong consistency and progress.
+Session length and frequency can be adjusted on request for mentees who demonstrate
+consistent effort and progress.
 
 ### Docs-as-code
 
-**Mentor**: [Vladimir Izmalkov](https://adplist.org/mentors/vladimir)  
-Estimated duration: ~5 months  
-Format: Bi-weekly live sessions (1 hour) + structured asynchronous work  
-Time commitment: ~2-3 hours per week (mentee self-study & assignments)  
+**Mentor**: [Vladimir Izmalkov](https://adplist.org/mentors/vladimir)\
+**Estimated duration**: Approximately 5 months\
+**Format**: A one-hour live session every two weeks, with structured independent work\
+**Time commitment**: Approximately 2–3 hours per week for self-study and assignments
 
-#### Specific prerequisites & selection criteria
+#### Specific prerequisites and selection criteria {#specific-prerequisites--selection-criteria-1}
 
-Admission is selective to ensure the programme remains high-impact.
+Admission is selective so that the programme can provide useful, focused support.
 Applicants must meet the following criteria:
 
-* **Demonstrated Writing Aptitude**
+* **Demonstrated writing ability**:
   Applicants must submit one of the following:
-  * a portfolio of technical writing samples,
-  * a technical blog with several substantial posts, or
+  * a portfolio of technical writing samples;
+  * a technical blog with several substantial posts; or
   * evidence of meaningful open-source documentation contributions.
-* **Basic technical expertise**
-  Some familiarity with **Git**, text editors, web sites, and CLI usage.
-* **Motivation to adopt workflows**
-  Willingness to learn and consistently apply version-controlled, review-based documentation practices.
+* **Basic technical expertise**:
+  Some familiarity with **Git**, text editors, websites and command-line tools.
+* **Willingness to adopt new workflows**:
+  A commitment to using version control and reviews consistently when working on documentation.
 
-#### Program objectives
+#### Programme objectives {#program-objectives-1}
 
 By the end of the programme, mentees will:
 
-* Build confidence working with documentation as code: version control, reviews,
-  and CI-friendly workflows.
+* Build confidence working with documentation as code: version control, reviews
+  and workflows that support continuous integration (CI).
 * Learn to structure documentation repositories for maintainability and collaboration.
-* Deliver a publishable docs project (or a meaningful improvement to an existing one)
-  that demonstrates industry-standard practice.
+* Deliver a publishable documentation project, or a meaningful improvement to an
+  existing one, that demonstrates established industry practices.
 
 #### Curriculum
 
@@ -136,78 +134,76 @@ The curriculum includes the following topics:
 2. Information architecture and single-sourcing
 3. Build systems and local previews
 4. Git usage for documentation
-5. PR reviews for documentation
+5. Pull request (PR) reviews for documentation
 6. Automated documentation testing
 7. CI/CD for documentation
 8. Releases
 9. Feedback gathering and improvement loops
 10. Portfolio building
 
-Each topic roughly requires one hour online and 4 hours of self-study.
-Both times can be flexible and adopted to interests of a particular mentee.
+Each topic takes approximately one hour online and four hours of self-study.
+These estimates can be adjusted to suit your interests and progress.
 
 #### Flexibility
 
-Time for online sessions can be booked in advance,
-either in the evening hours or during weekends (UTC timezone).
+Online sessions can be booked in advance for evenings or weekends (UTC).
 
-Session pacing (length and frequency) may be adjusted by request for mentees who demonstrate
-strong consistency and progress.
+Session length and frequency can be adjusted on request for mentees who demonstrate
+consistent effort and progress.
 
 ### AI-assisted technical writing
 
-**Mentor**: [Vladimir Izmalkov](https://adplist.org/mentors/vladimir)  
-Estimated duration: ~8 months  
-Format: Bi-weekly live sessions (1 hour) + asynchronous practice and assignments  
-Time commitment: ~2–3 hours per week (Mentee self-study & assignments)  
+**Mentor**: [Vladimir Izmalkov](https://adplist.org/mentors/vladimir)\
+**Estimated duration**: Approximately 8 months\
+**Format**: A one-hour live session every two weeks, with independent practice and assignments\
+**Time commitment**: Approximately 2–3 hours per week for self-study and assignments
 
-#### Specific prerequisites & selection criteria
+#### Specific prerequisites and selection criteria {#specific-prerequisites--selection-criteria-2}
 
 Admission is selective to ensure responsible, effective use of AI in professional writing.
 Applicants must meet the following criteria:
 
-* **Demonstrated Writing Aptitude**
+* **Demonstrated writing ability**:
   Applicants must submit one of the following:
-  * a portfolio of technical writing samples,
-  * a technical blog with several substantial posts, or
+  * a portfolio of technical writing samples;
+  * a technical blog with several substantial posts; or
   * evidence of meaningful open-source documentation contributions.
-* **Basic technical expertise**
-  Some familiarity with **Git**, text editors, web sites, and CLI usage.
+* **Basic technical expertise**:
+  Some familiarity with **Git**, text editors, websites and command-line tools.
 
-#### Program objectives
+#### Programme objectives {#program-objectives-2}
 
 By the end of the programme, mentees will:
 
-* Learn AI tools to accelerate drafting, editing, and research—without compromising accuracy or trust.
+* Learn to use AI tools for drafting, editing and research while maintaining accuracy and trust.
 * Establish a repeatable workflow for AI-assisted documentation that includes
-  verification and human judgment.
-* Produce a portfolio-ready documentation deliverable demonstrating responsible AI use
+  verification and human judgement.
+* Produce documentation suitable for your portfolio that demonstrates responsible AI use
   and measurable improvements.
 
 #### Curriculum
 
 The curriculum includes the following topics:
 
-* Introduction to AI-writing in technical documentation
+* Introduction to AI-assisted technical writing
 * Prompting for documentation work:
   * Result-oriented approach and quality control
   * Outlining and information design with AI
   * Drafting workflows
-  * Proofreading, editing, rewriting
-  * Working with SMEs
+  * Proofreading, editing and rewriting
+  * Working with subject-matter experts (SMEs)
   * Transformations at scale
-  * AI for docs maintenance
-* Confidentiality, compliance, responsibility
+  * AI for documentation maintenance
+* Confidentiality, compliance and responsibility
 * Metrics
-* Portfolio representation
+* Presenting your work in a portfolio
 
-Each topic is designed to take roughly one hour online and 4 hours of self-study.
-Both times can be flexible and adopted to interests of a particular mentee.
+Each topic takes approximately one hour online and four hours of self-study.
+These estimates can be adjusted to suit your interests and progress.
 
 #### Flexibility
 
-Time for online sessions can be booked in advance,
-either in the evening hours or during weekends (UTC timezone).
+Online sessions can be booked in advance for evenings or weekends (UTC).
 
-Session pacing (length and frequency) may be adjusted by request for mentees who demonstrate
-strong consistency and progress.
+Session length and frequency can be adjusted on request for mentees who demonstrate
+consistent effort and progress.

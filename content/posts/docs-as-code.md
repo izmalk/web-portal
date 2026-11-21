@@ -1,34 +1,36 @@
 ---
-title: "Embracing the Docs-as-Code Approach in Software Documentation"
+title: "Embracing the docs-as-code approach in software documentation"
 date: 2024-01-14T20:14:17Z
 draft: false
 ---
 
-As a technical writer with more than a decade of experience in software development, I've come to embrace the Docs-as-Code methodology as my preferred approach. This technique, borrowing best practices from software development, transforms the way we handle documentation, treating it much like we do code. It usually involves storing the content in a Git repository as a text file. Our user-facing documentation needs to undergo a building process to create the output format(s) needed: HTML (web page), PDF, `.docx`, etc.
+As a technical writer with more than a decade of experience in software development, I've come to prefer the docs-as-code approach. It applies familiar software development practices to documentation, including storing content as plain-text files in a Git repository. A build process turns that source into formats such as HTML, PDF or `.docx`.
 
-There are several alternatives to this approach, such as:
-- Text Processors (e.g., Microsoft Word), 
-- Dedicated Technical Writing Software (Adobe FrameMaker, MadCap Flare), 
-- Knowledge Base Management Tools (Confluence, MediaWiki), 
-- Content Management Systems (WordPress, Joomla), 
-- Document Collaboration Platforms (SharePoint, Quip), 
-- In-Code Documentation (Doxygen for code comments).
+Other tools and approaches for working with documentation include:
 
-Here are my thoughts on the Pros and Cons of the Docs-as-Code approach:
+- Word processors, such as Microsoft Word.
+- Dedicated technical writing software, such as Adobe FrameMaker and MadCap Flare.
+- Knowledge base tools, such as Confluence and MediaWiki.
+- Content management systems, such as WordPress and Joomla.
+- Document collaboration platforms, such as SharePoint and Quip.
+- Documentation generated from code comments, using tools such as Doxygen.
 
-Pros:
+Here are my thoughts on the benefits and challenges of docs as code.
 
-* **Version Control**: very transparent, reliable, and accountable process of managing version/changes with VCS like Git.
-* **Collaboration**: SMEs (like software engineers) are familiar and experienced with VCS (like Git). The usage of VCS lets us scale the documentation development process to any size of the documentation team.
-* **Consistency**: features like single sourcing, transparent change history, merging changes, forking, and branching let us preserve the consistency of documentation during any changes. Additionally, splitting content from design enables consistent representation of documentation.
-* **Automation**: a DevOps specialist can set up CI/CD for the documentation building pipeline that will publish updated documentation in any number of formats to any number of platforms from just a single commit. This pipeline can even include automated tests for the documentation content and output.
-* **Single Source of Truth**: maintaining all content in one place, avoiding discrepancies, and having a reliable change process.
-* **Popularity in Open Source**: most tools used in Docs-as-Code are open source, and the approach itself is very popular in open-source documentation.
-* **Open formats**: simple text formats are usually easily converted. No vendor locks.
+## Benefits
 
-Cons:
-* **Learning Curve**: requires familiarity with [Git](https://git-scm.com/) and a particular lightweight markup language (e.g., Markdown, AsciiDoc), which can be challenging for non-technical contributors.
-* **Overhead**: integrating documentation into the development workflow adds initial setup and maintenance efforts.
-* **Tool Dependency**: relies on specific tools and platforms, which might limit flexibility in some cases.
+* **Version control**: systems such as Git provide a transparent history of changes, making updates easier to track and review.
+* **Collaboration**: subject-matter experts, including software engineers, are often familiar with version control. A shared workflow makes collaboration easier as the documentation team grows.
+* **Consistency**: content reuse, a visible change history and controlled merges help maintain consistency. Separating content from presentation also makes it easier to apply a common design.
+* **Automation**: a continuous integration and deployment (CI/CD) pipeline can build, test and publish documentation in several formats and to several platforms from a single commit.
+* **A single source of truth**: keeping content in one place, with a reliable process for changes, helps prevent discrepancies.
+* **Open-source adoption**: many docs-as-code tools are open source, and the approach is widely used in open-source documentation.
+* **Open formats**: plain-text formats are generally easy to convert, reducing dependence on a single vendor.
 
-In conclusion, while Docs-as-Code is not a one-size-fits-all solution, its alignment with agile practices and software development tools, as well as its emphasis on transparency and collaboration, make it a standout choice for software products and projects where documentation may be as dynamic as the software it supports.
+## Challenges
+
+* **Learning curve**: contributors need familiarity with [Git](https://git-scm.com/) and a lightweight markup language, such as Markdown or AsciiDoc. This can be challenging for people without a technical background.
+* **Setup and maintenance**: integrating documentation into the development workflow takes time and ongoing effort.
+* **Tool dependencies**: build tools and publishing platforms require maintenance and may limit flexibility in some cases.
+
+Docs as code is a strong fit for software projects where documentation changes alongside the product. Version control, reviews and automation help teams maintain documentation as part of everyday development.

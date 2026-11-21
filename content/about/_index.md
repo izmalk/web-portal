@@ -5,7 +5,7 @@ layout = "single"
 
 {{< profile-intro src="/images/about_me_light.jpg" alt="Vladimir Izmalkov" >}}
 
-I'm a documentation engineer and technical writer with over 15 years in IT. I help people understand complex software and use it with confidence.
+I'm a documentation engineer and technical writer with over 15 years in IT. I help users achieve their goals and work confidently with complex software.
 
 I'm curious about technology and enjoy learning, tinkering, teaching and sharing what I discover. My work draws on experience in software development, research and team leadership.
 
@@ -15,11 +15,11 @@ I like to think of myself as a **pathfinder** through rough UX terrain. I explor
 
 ## What I do
 
-I specialize in developer documentation for complex products, including cloud platforms, databases and services.
+I specialise in developer documentation for complex products, including cloud platforms, databases and services.
 
-Good documentation starts with understanding the people who will use it. I research audiences and user journeys, talk to subject-matter experts, and organize information around the tasks readers need to complete.
+Good documentation starts with understanding the people who will use it. I research audiences and user journeys, talk to subject-matter experts and organise information around the tasks users need to complete.
 
-I prefer a docs-as-code approach, using Git, lightweight markup languages and static site generators. I use reader feedback and metrics to improve documentation over time.
+I prefer a docs-as-code approach, using Git, lightweight markup languages and static site generators. User feedback and metrics help me improve the documentation over time.
 
 ## How I work
 
