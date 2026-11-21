@@ -11,13 +11,14 @@
   <rect width="1200" height="750" fill="url(#base)"/>
   <rect width="1200" height="750" fill="url(#grid)"/>
   <ellipse cx="780" cy="310" rx="650" ry="490" fill="url(#halo)"/>
-  <path d="M1110 30v65m-32-32h64M34 570v100h100" fill="none" stroke="{{ .accent }}" stroke-width="1.5" opacity=".35"/>
+  <path d="M1110 30v65m-32-32h64" fill="none" stroke="{{ .accent }}" stroke-width="1.5" opacity=".35"/>
   <circle cx="1090" cy="601" r="115" fill="none" stroke="{{ .accent }}" opacity=".18"/>
   <rect x="64" y="55" width="6" height="37" rx="3" fill="{{ .accent }}"/>
   <text x="91" y="83" fill="#eaf2f5" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="600">{{ .title | htmlEscape }}</text>
   <text x="1136" y="80" fill="#9dafbd" font-family="Arial, Helvetica, sans-serif" font-size="21" text-anchor="end">{{ .category | htmlEscape }}</text>
-  <g filter="url(#shadow)">
-    <rect x="71" y="125" width="1058" height="504" rx="13" fill="#21313c" stroke="#607784" stroke-opacity=".65"/>
+  <g>
+    {{/* Keep embedded screenshots out of the shadow filter during thumbnail scaling. */}}
+    <rect x="71" y="125" width="1058" height="504" rx="13" fill="#21313c" stroke="#607784" stroke-opacity=".65" filter="url(#shadow)"/>
     <path d="M84 125h1032a13 13 0 0 1 13 13v24H71v-24a13 13 0 0 1 13-13" fill="#263843"/>
     <path d="M94 143h72" stroke="{{ .accent }}" stroke-width="3" stroke-linecap="round" opacity=".9"/>
     <text x="1099" y="150" fill="#bfccd5" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="end">{{ .label | htmlEscape }}</text>
@@ -26,7 +27,7 @@
   </g>
   <rect x="938" y="605" width="211" height="48" rx="8" fill="#17242c" stroke="{{ .accent }}" stroke-opacity=".65"/>
   <path d="M959 619v19h17m-12-15h16m-16 6h12" fill="none" stroke="{{ .accent }}" stroke-width="2"/>
-  <text x="995" y="636" fill="{{ .accent }}" font-family="Arial, Helvetica, sans-serif" font-size="21">In the project</text>
+  <text x="995" y="636" fill="{{ .accent }}" font-family="Arial, Helvetica, sans-serif" font-size="21">Open source</text>
   <path d="M64 681h1072" stroke="#34444d"/>
   <text x="64" y="717" fill="#a7bac7" font-family="Arial, Helvetica, sans-serif" font-size="21">{{ .note | htmlEscape }}</text>
 </svg>

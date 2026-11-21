@@ -916,7 +916,9 @@ button:focus-visible {
 }
 
 .project-header {
-    max-width: 48rem;
+    grid-area: header;
+    min-width: 0;
+    max-width: 38rem;
 }
 
 .project-deck {
@@ -931,7 +933,7 @@ button:focus-visible {
     flex-wrap: wrap;
     align-items: center;
     gap: 0.8rem 2.3rem;
-    margin-bottom: 1.75rem;
+    margin-bottom: 0;
 }
 
 .project-facts p {
@@ -980,13 +982,24 @@ button:focus-visible {
 .project-story-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-areas: "header" "main";
+    gap: 1.75rem;
+}
+
+.project-story-layout-with-outline {
+    grid-template-areas: "header" "outline" "main";
+}
+
+.project-main {
+    grid-area: main;
+    min-width: 0;
+    max-width: 38rem;
 }
 
 .project-prose {
     min-width: 0;
     max-width: 38rem;
+    margin-top: 2rem;
     font-size: 1rem;
     line-height: 1.75;
     overflow-wrap: anywhere;
@@ -1005,7 +1018,8 @@ button:focus-visible {
 }
 
 .project-outline {
-    order: -1;
+    grid-area: outline;
+    min-width: 0;
     padding: 1rem 1.2rem;
     border: 1px solid var(--project-border);
     border-radius: 0.4rem;
@@ -1029,10 +1043,21 @@ button:focus-visible {
 }
 
 .project-outline #TableOfContents a {
-    padding: 0.3rem 0;
+    padding: 0.3rem 0.4rem;
     color: var(--date-color);
     font-size: 0.875rem;
     font-weight: 300;
+}
+
+.project-outline #TableOfContents li.active > a {
+    color: var(--link-color);
+    background-color: var(--accent-soft);
+    font-weight: 400;
+}
+
+.project-outline #TableOfContents a:hover,
+.project-outline #TableOfContents a:focus-visible {
+    color: var(--link-color);
 }
 
 .project-gallery {
@@ -1047,6 +1072,7 @@ button:focus-visible {
     border: 0;
     font-size: 1.4rem;
     letter-spacing: -0.025em;
+    scroll-margin-top: 1.5rem;
 }
 
 .project-gallery figure + figure {
@@ -1110,15 +1136,15 @@ button:focus-visible {
 }
 
 @media (min-width: 90em) {
-    .project-story-layout {
+    .project-story-layout-with-outline {
         grid-template-columns: minmax(0, 1fr) 11rem;
-        gap: 3rem;
+        grid-template-areas: "header outline" "main outline";
+        column-gap: 3rem;
     }
 
     .project-outline {
         position: sticky;
         top: 1rem;
-        order: 0;
         align-self: start;
         padding: 0 0 0 1rem;
         border-width: 0 0 0 1px;

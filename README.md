@@ -77,6 +77,12 @@ catalogue to a single column when space is limited. Each project has a cover,
 summary, resource links, full description, optional image gallery, and navigation
 to the next project. The catalogue and count update automatically.
 
+Project pages keep the header, hero, description, and Gallery in the reading
+column. On wide screens, the local contents list stays beside that column and
+highlights the current section while scrolling or following an anchor. Gallery
+is included in the contents list. On smaller screens, the list sits between the
+project header and hero.
+
 To add a project:
 
 ```shell

@@ -5,7 +5,21 @@
   <span aria-current="page">{{ .LinkTitle }}</span>
 </nav>
 
+{{ $toc := .TableOfContents }}
+{{ $hasContentToc := strings.Contains $toc "<a " }}
+{{ $hasGallery := gt (len (.Params.gallery | default (slice))) 0 }}
+{{ if $hasGallery }}
+  {{ $galleryLink := printf `<li><a href="%s#gallery-title">Gallery</a></li>` .RelPermalink }}
+  {{ if $hasContentToc }}
+    {{ $toc = replaceRE `</ul>\s*</nav>\s*$` (printf "%s</ul></nav>" $galleryLink) $toc }}
+  {{ else }}
+    {{ $toc = printf `<nav id="TableOfContents"><ul>%s</ul></nav>` $galleryLink }}
+  {{ end }}
+{{ end }}
+{{ $hasOutline := or $hasContentToc $hasGallery }}
+
 <article class="project-detail">
+  <div class="project-story-layout{{ if $hasOutline }} project-story-layout-with-outline{{ end }}">
   <header class="project-header">
     {{ with .Params.category }}<p class="portfolio-eyebrow">{{ . }}</p>{{ end }}
     <h1 class="portfolio-title">{{ .Title }}</h1>
@@ -16,6 +30,7 @@
     </div>
   </header>
 
+  <div class="project-main">
   {{ $cover := partial "portfolio/cover.html" . }}
   <figure class="project-hero">
     <a class="image-zoom" data-image-viewer href="{{ $cover.url }}" aria-label="Enlarge image: {{ $cover.alt }}"{{ with $cover.caption }} data-image-caption="{{ . }}"{{ end }}>
@@ -24,19 +39,11 @@
     {{ with $cover.caption }}<figcaption>{{ . }}</figcaption>{{ end }}
   </figure>
 
-  <div class="project-story-layout">
     <div class="project-prose">{{ .Content }}</div>
-    {{ if strings.Contains .TableOfContents "<a " }}
-    <aside class="project-outline" aria-label="On this page">
-      <p>On this page</p>
-      {{ .TableOfContents }}
-    </aside>
-    {{ end }}
-  </div>
 
   {{ with .Params.gallery }}
   <section class="project-gallery" aria-labelledby="gallery-title">
-    <h2 id="gallery-title">A closer look</h2>
+    <h2 id="gallery-title">Gallery</h2>
     {{ range . }}
     <figure>
       <a class="project-gallery-image image-zoom" data-image-viewer href="{{ partial "portfolio/image-url.html" (dict "page" $ "image" .image) }}" aria-label="Enlarge image: {{ .alt }}"{{ with .caption }} data-image-caption="{{ . }}"{{ end }}>
@@ -47,6 +54,15 @@
     {{ end }}
   </section>
   {{ end }}
+  </div>
+
+  {{ if $hasOutline }}
+  <aside class="project-outline" aria-label="On this page">
+    <p>On this page</p>
+    {{ $toc | safeHTML }}
+  </aside>
+  {{ end }}
+  </div>
 </article>
 
 {{ $projects := .Parent.RegularPages.ByWeight }}
