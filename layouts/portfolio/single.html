@@ -16,9 +16,12 @@
     </div>
   </header>
 
+  {{ $cover := partial "portfolio/cover.html" . }}
   <figure class="project-hero">
-    <img src="{{ partial "portfolio/image-url.html" (dict "page" . "image" .Params.image) }}" alt="{{ .Params.image_alt | default (printf "Illustration for %s" .Title) }}" width="1200" height="750" fetchpriority="high" decoding="async">
-    {{ with .Params.image_caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+    <a class="image-zoom" data-image-viewer href="{{ $cover.url }}" aria-label="Enlarge image: {{ $cover.alt }}"{{ with $cover.caption }} data-image-caption="{{ . }}"{{ end }}>
+      <img src="{{ $cover.url }}" alt="{{ $cover.alt }}" width="1200" height="750" fetchpriority="high" decoding="async">
+    </a>
+    {{ with $cover.caption }}<figcaption>{{ . }}</figcaption>{{ end }}
   </figure>
 
   <div class="project-story-layout">
@@ -36,7 +39,7 @@
     <h2 id="gallery-title">A closer look</h2>
     {{ range . }}
     <figure>
-      <a class="project-gallery-image" href="{{ partial "portfolio/image-url.html" (dict "page" $ "image" .image) }}" target="_blank" rel="noopener" aria-label="Open image: {{ .alt }} (new tab)">
+      <a class="project-gallery-image image-zoom" data-image-viewer href="{{ partial "portfolio/image-url.html" (dict "page" $ "image" .image) }}" aria-label="Enlarge image: {{ .alt }}"{{ with .caption }} data-image-caption="{{ . }}"{{ end }}>
         <img src="{{ partial "portfolio/image-url.html" (dict "page" $ "image" .image) }}" alt="{{ .alt }}" loading="lazy" decoding="async">
       </a>
       {{ with .caption }}<figcaption>{{ . }}</figcaption>{{ end }}

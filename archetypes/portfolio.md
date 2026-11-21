@@ -9,6 +9,12 @@ role: "Author"
 # Save a cover image beside index.md, then uncomment these two fields.
 # image: cover.webp
 # image_alt: "Describe what the image shows."
+# Optional: frame a real screenshot; image remains the illustration fallback.
+# cover_source: screenshot.webp
+# cover_label: "Project screenshot"
+# cover_alt: "The project interface, framed with decorative artwork."
+# cover_caption: "Describe the source of the screenshot."
+# cover_accent: "#67D7A5"
 # Optional: set featured: true to highlight the card.
 links:
   - label: "Source code"

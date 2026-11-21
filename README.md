@@ -91,8 +91,8 @@ in a normal build.
 
 Save images in the same folder as `index.md`, then set `image` and `image_alt`.
 An omitted image uses a built-in cover. A `gallery` accepts any number of images;
-each entry has `image`, `alt`, and an optional `caption`. Gallery images open at
-full size in a new tab. For example:
+each entry has `image`, `alt`, and an optional `caption`. Hero and gallery images
+open in the site's image viewer. For example:
 
 ```yaml
 image: cover.webp
@@ -103,14 +103,61 @@ gallery:
     caption: "Reviewing a guide in the editor."
 ```
 
-The six initial entries use descriptions grounded in their public repositories
-and documentation. SVG covers and diagrams are conceptual illustrations. The
-Ulwazi and Kafka `site.webp` images are captures of the linked documentation
-sites from November 2026. The scanner and auditor `source-preview.png` images
-come from their source repositories (`starter_pack_scanner/pics/main-screen.png`
-and `hero-image.png`, respectively). These prototype descriptions can be expanded
-with personal project decisions and outcomes before publication.
+To make a screenshot-based cover, set `cover_source` to a local PNG, JPEG, or
+WebP in the project's folder. Hugo places the unaltered screenshot inside the
+shared SVG frame at build time. Set `cover_label`, `cover_alt`, `cover_caption`,
+and optionally `cover_note` and `cover_accent` to describe and style it. The
+original `image` remains the fallback when `cover_source` is omitted or missing;
+all six original `cover.svg` illustrations are preserved. Captures are embedded
+in the generated SVG, so covers are self-contained and make no remote requests.
+
+```yaml
+image: cover.svg
+image_alt: "A conceptual illustration of the project."
+cover_source: screenshot.webp
+cover_label: "Project interface"
+cover_alt: "The actual project interface, with decorative framing."
+cover_caption: "The local interface, captured in November 2026."
+cover_accent: "#67D7A5"
+```
+
+The initial entries use descriptions grounded in their public repositories and
+documentation. Their cover captures are genuine; the surrounding graphics and
+the separate workflow diagrams are illustrative. Image sources:
+
+- Ulwazi and Kafka `site.webp`: the linked published documentation, captured in November 2026.
+- STAT `source-preview.webp`: [the annotated tutorial example](https://github.com/izmalk/stat/blob/main/examples/sample-page.md?plain=1), captured from GitHub on 21 November 2026.
+- Release Notes Builder `source-preview.webp`: [the committed Revision 248 example](https://github.com/izmalk/release-notes-builder/blob/main/examples/205-248.md), captured from GitHub on 21 November 2026.
+- Scanner `source-preview.png`: `starter_pack_scanner/pics/main-screen.png` in its source repository.
+- Auditor `source-preview.png`: `hero-image.png` in its source repository.
+
+The STAT and release-note captures show repository examples, rather than a new
+execution or a claim of newly published output. Prototype descriptions can be
+expanded with personal project decisions and outcomes before publication.
 
 Tags and filtering remain future additions. Each page already supplies a title
 and description to the theme's existing canonical, sitemap, and social metadata;
 the prototype adds no SEO service or dependency.
+
+## Image viewer
+
+Block images throughout the site use a shared native `<dialog>` viewer. It
+supports keyboard focus, Escape, a close control, backdrop dismissal, and a
+fit/actual-size view for screenshots. The reader stays on the same page, and
+closing restores focus and the reading position. Inline images, sidebar
+portraits, catalogue navigation, and video links retain their existing purpose.
+
+Standalone Markdown images are rendered as linked figures automatically. The
+About me portrait and portfolio images also have normal image links as a
+fallback: with scripting disabled, they open the image in the same tab. Other
+unlinked HTML block images are enhanced when the page loads. An explicit
+`data-image-viewer` attribute opts an image link into the viewer;
+`data-no-image-viewer` on an image or its container opts out.
+
+The implementation lives in `assets/ts/image-viewer.ts`,
+`assets/css/image-viewer.css`, and `layouts/partials/image-viewer.html`. Hugo's
+built-in `js.Build` compiles the TypeScript during a normal site build; no Node
+setup or external lightbox library is required. The Markdown image render hook
+is `layouts/_default/_markup/render-image.html` and uses Goldmark's standalone
+image setting in `config.toml`. The adjacent `render-link.html` override preserves
+author-supplied links around images without producing nested anchors.

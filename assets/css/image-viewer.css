@@ -1,0 +1,193 @@
+/* Image links remain useful when TypeScript is unavailable. */
+.content a.image-zoom {
+    display: block;
+    cursor: zoom-in;
+}
+
+.content a.image-zoom img {
+    cursor: zoom-in;
+}
+
+.content figure.image-block {
+    margin: 1.25rem 0;
+}
+
+.content figure.image-block img {
+    margin: 0;
+}
+
+.content figure.image-block figcaption {
+    margin-top: 0.55rem;
+    color: var(--date-color);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.profile-portrait > a.image-zoom {
+    width: 100%;
+    height: 100%;
+}
+
+.image-viewer {
+    width: min(96vw, 1600px);
+    max-width: calc(100vw - 1rem);
+    max-height: calc(100vh - 1rem);
+    max-height: calc(100dvh - 1rem);
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid var(--table-border-color, #45576a);
+    border-radius: 0.65rem;
+    color: var(--text-color, #e0e7ef);
+    background: var(--bkg-color, #181e25);
+    box-shadow: 0 1rem 5rem #00000066;
+}
+
+.image-viewer:not([open]),
+.image-viewer [hidden] {
+    display: none !important;
+}
+
+.image-viewer::backdrop {
+    background: #081017d9;
+    backdrop-filter: blur(5px);
+}
+
+.image-viewer-panel {
+    display: flex;
+    max-height: calc(100vh - 1rem);
+    max-height: calc(100dvh - 1rem);
+    flex-direction: column;
+}
+
+.image-viewer-toolbar {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.6rem 0.8rem 0.6rem 1rem;
+    border-bottom: 1px solid var(--table-border-color, #45576a);
+}
+
+.image-viewer-toolbar h2 {
+    margin: 0;
+    color: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.image-viewer-actions {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.image-viewer button {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45rem 0.65rem;
+    border: 1px solid var(--table-border-color, #45576a);
+    border-radius: 0.35rem;
+    color: var(--text-color, #e0e7ef);
+    background: transparent;
+    font: inherit;
+    font-size: 0.875rem;
+    line-height: 1.3;
+    cursor: pointer;
+}
+
+.image-viewer button:hover,
+.image-viewer button[aria-pressed="true"] {
+    border-color: var(--link-color, #55c995);
+    background: var(--accent-soft, #1b352e);
+}
+
+.image-viewer button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.image-viewer .image-viewer-close {
+    padding: 0.4rem;
+}
+
+.image-viewer-stage {
+    min-height: 6rem;
+    max-height: calc(100vh - 7rem);
+    max-height: calc(100dvh - 7rem);
+    padding: 0.8rem;
+    overflow: auto;
+    overscroll-behavior: contain;
+    touch-action: pan-x pan-y pinch-zoom;
+}
+
+.image-viewer-stage:focus-visible {
+    outline: 2px solid var(--link-color, #55c995);
+    outline-offset: -3px;
+}
+
+.image-viewer .image-viewer-image {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: calc(100vh - 10rem);
+    max-height: calc(100dvh - 10rem);
+    margin: 0 auto;
+    border-radius: 0.15rem;
+    object-fit: contain;
+}
+
+.image-viewer-actual .image-viewer-image {
+    max-width: none;
+    max-height: none;
+}
+
+.image-viewer .image-viewer-caption {
+    flex: 0 0 auto;
+    max-height: 5rem;
+    margin: 0;
+    padding: 0.75rem 1rem;
+    overflow: auto;
+    border-top: 1px solid var(--table-border-color, #45576a);
+    color: var(--date-color, #a6b5c6);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.image-viewer-status,
+.image-viewer-error {
+    margin: 1rem;
+    color: var(--text-color, #e0e7ef);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.image-viewer-error a {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+@media (max-width: 36em) {
+    .image-viewer-toolbar {
+        padding-inline: 0.65rem;
+    }
+
+    .image-viewer-toolbar h2 {
+        font-size: 0.9rem;
+    }
+
+    .image-viewer button {
+        padding-inline: 0.5rem;
+    }
+
+    .image-viewer-stage {
+        padding: 0.4rem;
+    }
+}

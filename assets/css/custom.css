@@ -955,13 +955,19 @@ button:focus-visible {
     margin: 0;
 }
 
-.project-hero > img {
+.project-hero > .image-zoom {
+    display: block;
+    overflow: hidden;
+    border: 1px solid var(--project-border);
+    border-radius: 0.65rem;
+}
+
+.project-hero img {
     display: block;
     width: 100%;
     height: auto;
     margin: 0;
-    border: 1px solid var(--project-border);
-    border-radius: 0.65rem;
+    border-radius: 0;
 }
 
 .project-detail figcaption {

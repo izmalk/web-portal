@@ -1,7 +1,8 @@
 {{ $page := .page }}
+{{ $cover := partial "portfolio/cover.html" $page }}
 <article class="project-card{{ if $page.Params.featured }} project-card-featured{{ end }}" aria-labelledby="project-{{ $page.File.ContentBaseName | urlize }}-{{ .index }}">
   <a class="project-cover" href="{{ $page.RelPermalink }}" tabindex="-1" aria-hidden="true">
-    <img src="{{ partial "portfolio/image-url.html" (dict "page" $page "image" $page.Params.image) }}" alt="{{ $page.Params.image_alt | default (printf "Illustration for %s" $page.Title) }}" width="1200" height="750"{{ if gt .index 1 }} loading="lazy"{{ else }} fetchpriority="high"{{ end }} decoding="async">
+    <img src="{{ $cover.url }}" alt="{{ $cover.alt }}" width="1200" height="750"{{ if gt .index 1 }} loading="lazy"{{ else }} fetchpriority="high"{{ end }} decoding="async">
   </a>
   <div class="project-card-body">
     <div class="project-category-row">
