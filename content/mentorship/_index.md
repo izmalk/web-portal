@@ -8,6 +8,8 @@ I provide free mentorship for aspiring and motivated technical writers of all se
 You can book a session for free on [ADPlist](https://adplist.org/mentors/vladimir).
 I use this platform to manage my calendar and booking.
 
+{{< mentorship-impact >}}
+
 Before you book a slot, consider the following information:
 
 * All mentorship is completely free.
