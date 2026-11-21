@@ -1,6 +1,6 @@
 ---
 title: "Charmed Apache Kafka"
-description: "Product documentation that helps users deploy, secure, and operate Apache Kafka with Canonical's operators."
+description: "Charmed Apache Kafka is an open-source operator, that simplifies the deployment, scaling, and management of Apache Kafka clusters on physical hardware, VMs, and Kubernetes."
 weight: 20
 collection: "documentation"
 category: "Product documentation"
@@ -29,17 +29,48 @@ gallery:
     caption: "The Diátaxis structure used by the documentation. Conceptual overview."
 ---
 
-## Documentation for a distributed system
+## Product summary
 
-Charmed Apache Kafka uses Juju operators to manage Kafka deployments on machines and Kubernetes. Its documentation supports readers from their first deployment through ongoing cluster operations.
+Charmed Apache Kafka is an open-source operator, packaged as a
+[Juju charm](https://documentation.ubuntu.com/juju/3.6/reference/charm/), that simplifies
+the deployment, scaling, and management of [Apache Kafka](https://kafka.apache.org/)
+clusters on physical hardware, VMs, and Kubernetes, including deployments
+on AWS, Azure, OpenStack, and VMware.
 
-As a Technical Author in Canonical's Data Platform team, I work on documentation for Charmed Apache Kafka alongside other data products. This portfolio entry presents the published documentation and its source.
+As most Canonical's documentation, the documentation follows Diátaxis:
+a tutorial supports learning, how-to guides cover practical instructions,
+reference pages provide technical details, and explanation pages develop understanding
+of core concepts.
 
-## Organise around the reader's task
+## My involvement
 
-The documentation follows Diátaxis: a tutorial supports learning, how-to guides cover practical operations, reference pages provide technical details, and explanation pages develop understanding.
+I've joined the team in 2024 and I'm responsible for all documentation for this product:
+managing our plans, standards and automation, as well as reviewing all content changes,
+and writing new documents.
 
-The coverage includes deployment, client connections, TLS encryption, upgrades, and monitoring. Guides distinguish machine and Kubernetes deployments where their procedures differ, while keeping both available within one documentation set.
+On top of all documentation aviailable at https://canonical.com/data/kafka/docs/4/
+for all major versions, I'm maintaining documentation automation, testing and publishing.
+
+## Main challenges
+
+The product is very technical and we expect our target audience to be familiar with both
+Juju orchestrator and Apache Kafka already. That way we can concentrate on explaining only
+the product's features without duplicating upstream documentation of Apache Kafka and Juju.
+
+When I joined, I started by refactoring the existing documentation, written mostly by engineers,
+to improve clarity, trim unnecessary details and add missing bits. After that, I recreated
+the tutorial to provide a smoother and more robust experience. And then I added automated
+testing for our tutorial to make sure it always stay correct, tested for every change in either
+the product or the tutorial itself.
+
+I also created a fully automated reference notes builder from source code on build time:
+[Actions](https://canonical.com/data/kafka/docs/4/reference/_generated/actions/),
+[Configurations](https://canonical.com/data/kafka/docs/4/reference/_generated/configurations/),
+[Charm Statuses](https://canonical.com/data/kafka/docs/4/reference/_generated/statuses/).
+
+Finally, I developed
+[mostly deterministic solution](https://github.com/izmalk/release-notes-builder) to generate
+our release notes with particular attention on strict factual basis from GitHub API and formatting.
 
 ## Explore the documentation
 
