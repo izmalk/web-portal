@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-labelledby="title desc">
   <title id="title">{{ .title | htmlEscape }}</title>
-  <desc id="desc">{{ .label | htmlEscape }}. Authentic project capture with decorative framing.</desc>
+  <desc id="desc">{{ with .label }}{{ . | htmlEscape }}. {{ end }}Authentic project capture with decorative framing.</desc>
   <defs>
     <linearGradient id="base" x2="1" y2="1"><stop stop-color="#17242c"/><stop offset="1" stop-color="#111b22"/></linearGradient>
     <radialGradient id="halo"><stop stop-color="{{ .accent }}" stop-opacity=".17"/><stop offset="1" stop-color="{{ .accent }}" stop-opacity="0"/></radialGradient>
@@ -21,7 +21,9 @@
     <rect x="71" y="125" width="1058" height="504" rx="13" fill="#21313c" stroke="#607784" stroke-opacity=".65" filter="url(#shadow)"/>
     <path d="M84 125h1032a13 13 0 0 1 13 13v24H71v-24a13 13 0 0 1 13-13" fill="#263843"/>
     <path d="M94 143h72" stroke="{{ .accent }}" stroke-width="3" stroke-linecap="round" opacity=".9"/>
-    <text x="1099" y="150" fill="#bfccd5" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="end">{{ .label | htmlEscape }}</text>
+    {{ with .label }}
+    <text x="1099" y="150" fill="#bfccd5" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="end">{{ . | htmlEscape }}</text>
+    {{ end }}
     <image x="72" y="162" width="1056" height="466" href="{{ .screenshot | safeURL }}" preserveAspectRatio="{{ .fit }}" clip-path="url(#screen)"/>
     <rect x="71" y="125" width="1058" height="504" rx="13" fill="none" stroke="{{ .accent }}" stroke-opacity=".3"/>
   </g>

@@ -11,7 +11,7 @@
           "title" $page.Title
           "category" ($page.Params.category | default "Selected work")
           "accent" ($page.Params.cover_accent | default "#67D7A5")
-          "label" ($page.Params.cover_label | default "Project screenshot")
+          "label" (cond (isset $page.Params "cover_label") $page.Params.cover_label "Project screenshot")
           "badge" ($page.Params.cover_badge | default "Open source")
           "note" ($page.Params.cover_note | default "A closer look at the project")
           "fit" (cond (eq $page.Params.cover_fit "contain") "xMidYMid meet" "xMidYMin slice")

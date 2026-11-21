@@ -1116,6 +1116,69 @@ button:focus-visible {
     margin-top: 0;
 }
 
+.project-examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+    gap: 1rem;
+}
+
+.project-examples .project-example {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 1.15rem;
+    border: 1px solid var(--project-border);
+    border-top: 3px solid var(--link-color);
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    background: var(--project-surface);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.project-examples .project-example:hover,
+.project-examples .project-example:focus-visible {
+    border-color: var(--link-color);
+    background: var(--accent-soft);
+    text-decoration: none;
+}
+
+.project-example-kind {
+    color: var(--date-color);
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.project-examples .project-example-title {
+    margin: 0;
+    color: var(--post-title-color);
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+}
+
+.project-examples .project-example-description {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+.project-example-action {
+    margin-top: auto;
+    padding-top: 0.35rem;
+    color: var(--link-color);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
 .project-outline {
     grid-area: outline;
     min-width: 0;
@@ -1159,12 +1222,14 @@ button:focus-visible {
     color: var(--link-color);
 }
 
+.project-examples,
 .project-gallery {
     margin-top: 2.5rem;
     padding-top: 1.6rem;
     border-top: 1px solid var(--project-border);
 }
 
+.content .project-examples h2,
 .content .project-gallery h2 {
     margin: 0 0 1.2rem;
     padding: 0;

@@ -11,16 +11,23 @@
 
 {{ $toc := .TableOfContents }}
 {{ $hasContentToc := strings.Contains $toc "<a " }}
+{{ $hasExamples := gt (len (.Params.examples | default (slice))) 0 }}
 {{ $hasGallery := gt (len (.Params.gallery | default (slice))) 0 }}
+{{ $sectionLinks := "" }}
+{{ if $hasExamples }}
+  {{ $sectionLinks = printf `<li><a href="%s#examples-title">Examples</a></li>` .RelPermalink }}
+{{ end }}
 {{ if $hasGallery }}
-  {{ $galleryLink := printf `<li><a href="%s#gallery-title">Gallery</a></li>` .RelPermalink }}
+  {{ $sectionLinks = printf `%s<li><a href="%s#gallery-title">Gallery</a></li>` $sectionLinks .RelPermalink }}
+{{ end }}
+{{ if $sectionLinks }}
   {{ if $hasContentToc }}
-    {{ $toc = replaceRE `</ul>\s*</nav>\s*$` (printf "%s</ul></nav>" $galleryLink) $toc }}
+    {{ $toc = replaceRE `</ul>\s*</nav>\s*$` (printf "%s</ul></nav>" $sectionLinks) $toc }}
   {{ else }}
-    {{ $toc = printf `<nav id="TableOfContents"><ul>%s</ul></nav>` $galleryLink }}
+    {{ $toc = printf `<nav id="TableOfContents"><ul>%s</ul></nav>` $sectionLinks }}
   {{ end }}
 {{ end }}
-{{ $hasOutline := or $hasContentToc $hasGallery }}
+{{ $hasOutline := or $hasContentToc $hasExamples $hasGallery }}
 
 <article class="project-detail">
   <div class="project-story-layout{{ if $hasOutline }} project-story-layout-with-outline{{ end }}">
@@ -44,6 +51,22 @@
   </figure>
 
     <div class="project-prose">{{ .Content }}</div>
+
+  {{ with .Params.examples }}
+  <section class="project-examples" aria-labelledby="examples-title">
+    <h2 id="examples-title">Examples</h2>
+    <div class="project-examples-grid">
+      {{ range . }}
+      <a class="project-example" href="{{ .url }}">
+        <span class="project-example-kind">{{ .kind }}</span>
+        <h3 class="project-example-title">{{ .title }}</h3>
+        <p class="project-example-description">{{ .description }}</p>
+        <span class="project-example-action">{{ .action }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
 
   {{ with .Params.gallery }}
   <section class="project-gallery" aria-labelledby="gallery-title">

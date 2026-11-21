@@ -122,11 +122,18 @@ gallery:
     caption: "Reviewing a guide in the editor."
 ```
 
+For cards linking to specific work samples, add an `examples` list to the page's
+front matter, with `kind`, `title`, `description`, `action` and `url` for each
+entry. The project template automatically renders an **Examples** section before
+Gallery and includes it in the local contents list. The cards use the site's
+palette and stack when there is room for only one column.
+
 To make a screenshot-based cover, set `cover_source` to a local PNG, JPEG, or
 WebP in the project's folder. Hugo places the unaltered screenshot inside the
 shared SVG frame at build time. Set `cover_label`, `cover_alt`, `cover_caption`,
 and optionally `cover_note`, `cover_accent`, and `cover_badge` to describe and
-style it. The badge defaults to “Open source”; documentation entries use
+style it. Set `cover_label: ""` to omit the label above the screenshot; omitting
+the field uses “Project screenshot”. The badge defaults to “Open source”; documentation entries use
 “Documentation”. Use `cover_fit: contain` to show the entire screenshot when cropping would hide an
 important detail, such as a progress bar. The
 original `image` remains the fallback when `cover_source` is omitted or missing;
@@ -149,7 +156,10 @@ The initial entries use descriptions grounded in their public repositories and
 documentation. Their cover captures are genuine; the surrounding graphics and
 the separate workflow diagrams are illustrative. Image sources:
 
-- Ulwazi and Kafka `site.webp`: the linked published documentation, captured in November 2026.
+- Ulwazi `site.webp`: the linked published documentation, captured in November 2026.
+- Kafka `site.webp`: the [live version 4 documentation home page](https://canonical.com/data/kafka/docs/4/), captured in light mode on 21 November 2026. The same capture supplies the framed cover and the first gallery image.
+- Kafka `tutorial.webp`, `deploy-juju.webp`, `actions.webp` and `components.webp`: the live [tutorial](https://canonical.com/data/kafka/docs/4/tutorial/), [Juju CLI deployment guide](https://canonical.com/data/kafka/docs/4/how-to/deploy/deploy-anywhere/), [generated actions reference](https://canonical.com/data/kafka/docs/4/reference/_generated/actions/) and [component overview](https://canonical.com/data/kafka/docs/4/explanation/components/), respectively. All were captured in light mode on 21 November 2026, at the same 1440 × 1060 viewport and twice the pixel density.
+- Kafka `navigation.webp`: the live version 4 documentation menu, captured in light mode on 21 November 2026 with every branch expanded. The native menu captures are arranged in four section columns inside a light frame, with Home and Contributor's guide above them; all 57 navigation links and their nesting are preserved.
 - OpenSearch `site.webp`: the linked version 2 documentation, captured in November 2026.
 - TypeDB `site.webp`: the supplied Wayback Machine snapshot of the documentation overview, dated 15 June 2024. The card and detail page link to that archive.
 - VK Private Cloud `screenshot.webp` and `project-quotas.webp`: the supplied administrator guide (12 August 2022), p.161; the former is a full-page render of the quota-management procedure, the latter an excerpt showing the administrator portal's resource quotas. `test-methodology.webp`: the supplied test programme and methodology (25 August 2022), p.44.
