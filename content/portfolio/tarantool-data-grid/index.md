@@ -3,7 +3,7 @@ title: "Tarantool Data Grid"
 description: "Developer and operations documentation connecting data models, application APIs, and cluster administration."
 weight: 24
 collection: "documentation"
-category: "Database documentation"
+category: "Product documentation"
 role: "Senior Technical Writer, Tarantool team, Mail.Ru Group (later VK)"
 image: "screenshot.webp"
 image_alt: "A page from Tarantool Data Grid 1.0 documentation, showing an annotated cluster interface and explanatory text in Russian."

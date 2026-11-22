@@ -3,7 +3,7 @@ title: "TypeDB"
 description: "TypeDB is a strongly typed database combining the PERA model with polymorphic queries in fully composable TypeQL. The documentation covered TypeDB, TypeQL, native drivers and TypeDB Cloud."
 weight: 22
 collection: "documentation"
-category: "Developer documentation"
+category: "Product documentation"
 role: "Senior Technical Writer, TypeDB (formerly Vaticle), 2022–2024"
 image: "site.webp"
 image_alt: "The archived TypeDB documentation overview from June 2024."

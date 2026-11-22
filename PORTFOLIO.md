@@ -201,8 +201,10 @@ while its reference screenshot shows Actions. Describe the actual capture.
 - Use alt text to describe what is visible. Use captions to identify the
   document/category, focus, mode and capture date, rather than making claims
   about impact. Record source URLs and capture details in the README image list.
-- Preserve historical documents and their original language faithfully. Identify
-  the source title, version, document date and page number, distinguishing printed
+- Preserve historical documents and the text within source images faithfully.
+  Keep accompanying page text, captions and accessibility labels in English,
+  including translated source document titles. Identify the source title,
+  version, document date and page number, distinguishing printed
   page numbers from PDF page indices when needed. An old document's date and the
   date of its screenshot are different facts.
 - Label current documentation links as current when the samples show earlier
