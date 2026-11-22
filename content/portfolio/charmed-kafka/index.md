@@ -92,14 +92,21 @@ the product's features without duplicating the upstream documentation for Apache
 
 When I joined, I started by refactoring the existing documentation, written mostly by engineers,
 to improve clarity, trim unnecessary details and add missing content. After that, I recreated
-the tutorial to provide a smoother and more robust experience. I then added automated
-testing for our tutorial to make sure it always stays correct. The tests run for every change to either
-the product or the tutorial itself.
+the tutorial to provide a smoother and more robust experience. 
 
-I also created a fully automated builder that generates reference documentation from source code at build time:
+I then added automated testing for our tutorial to make sure it always stays correct. 
+The test workflow extracts commands from the tutorial and runs them with Spread in a Multipass VM,
+keeping the test tied to the documented procedure.
+
+I also created a fully automated builder that generates reference documentation from source code at
+build time, for example:
 [Actions](https://canonical.com/data/kafka/docs/4/reference/_generated/actions/),
 [Configurations](https://canonical.com/data/kafka/docs/4/reference/_generated/configurations/),
 [Charm Statuses](https://canonical.com/data/kafka/docs/4/reference/_generated/statuses/).
+
+To keep the documentation sources consistent, I introduced automated Markdown formatting
+with MyST support, checked through pre-commit and CI. This makes formatting
+checks part of the contribution workflow, alongside reviewing the technical content.
 
 Finally, I developed
 [a mostly deterministic solution](https://github.com/izmalk/release-notes-builder) to generate

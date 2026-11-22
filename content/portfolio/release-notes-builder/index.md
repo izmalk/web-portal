@@ -11,37 +11,46 @@ image_alt: "Conceptual illustration of commit and pull-request records being org
 cover_source: "generated-notes.webp"
 cover_accent: "#EFC178"
 cover_label: "Generated example · 777"
-cover_note: "Repository history · Jinja2 templates · release notes"
-cover_alt: "An example of generated Charmed Apache Kafka release notes using the placeholder revision 777, framed with amber project artwork."
-cover_caption: "Generated release-note example from charmed-apache-kafka-rev777.md. 777 is a placeholder, not a real release revision."
+cover_note: "GitHub evidence · reusable templates · editorial review"
+cover_alt: "An example of generated Charmed Apache Kafka release notes in light mode using the placeholder revision 777, framed with amber project artwork."
+cover_caption: "Generated release-note example from charmed-apache-kafka-rev777.md, captured in light mode in November 2026. 777 is a placeholder, not a real release revision."
 links:
-  - label: "Generated example"
-    url: "https://github.com/izmalk/release-notes-builder/blob/main/release-notes/charmed-apache-kafka-rev777.md"
   - label: "Source code"
     url: "https://github.com/izmalk/release-notes-builder"
+examples:
+  - kind: "Generated output"
+    title: "Inspect a release-note draft"
+    description: "Read the stored Kafka example, including its categorised changes and linked pull requests. Revision 777 is a placeholder."
+    action: "Read the generated example"
+    url: "https://github.com/izmalk/release-notes-builder/blob/main/release-notes/charmed-apache-kafka-rev777.md"
+  - kind: "Template"
+    title: "See how the output is structured"
+    description: "Inspect the Kafka Jinja2 template used to organise the collected changes into release notes."
+    action: "Read the product template"
+    url: "https://github.com/izmalk/release-notes-builder/blob/main/templates/kafka.md.j2"
 gallery:
   - image: "generated-notes.webp"
-    alt: "The generated Charmed Apache Kafka release-note example, showing the placeholder revision 777, summary, features, and linked pull requests."
-    caption: "Generated release-note example from the source repository. Revision 777 is a placeholder."
-  - image: "detail.svg"
-    alt: "Conceptual diagram connecting a verified commit range, categorised changes, and a release-note draft for review."
-    caption: "Conceptual overview of the release notes workflow."
+    alt: "The generated Charmed Apache Kafka release-note example in light mode, showing the placeholder revision 777, summary, features and linked pull requests."
+    caption: "Generated release-note example from the source repository, captured in light mode, November 2026. Revision 777 is a placeholder."
+  - image: "template.webp"
+    alt: "An excerpt from the Kafka release-note template in light mode, showing Jinja2 blocks and loops that structure the generated document."
+    caption: "An excerpt from the Kafka Jinja2 template in the source repository, captured in light mode, November 2026."
 ---
 
-## From repository history to a readable release
+## Project summary
 
-Release notes need to connect engineering changes with the information a product user needs. Collecting commits is one part of the work; choosing the right range, identifying affected components, and presenting changes consistently all require care.
+Release Notes Builder generates structured release notes for Canonical Data & AI charms from GitHub commit and pull-request data. Its Python builder turns a commit range from one repository into a categorised document, rendered through Jinja2 templates.
 
-Release Notes Builder generates structured release notes for Canonical Data & AI charms from GitHub commit and pull-request data. Its Python builder turns a commit range from a single repository into a categorised document, rendered through Jinja2 templates. The [repository](https://github.com/izmalk/release-notes-builder#readme) also contains an agent skill for coordinating the broader product-level workflow.
+An accompanying agent skill coordinates the broader product-level workflow from the product's own workspace, where it can consult metadata, existing documentation and previous release notes.
 
-## Separate collection from editorial decisions
+## My involvement
 
-The standalone builder gathers changes for one repository. The accompanying skill works from the product's own workspace, where it can consult metadata, existing documentation, and previously published notes. That context helps it establish the release range and follow the product's established structure.
+I developed this personal project for release-note generation in my Charmed Apache Kafka work. My focus is a strict factual basis in GitHub API data and a consistent document format, with a mostly deterministic workflow that produces a draft for editorial review.
 
-For products spanning multiple repositories, the workflow supports an explicit component list. Reference names are resolved against the repository, and uncertainty about scope is reported. This makes the boundary of a draft visible to the person reviewing it.
+## Main challenges
 
-## Produce a draft with a review trail
+Release notes need to connect engineering changes with information a product user can use. Choosing the commit range, identifying affected components and presenting the changes consistently all require care. The standalone builder gathers changes for one repository; component scope and the broader product context belong to the accompanying skill.
 
-The workflow is designed around a document that can be checked before publication. Its unattended mode can record selected components, resolved references, evidence, exclusions, and blockers in a structured report. Existing release-note files are protected from accidental overwriting.
+For products spanning several repositories, an explicit component list defines what the draft covers. Reference names are resolved against the repository, and uncertainty about scope is reported. Product-specific templates preserve the expected document structure.
 
-The result is a repeatable starting point for editorial work: collected source material, a consistent document structure, and a record of what the draft covers. The source repository documents both direct CLI use and installation of the agent skill in a target product repository.
+The workflow can record selected components, resolved references, evidence, exclusions and blockers in a structured report. Existing release-note files are protected from accidental overwriting. The resulting draft and review trail provide a repeatable starting point for editorial work before publication.

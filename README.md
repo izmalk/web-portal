@@ -84,16 +84,16 @@ emerald palette, supports light and dark mode, and switches from a two-column
 catalogue to a single column when space is limited. Each project has a cover,
 summary, resource links, full description, optional image gallery, and navigation
 to the next project in its category. The catalogue has two sections with jump
-links and automatic counts: **Documentation and texts** and **Tools and
+links and automatic counts: **Documentation and other texts** and **Tools and
 automation**. Their labels and descriptions live in `data/portfolio.yaml`.
 Kafka, OpenSearch, TypeDB, VK Private Cloud, and Tarantool Data Grid belong to
 the first section, followed by the BusyRebar blog post. Ulwazi and the other
 tools belong to the second section.
 
-Project pages keep the header, hero, description, and Gallery in the reading
+Project pages keep the header, hero, description, Examples and Gallery in the reading
 column. On wide screens, the local contents list stays beside that column and
-highlights the current section while scrolling or following an anchor. Gallery
-is included in the contents list. On smaller screens, the list sits between the
+highlights the current section while scrolling or following an anchor. Examples
+and Gallery are included in the contents list. On smaller screens, the list sits between the
 project header and hero.
 
 To add a project:
@@ -156,27 +156,28 @@ cover_accent: "#67D7A5"
 ```
 
 The initial entries use descriptions grounded in their public repositories and
-documentation. Their cover captures are genuine; the surrounding graphics and
-the separate workflow diagrams are illustrative. Image sources:
+documentation. Their cover captures are genuine and the shared SVG frames are decorative.
+Older conceptual SVGs remain as fallback assets rather than gallery evidence.
+Image sources:
 
-- Ulwazi `site.webp`: the linked published documentation, captured in November 2026.
+- Ulwazi `site.webp`, `configuration.webp` and `myst.webp`: the live [theme documentation](https://documentation.ubuntu.com/ulwazi/), [configuration reference](https://documentation.ubuntu.com/ulwazi/content/configuration/) and [MyST examples](https://documentation.ubuntu.com/ulwazi/content/myst-cheat-sheet/). Refreshed in light mode on 21 November 2026 at 1440 × 1060 CSS pixels and 2× density.
 - Kafka `site.webp`: the [live version 4 documentation home page](https://canonical.com/data/kafka/docs/4/), captured in light mode on 21 November 2026. The same capture supplies the framed cover and the first gallery image.
 - Kafka `tutorial.webp`, `deploy-juju.webp`, `actions.webp` and `components.webp`: the live [tutorial](https://canonical.com/data/kafka/docs/4/tutorial/), [Juju CLI deployment guide](https://canonical.com/data/kafka/docs/4/how-to/deploy/deploy-anywhere/), [generated actions reference](https://canonical.com/data/kafka/docs/4/reference/_generated/actions/) and [component overview](https://canonical.com/data/kafka/docs/4/explanation/components/), respectively. All were captured in light mode on 21 November 2026, at the same 1440 × 1060 viewport and twice the pixel density.
 - Kafka `navigation.webp`: the live version 4 documentation menu, captured in light mode on 21 November 2026 with every branch expanded. The native menu captures are arranged in four section columns inside a light frame, with Home and Contributor's guide above them; all 57 navigation links and their nesting are preserved.
-- OpenSearch `site.webp`: the linked version 2 documentation, captured in November 2026.
-- TypeDB `site.webp`: the supplied Wayback Machine snapshot of the documentation overview, dated 15 June 2024. The card and detail page link to that archive.
+- OpenSearch `site.webp`, `tutorial.webp`, `deploy-standard.webp`, `requirements.webp` and `node-roles.webp`: the live version 2 [home page](https://canonical.com/data/opensearch/docs/2/), [tutorial](https://canonical.com/data/opensearch/docs/2/tutorial/), [standard deployment guide](https://canonical.com/data/opensearch/docs/2/how-to/deploy/standard/), [system requirements](https://canonical.com/data/opensearch/docs/2/reference/system-requirements/) and [node-role explanation](https://canonical.com/data/opensearch/docs/2/explanation/node-roles/). Captured in light mode on 21 November 2026, at 1440 × 1060 CSS pixels and 2× density.
+- OpenSearch `navigation.webp`: all 60 links in the same documentation's navigation, fully expanded in light mode on 21 November 2026. Native captures are arranged by section, including the Dashboards subtree; no labels or nesting have been omitted.
+- TypeDB `site.webp`: the [documentation overview archived on 15 June 2024](https://web.archive.org/web/20240615140608mp_/https://typedb.com/docs/home/overview). `learning-course.webp`, `installation.webp`, `typeql.webp` and `why-typedb.webp` show the [learning course](https://web.archive.org/web/20240620100948mp_/https://typedb.com/docs/learn/overview), [installation guidance](https://web.archive.org/web/20240620100951mp_/https://typedb.com/docs/home/install/overview), [TypeQL reference](https://web.archive.org/web/20240620100947mp_/https://typedb.com/docs/typeql/overview) and [conceptual introduction](https://web.archive.org/web/20240620101010mp_/https://typedb.com/docs/learn/1-why-typedb/1-why-typedb) archived on 20 June 2024. All preserve the archive's native dark appearance and were captured on 21 November 2026 at 1440 × 1060 CSS pixels and 2× density. Archive dates and capture dates are distinguished in the captions.
 - VK Private Cloud `screenshot.webp` and `project-quotas.webp`: the supplied administrator guide (12 August 2022), p.161; the former is a full-page render of the quota-management procedure, the latter an excerpt showing the administrator portal's resource quotas. `test-methodology.webp`: the supplied test programme and methodology (25 August 2022), p.44.
 - Tarantool Data Grid `screenshot.webp` and `interface.webp`: the supplied release 1.0 documentation (2 November 2020), printed p.43 / PDF page 45; the former is a full-page render, the latter an interface excerpt. `domain-model.webp`: printed p.3 / PDF page 5 of the same document.
-- STAT `source-preview.webp`: [the annotated tutorial example](https://github.com/izmalk/stat/blob/main/examples/sample-page.md?plain=1), captured from GitHub on 21 November 2026.
-- Release Notes Builder `generated-notes.webp`: [the generated Charmed Apache Kafka example](https://github.com/izmalk/release-notes-builder/blob/main/release-notes/charmed-apache-kafka-rev777.md), captured from GitHub in November 2026. Revision 777 is a placeholder used by the example, not a real release revision.
-- Scanner `progress-bar.png` (cover) and `source-preview.png` (gallery): `starter_pack_scanner/pics/progress-bar.png` and `starter_pack_scanner/pics/main-screen.png` in its source repository.
-- Auditor `source-preview.png`: `hero-image.png` in its source repository.
+- STAT `source-preview.webp` and `annotations.webp`: [the annotated tutorial example](https://github.com/izmalk/stat/blob/main/examples/sample-page.md?plain=1) and [annotation reference](https://github.com/izmalk/stat#annotations), captured from GitHub in light mode on 21 November 2026.
+- Release Notes Builder `generated-notes.webp` and `template.webp`: [the stored Charmed Apache Kafka example](https://github.com/izmalk/release-notes-builder/blob/main/release-notes/charmed-apache-kafka-rev777.md) and an excerpt from [the Kafka Jinja2 template](https://github.com/izmalk/release-notes-builder/blob/main/templates/kafka.md.j2), captured from GitHub in light mode on 21 November 2026. Revision 777 is a placeholder used by the example, not a real release revision.
+- Scanner `progress-bar.png` (cover), `source-preview.png`, `batch-scan.png` and `batch-results.png`: unchanged screenshots from `starter_pack_scanner/pics/progress-bar.png`, `main-screen.png`, `batch-scan.png` and `batch-scan-results.png` in [its source repository](https://github.com/izmalk/starter-pack-scanner/tree/main/starter_pack_scanner/pics). The batch images were retrieved on 21 November 2026; the stored report shows 4 September 2026. All preserve the application's dark palette and depict saved examples, not new scans.
+- Auditor `source-preview.png`: the original dark report excerpt `hero-image.png` in [its source repository](https://github.com/izmalk/hack-docs-qc); long lines are already clipped in that source capture. `criteria.webp` shows [the how-to-specific criteria table](https://github.com/izmalk/hack-docs-qc#how-to-specific-checks-h01h16), captured from GitHub in matching dark mode on 21 November 2026.
 - BusyRebar reuses `/images/busy-led.jpg` and `/images/busy-power.jpg` from the existing build post; no additional image copies are needed.
 
-The STAT capture shows annotated tutorial source; the release-note capture shows
-a generated example stored in the repository. Prototype
-descriptions can be expanded with personal project decisions and outcomes before
-publication.
+Source and output captures show the stored examples identified in their captions;
+capturing them does not constitute a new scan, test or generation run. Further
+personal decisions and outcomes can be added when supported by the author's account.
 
 The supplied Private Cloud and TDG PDFs are source material only: their original
 files are not stored in the site. Selected pages and excerpts were rendered

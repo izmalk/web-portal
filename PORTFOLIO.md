@@ -6,10 +6,10 @@ presentation. The documentation profile below is based on the approved
 Its structure and editorial choices are the reference; its personal claims,
 dates, product details and assets belong to that project.
 
-Apply the profile when an entry is requested for revision. Existing entries
-have not all been brought into alignment. Creating this guide does not call for
-a bulk rewrite. Tools and automation entries need a separate profile in a future
-revision; retain their current structure in the meantime.
+Apply the relevant profile when an entry is requested for revision. Documentation
+and tools use the same case-study progression, with an opening section appropriate
+to their subject. Preserve project-specific evidence and historical context when
+bringing entries into alignment.
 
 ## Common data and rendering conventions
 
@@ -225,3 +225,72 @@ while its reference screenshot shows Actions. Describe the actual capture.
   and mobile layouts, both site colour modes, contents links and image zoom work.
 - Report any evidence or verification gap. Do not describe a draft, failed capture
   or unavailable source as a completed or verified result.
+
+## Tools and automation entries
+
+Use the same presentation components as documentation entries: a real capture
+in the shared hero frame, three prose sections, targeted Examples cards and an
+evidence gallery. Set `collection: tools` and retain a specific category such as
+documentation testing, publishing automation or documentation design.
+
+### Markdown body and voice
+
+Use these level-two headings, in order:
+
+1. **Project summary**: explain the user's problem, what the tool does and the
+   source-to-result workflow. Distinguish a theme, CLI, local web application or
+   agent skill so the reader knows what they are looking at.
+2. **My involvement**: state the supported personal contribution and context.
+   Keep a personal project, a maintained Canonical project and a hackathon
+   experiment distinct. A repository hosted under the author's account alone
+   does not establish sole authorship or an employment context.
+3. **Main challenges**: connect design choices to the problem: keeping tests
+   tied to tutorial source, gathering release evidence, checking both source
+   configuration and published behaviour, designing reusable navigation, or
+   expressing review criteria clearly. Explain relevant limits without inventing
+   accuracy figures, adoption metrics or claims that the tool was run for this
+   portfolio page.
+
+Prefer concrete, first-person contribution statements where supported. Retain
+neutral descriptions of behaviour when personal ownership is not established.
+Describe AI-generated findings as review material requiring judgement; do not
+present them as verified defects or evidence that a procedure was executed.
+
+### Examples and gallery
+
+- Use two to four useful examples when available, with the same `kind`, `title`,
+  `description`, `action` and `url` fields as documentation cards. Choose labels
+  such as Usage, Configuration, Sample output, Source example or Review criteria.
+  Diátaxis categories are appropriate only when the linked material fits them.
+- Point to specific installation/usage sections, configuration references,
+  annotation examples, templates, criteria or stored output. Avoid a closing
+  paragraph or card that merely repeats the generic source-repository link.
+- Prefer real interface or output captures. A source view is useful when it
+  demonstrates the tool's input, annotations, configuration or review protocol.
+  Identify stored examples as examples; never imply that capturing one means a
+  new scan, test, audit or release-generation run took place.
+- Replace generic workflow illustrations in the evidence gallery with useful
+  captures where available. Preserve existing fallback artwork separately.
+- Use one coherent capture mode within each entry. Prefer light mode for new
+  browser documentation and GitHub captures; retain an application's native
+  appearance when its genuine screenshots use a fixed palette. Do not recolour
+  a real interface or crop away context that changes the meaning of its output.
+- Label excerpts and placeholder revisions explicitly. Inspect screenshots for
+  clipped lines, empty panels or stale destinations, and record provenance in
+  the README alongside the other image sources.
+- Make `cover_note` identify the tool's distinctive, supported work or workflow.
+  Omit redundant labels with `cover_label: ""`; retain labels that distinguish
+  an annotated input, an example output or a scan-progress view.
+
+Apply the common build, responsive layout, colour-mode, contents and image-viewer
+checks to these pages too. Review code-source captures as code, and interface
+captures as interfaces; neither is a substitute for exercising the tool itself.
+
+## Other writing in the documentation collection
+
+An entry presenting a build article, such as BusyRebar, may use **Project summary**,
+**My involvement** and **Main challenges**. Explain the project and the author's
+writing/build contribution, then link to useful sections of the article rather
+than forcing four Diátaxis samples. Use genuine project photographs with their
+original colours and accurate captions. Reuse the site's existing photos where
+possible instead of introducing duplicate copies.
