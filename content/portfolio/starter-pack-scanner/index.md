@@ -1,6 +1,6 @@
 ---
 title: "Starter Pack Scanner"
-description: "Check documentation repositories and published sites for configuration, discoverability, and migration issues."
+description: "Check documentation repositories and published sites for configuration, discoverability, and migration issues against preset expectations."
 weight: 50
 collection: "tools"
 category: "Documentation quality"
@@ -43,18 +43,24 @@ gallery:
 
 ## Project summary
 
-A documentation site depends on more than its pages. Build configuration, publishing URLs, metadata, and discovery files all affect whether readers can find and use the material. Reviewing those details across several repositories can become repetitive.
+A documentation site depends on more than its pages. Build configuration, publishing URLs, metadata, and discovery files all affect whether readers can find and use the material. Reviewing those details manually across multiple products can become repetitive, tedious and prone to errors.
 
-Starter Pack Scanner runs a modular set of checks against repositories using Canonical's Sphinx Stack, previously known as the Starter Pack. It provides a command-line interface, a local web interface and a Python API.
+Starter Pack Scanner runs a modular set of checks against repositories using Canonical's [Sphinx Stack](https://github.com/canonical/sphinx-stack), previously known as the Starter Pack. It provides a command-line interface, a local web interface and a Python API.
 
 ## My involvement
 
 This is one of my personal documentation automation projects. Its scope is the supporting infrastructure around documentation: repository configuration, publication URLs and discovery resources. The interfaces expose the same underlying checks for individual investigations and wider reviews.
 
+My main goal was to save effort and raise reliability of quality control.
+
 ## Main challenges
+
+The checks themselves are designed to be easily extendable, like plugins.
+
+It can be hard to infer the published documentation address from its repository. For that reason, it has some heuristics and a manual override.
 
 Repository configuration and the published site can diverge. The scanner clones a target repository into a temporary directory, identifies the documentation root and runs the selected checks. Live-site checks inspect published pages and discovery resources, including metadata and the links exposed through `llms.txt`.
 
-A dedicated migration group checks documentation moving from Read the Docs hosting to Canonical domains. It covers configuration and live behaviour such as canonical URLs, sitemaps, redirects and HTTP responses for missing pages. Both sources contribute to the same report.
+A dedicated migration group checks documentation moving from Read the Docs hosting domain to Canonical's own domains. It covers configuration and live behaviour such as canonical URLs, sitemaps, redirects and HTTP responses for missing pages. Both sources contribute to the same report.
 
 The local web interface presents findings and guidance, while batch YAML input records the options for several repositories in one place. Reports are cached on disk with their generation time, and a fresh scan can bypass the cache. A common check interface and CLI exit codes let the same workflow support interactive and automated reviews.
