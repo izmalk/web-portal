@@ -64,3 +64,5 @@ Repository configuration and the published site can diverge. The scanner clones 
 A dedicated migration group checks documentation moving from Read the Docs hosting domain to Canonical's own domains. It covers configuration and live behaviour such as canonical URLs, sitemaps, redirects and HTTP responses for missing pages. Both sources contribute to the same report.
 
 The local web interface presents findings and guidance, while batch YAML input records the options for several repositories in one place. Reports are cached on disk with their generation time, and a fresh scan can bypass the cache. A common check interface and CLI exit codes let the same workflow support interactive and automated reviews.
+
+My main concern was reproducable results, give non-deterministic nature of LLMs output. While creating this skill I made sure to provide clear criteria and examples of good and bad. My tests showed results to be the same for many consecutive runs on the same content.
