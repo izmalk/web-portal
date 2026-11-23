@@ -42,6 +42,8 @@ gallery:
 
 Tarantool Data Grid stores complex business objects and supports real-time queries across them. Its documentation connects the developer's view of a domain model with the operator's view of a running cluster.
 
+It's built on Tarantool DBMS: an in-memory database made for ultra-low latency with a built-in application server, programmed with Lua.
+
 The documentation set includes an application development guide, an operations guide and reference material for requests from external systems. This entry presents Russian-language samples from release 1.0, dated 2 November 2020; the current documentation linked above describes a newer version.
 
 ## My involvement
