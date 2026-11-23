@@ -12,8 +12,8 @@ cover_source: "source-preview.webp"
 cover_accent: "#B6A1EE"
 cover_label: "Tutorial source example"
 cover_note: "Annotated tutorials · repeatable VM tests · CI integration"
-cover_alt: "A genuine STAT tutorial source example and its test annotations in light mode, framed with violet project artwork."
-cover_caption: "Sample tutorial source from the STAT repository, captured in light mode in November 2026, with decorative framing. This is source code, not a new test run."
+cover_alt: "A STAT tutorial source excerpt and its test annotations in dark mode, framed with violet project artwork."
+cover_caption: "Sample tutorial source from the STAT repository, captured from GitHub in dark mode on 23 November 2026, with decorative framing. This is source code, not a new test run."
 links:
   - label: "Source code"
     url: "https://github.com/izmalk/stat"
@@ -30,18 +30,18 @@ examples:
     url: "https://github.com/canonical/kafka-operator/tree/main/tests/tutorial"
 gallery:
   - image: "source-preview.webp"
-    alt: "The sample-page.md tutorial in the STAT repository in light mode, showing MyST shell blocks and test annotations."
-    caption: "The repository's sample tutorial source, captured from GitHub in light mode, November 2026."
+    alt: "The STAT repository's sample-page.md tutorial in dark mode, showing MyST shell blocks and test annotations."
+    caption: "Sample tutorial source excerpt, captured from GitHub in dark mode on 23 November 2026."
   - image: "annotations.webp"
-    alt: "STAT's annotation reference in light mode, with a table explaining the form and effect of the tutorial test controls."
-    caption: "The annotation reference in the project README, captured from GitHub in light mode, November 2026."
+    alt: "STAT's annotation reference in dark mode, with a table explaining the form and effect of the tutorial test controls."
+    caption: "The complete annotation table in the project README, captured from GitHub in dark mode on 23 November 2026."
 ---
 
 ## Project summary
 
-A tutorial can be clear, well structured, and still fail when a reader follows it. Commands change, deployments take time to settle, and examples drift away from the product they describe. STAT — Spread Tutorial Automated Testing — addresses that gap by running the commands from the documentation itself.
+A tutorial can be clear, well structured, and still fail when a reader follows it. Commands change, deployments take time to settle, and examples drift away from the product they describe. STAT (Spread Tutorial Automated Testing) addresses that gap by running the commands from the documentation itself.
 
-The project extracts shell commands from MyST Markdown tutorial pages and executes them sequentially in a clean virtual machine through Spread. It was developed for Canonical Charmed Operator tutorials, with integrations for Charmed OpenSearch, Charmed Apache Kafka and Charmed Apache Spark.
+The project extracts shell commands directly from MyST Markdown tutorial pages and executes them sequentially in a clean virtual machine through [Spread](https://github.com/canonical/spread). It was developed for Canonical Charmed Operator tutorials, and tested for Charmed OpenSearch, Charmed Apache Kafka and Charmed Apache Spark.
 
 ## My involvement
 
@@ -51,8 +51,8 @@ The repository packages the command extractor, diagnostic helpers and integratio
 
 ## Main challenges
 
-The test needs to follow the tutorial while accounting for operations that take time, interactive prompts and state that must be checked between steps. Test instructions live in HTML comments alongside the tutorial text: they identify blocks to skip, waits, hidden commands and assertions without adding that machinery to the published page.
+The test needs to follow the tutorial while accounting for operations that take time, interactive prompts and state that must be checked between steps. Additional invisible test directives live in HTML comments alongside the tutorial text: they identify blocks to skip, waits, hidden commands and assertions without adding that machinery to the published page.
 
-The extractor produces shell scripts and Spread task definitions. Spread provisions a Multipass virtual machine and runs the tasks in order. Generated files are recreated before a run, keeping the tutorial source connected to the commands under test.
+The extractor produces shell scripts and Spread task definitions. [Spread](https://github.com/canonical/spread) provisions a [Multipass](https://canonical.com/multipass) virtual machine and runs the tasks in order. Generated files are recreated before a run, keeping the tutorial source connected to the commands under test.
 
 When a procedure fails, the author needs enough information to investigate it. The workflow includes extraction, freshness checks, complete runs and interactive debugging; diagnostic helpers collect Juju and host information for that investigation.

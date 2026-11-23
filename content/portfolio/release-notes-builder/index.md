@@ -1,10 +1,10 @@
 ---
 title: "Release Notes Builder"
-description: "Turn GitHub commits and pull requests into structured release notes, with a repeatable workflow for editorial review."
+description: "A mostly deterministic tool to turn GitHub commits and pull requests into structured release notes, with a repeatable workflow for editorial review."
 weight: 40
 collection: "tools"
-category: "Publishing automation"
-role: "Personal project"
+category: "Documentation automation"
+role: "Documentation automation"
 role_label: "Project context"
 image: "cover.svg"
 image_alt: "Conceptual illustration of commit and pull-request records being organised into release notes."
@@ -43,14 +43,18 @@ Release Notes Builder generates structured release notes for Canonical Data & AI
 
 An accompanying agent skill coordinates the broader product-level workflow from the product's own workspace, where it can consult metadata, existing documentation and previous release notes.
 
+The deterministic script ensures complete coverage of changes and factual correctness while agentic skill provides convenience and creativity for human readable summary.
+
 ## My involvement
 
-I developed this personal project for release-note generation in my Charmed Apache Kafka work. My focus is a strict factual basis in GitHub API data and a consistent document format, with a mostly deterministic workflow that produces a draft for editorial review.
+I developed this project by myself for release-note generation in my Charmed Apache Kafka work. My focus is a strict factual basis in GitHub API data and a consistent document format, with a mostly deterministic workflow that produces a draft for editorial review.
+
+The initial success made me expand the application of this tool to other of my products.
 
 ## Main challenges
 
-Release notes need to connect engineering changes with information a product user can use. Choosing the commit range, identifying affected components and presenting the changes consistently all require care. The standalone builder gathers changes for one repository; component scope and the broader product context belong to the accompanying skill.
+Release notes need to connect engineering changes with information a product user can use. Choosing the commit range, identifying affected components and presenting the changes consistently all require care. The deterministic builder script gathers changes for one repository; component scope and the broader product context belong to the accompanying skill.
 
-For products spanning several repositories, an explicit component list defines what the draft covers. Reference names are resolved against the repository, and uncertainty about scope is reported. Product-specific templates preserve the expected document structure.
+For products spanning several repositories, one can use auto-detection logic or an explicit component list that defines what the draft covers. Reference names are resolved against the repository, and uncertainty about scope is reported. Product-specific templates preserve the expected document structure.
 
-The workflow can record selected components, resolved references, evidence, exclusions and blockers in a structured report. Existing release-note files are protected from accidental overwriting. The resulting draft and review trail provide a repeatable starting point for editorial work before publication.
+The workflow can record selected components, resolved references, evidence, exclusions and blockers in a structured report. Existing release-note files are protected from accidental overwriting and used to create a template for new ones. The resulting draft and review trail provide a repeatable starting point for editorial work before publication.
