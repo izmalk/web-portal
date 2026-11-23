@@ -16,7 +16,7 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
     brand_image = "/images/guy.jpg"        # path to the image shown in the sidebar
     description = "Documentation engineer. Technical writer, mentor, and team leader with 15+ years in IT."
     dark_mode = true                       # optional - defaults to false
-    favicon = "/favicon.ico"               # path to favicon
+    favicon = "/favicon.svg"               # path to favicon
 
     front_page_content = ["posts"]         # page bundles listed on the front page
 

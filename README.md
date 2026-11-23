@@ -37,6 +37,15 @@ ring are styled in `assets/css/custom.css`. The site-level
 navigation highlight. Hugo includes these customizations in the normal build;
 the `design-preview` files are only the earlier comparison galleries.
 
+The favicon is the versioned-guide mark in `static/favicon.svg`: an open book
+with a Git branch. `params.favicon` in `config.toml` selects it, and the
+`layouts/partials/head/head.html` override declares its SVG type and scalable
+size (`sizes="any"`). Edit the SVG source directly to update the mark.
+
+Post dates and reading estimates use `layouts/partials/post/info.html` and the
+`.post-meta` flex gap in `assets/css/custom.css`. Their spacing is independent
+of HTML whitespace, so local previews and the minified GitHub Pages build match.
+
 `assets/js/toc.js` overrides the theme's TOC tracking. It follows the section at
 the top of the reading area, supports both the desktop content pane and window
 scrolling, and preserves explicit anchor selections until scrolling resumes.

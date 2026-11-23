@@ -183,6 +183,14 @@ body.dark-theme {
 /* Emerald accents: links, current navigation, and editorial rules      */
 /* ------------------------------------------------------------------ */
 
+/* Keep metadata spacing when production minification removes HTML whitespace. */
+.post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 0.3em;
+}
+
 .reading-time {
     color: var(--date-color);
 }

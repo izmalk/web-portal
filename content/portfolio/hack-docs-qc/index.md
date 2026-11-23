@@ -4,7 +4,7 @@ description: "An AI-assisted review skill that evaluates how-to guides against e
 weight: 60
 collection: "tools"
 category: "AI-assisted review"
-role: "Hackathon project"
+role: "One-day hackathon · Team of three"
 role_label: "Project context"
 image: "cover.svg"
 image_alt: "Conceptual illustration of a how-to guide reviewed against a structured checklist."
@@ -46,7 +46,7 @@ How-to Auditor explores an LLM-assisted approach to that review. It evaluates gu
 
 ## My involvement
 
-This is my project from Canonical's Engineering Sprint Hackathon in Madrid in 2026. It explores how technical writing principles can be expressed as a portable review protocol, supported by explicit criteria and examples of good and poor practice.
+I created How-to Auditor with two colleagues in a single day during Canonical's Engineering Sprint Hackathon in Madrid in 2026. It explores how technical writing principles can be expressed as a portable review protocol, supported by explicit criteria and examples of good and poor practice.
 
 ## Main challenges
 
