@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-labelledby="title desc">
+  <title id="title">{{ .title | htmlEscape }}</title>
+  <desc id="desc">{{ with .label }}{{ . | htmlEscape }}. {{ end }}Authentic project capture with decorative framing.</desc>
+  <defs>
+    <linearGradient id="base" x2="1" y2="1"><stop stop-color="#17242c"/><stop offset="1" stop-color="#111b22"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="{{ .accent }}" stop-opacity=".17"/><stop offset="1" stop-color="{{ .accent }}" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#afccd7" stroke-opacity=".04"/></pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="16" stdDeviation="18" flood-opacity=".35"/></filter>
+    <clipPath id="screen"><rect x="72" y="162" width="1056" height="466" rx="1"/></clipPath>
+  </defs>
+  <rect width="1200" height="750" fill="url(#base)"/>
+  <rect width="1200" height="750" fill="url(#grid)"/>
+  <ellipse cx="780" cy="310" rx="650" ry="490" fill="url(#halo)"/>
+  <path d="M1110 30v65m-32-32h64" fill="none" stroke="{{ .accent }}" stroke-width="1.5" opacity=".35"/>
+  <circle cx="1090" cy="601" r="115" fill="none" stroke="{{ .accent }}" opacity=".18"/>
+  <rect x="64" y="55" width="6" height="37" rx="3" fill="{{ .accent }}"/>
+  <text x="91" y="83" fill="#eaf2f5" font-family="Arial, Helvetica, sans-serif" font-size="33" font-weight="600">{{ .title | htmlEscape }}</text>
+  <text x="1136" y="80" fill="#9dafbd" font-family="Arial, Helvetica, sans-serif" font-size="21" text-anchor="end">{{ .category | htmlEscape }}</text>
+  <g>
+    {{/* Keep embedded screenshots out of the shadow filter during thumbnail scaling. */}}
+    <rect x="71" y="125" width="1058" height="504" rx="13" fill="#21313c" stroke="#607784" stroke-opacity=".65" filter="url(#shadow)"/>
+    <path d="M84 125h1032a13 13 0 0 1 13 13v24H71v-24a13 13 0 0 1 13-13" fill="#263843"/>
+    <path d="M94 143h72" stroke="{{ .accent }}" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+    {{ with .label }}
+    <text x="1099" y="150" fill="#bfccd5" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="end">{{ . | htmlEscape }}</text>
+    {{ end }}
+    <image x="72" y="162" width="1056" height="466" href="{{ .screenshot | safeURL }}" preserveAspectRatio="{{ .fit }}" clip-path="url(#screen)"/>
+    <rect x="71" y="125" width="1058" height="504" rx="13" fill="none" stroke="{{ .accent }}" stroke-opacity=".3"/>
+  </g>
+  <rect x="938" y="605" width="211" height="48" rx="8" fill="#17242c" stroke="{{ .accent }}" stroke-opacity=".65"/>
+  <path d="M959 619v19h17m-12-15h16m-16 6h12" fill="none" stroke="{{ .accent }}" stroke-width="2"/>
+  <text x="995" y="636" fill="{{ .accent }}" font-family="Arial, Helvetica, sans-serif" font-size="21">{{ .badge | htmlEscape }}</text>
+  <path d="M64 681h1072" stroke="#34444d"/>
+  <text x="64" y="717" fill="#a7bac7" font-family="Arial, Helvetica, sans-serif" font-size="21">{{ .note | htmlEscape }}</text>
+</svg>

@@ -1,0 +1,35 @@
+{{- $page := . -}}
+{{- $cover := dict
+    "url" (partial "portfolio/image-url.html" (dict "page" $page "image" $page.Params.image))
+    "alt" ($page.Params.image_alt | default (printf "Illustration for %s" $page.Title))
+    "caption" ($page.Params.image_caption | default "")
+-}}
+{{- with $page.Params.cover_source -}}
+  {{- with $page.Resources.GetMatch . -}}
+    {{- if and (eq .ResourceType "image") (in (slice "image/png" "image/jpeg" "image/webp") .MediaType.Type) -}}
+      {{- $context := dict
+          "title" $page.Title
+          "category" ($page.Params.category | default "Selected work")
+          "accent" ($page.Params.cover_accent | default "#67D7A5")
+          "label" (cond (isset $page.Params "cover_label") $page.Params.cover_label "Project screenshot")
+          "badge" ($page.Params.cover_badge | default "Open source")
+          "note" ($page.Params.cover_note | default "A closer look at the project")
+          "fit" (cond (eq $page.Params.cover_fit "contain") "xMidYMid meet" "xMidYMin slice")
+          "screenshot" (printf "data:%s;base64,%s" .MediaType.Type (encoding.Base64Encode .Content))
+      -}}
+      {{/* ExecuteAsTemplate caches by target path, including during live reload. */}}
+      {{- $path := printf "images/portfolio/%s/%s-cover.svg" ($context | jsonify | sha256) $page.File.ContentBaseName -}}
+      {{- $image := resources.Get "images/portfolio/cover-frame.svg" | resources.ExecuteAsTemplate $path $context | fingerprint -}}
+      {{- $cover = dict
+          "url" $image.RelPermalink
+          "alt" ($page.Params.cover_alt | default (printf "Screenshot of %s, framed with project artwork" $page.Title))
+          "caption" ($page.Params.cover_caption | default ($page.Params.cover_label | default "Project screenshot with decorative framing."))
+      -}}
+    {{- else -}}
+      {{- warnf "Portfolio: cover_source %q in %s must be a PNG, JPEG, or WebP image; using the original cover" $page.Params.cover_source $page.File.Path -}}
+    {{- end -}}
+  {{- else -}}
+    {{- warnf "Portfolio: cover_source %q is missing in %s; using the original cover" . $page.File.Path -}}
+  {{- end -}}
+{{- end -}}
+{{- return $cover -}}

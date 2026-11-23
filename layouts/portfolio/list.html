@@ -1,0 +1,44 @@
+{{ define "main" }}
+<header class="portfolio-intro">
+  <p class="portfolio-eyebrow">Selected work</p>
+  <h1 class="portfolio-title">{{ .Title }}</h1>
+  <div class="portfolio-intro-copy">{{ .Content }}</div>
+</header>
+
+{{ $projects := .RegularPages.ByWeight }}
+{{ $documentation := where $projects "Params.collection" "documentation" }}
+{{ $tools := where $projects "Params.collection" "ne" "documentation" }}
+{{ $collections := slice
+  (merge site.Data.portfolio.documentation (dict "projects" $documentation))
+  (merge site.Data.portfolio.tools (dict "projects" $tools))
+}}
+<nav class="portfolio-collections" aria-label="Catalogue categories">
+  {{ range $collections }}
+  <a href="{{ $.RelPermalink }}#{{ .anchor }}">{{ .title }} <span class="portfolio-count">{{ len .projects }}</span></a>
+  {{ end }}
+</nav>
+
+{{ $cardIndex := 0 }}
+{{ range $collections }}
+<section class="portfolio-collection" id="{{ .anchor }}" aria-labelledby="{{ .anchor }}-title">
+  <div class="portfolio-collection-heading">
+    <div>
+      <h2 id="{{ .anchor }}-title">{{ .title }}</h2>
+      <p>{{ .description }}</p>
+    </div>
+    <span class="portfolio-count">{{ len .projects }} {{ if eq (len .projects) 1 }}project{{ else }}projects{{ end }}</span>
+  </div>
+  <div class="portfolio-grid">
+    {{ range .projects }}
+      {{ partial "portfolio/card.html" (dict "page" . "index" $cardIndex) }}
+      {{ $cardIndex = add $cardIndex 1 }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+<footer class="portfolio-endnote">
+  <p>Curious about the person behind the projects?</p>
+  <a href="{{ "work-profile/" | relURL }}">Explore my work profile</a>
+</footer>
+{{ end }}

@@ -1,11 +1,11 @@
 ---
 title: "Portfolio"
-layout: profile
+description: "Selected projects by Vladimir Izmalkov: documentation, open-source tools, and developer experience."
 hideToc: true
 ---
 
-> **Work in progress**
->
-> I'm putting together a selection of my work. Please check back soon.
+This is a catalogue of selected projects in documentation engineering, developer experience,
+and open source. It's not everything I did, but a curated list of achievements.
 
-In the meantime, visit my [Work profile](/work-profile/) for an overview of my experience.
+For your convenience, I separated examples of my work into categories for written content
+(documentation and other text) and tools/automation.

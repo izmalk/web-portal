@@ -1,0 +1,8 @@
+documentation:
+  title: Documentation and other texts
+  anchor: documentation-and-texts
+  description: Product documentation, guides, reference material, and blog posts.
+tools:
+  title: Tools and automation
+  anchor: tools-and-automation
+  description: Themes and tools for testing, reviewing, and publishing documentation.

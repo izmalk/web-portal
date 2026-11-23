@@ -1,0 +1,114 @@
+{{ define "main" }}
+{{ $collection := partial "portfolio/collection.html" . }}
+{{ $collectionURL := printf "%s#%s" .Parent.RelPermalink $collection.anchor }}
+<nav class="project-breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ .Parent.RelPermalink }}">Portfolio</a>
+  <span aria-hidden="true">/</span>
+  <a href="{{ $collectionURL }}">{{ $collection.title }}</a>
+  <span aria-hidden="true">/</span>
+  <span aria-current="page">{{ .LinkTitle }}</span>
+</nav>
+
+{{ $toc := .TableOfContents }}
+{{ $hasContentToc := strings.Contains $toc "<a " }}
+{{ $hasExamples := gt (len (.Params.examples | default (slice))) 0 }}
+{{ $hasGallery := gt (len (.Params.gallery | default (slice))) 0 }}
+{{ $sectionLinks := "" }}
+{{ if $hasExamples }}
+  {{ $sectionLinks = printf `<li><a href="%s#examples-title">Examples</a></li>` .RelPermalink }}
+{{ end }}
+{{ if $hasGallery }}
+  {{ $sectionLinks = printf `%s<li><a href="%s#gallery-title">Gallery</a></li>` $sectionLinks .RelPermalink }}
+{{ end }}
+{{ if $sectionLinks }}
+  {{ if $hasContentToc }}
+    {{ $toc = replaceRE `</ul>\s*</nav>\s*$` (printf "%s</ul></nav>" $sectionLinks) $toc }}
+  {{ else }}
+    {{ $toc = printf `<nav id="TableOfContents"><ul>%s</ul></nav>` $sectionLinks }}
+  {{ end }}
+{{ end }}
+{{ $hasOutline := or $hasContentToc $hasExamples $hasGallery }}
+
+<article class="project-detail">
+  <div class="project-story-layout{{ if $hasOutline }} project-story-layout-with-outline{{ end }}">
+  <header class="project-header">
+    {{ with .Params.category }}<p class="portfolio-eyebrow">{{ . }}</p>{{ end }}
+    <h1 class="portfolio-title">{{ .Title }}</h1>
+    <p class="project-deck">{{ .Description }}</p>
+    <div class="project-facts">
+      {{ with .Params.role }}<p><span class="project-fact-label">{{ $.Params.role_label | default "My role" }}</span>{{ . }}</p>{{ end }}
+      {{ partial "portfolio/links.html" . }}
+    </div>
+  </header>
+
+  <div class="project-main">
+  {{ $cover := partial "portfolio/cover.html" . }}
+  <figure class="project-hero">
+    <a class="image-zoom" data-image-viewer href="{{ $cover.url }}" aria-label="Enlarge image: {{ $cover.alt }}"{{ with $cover.caption }} data-image-caption="{{ . }}"{{ end }}>
+      <img src="{{ $cover.url }}" alt="{{ $cover.alt }}" width="1200" height="750" fetchpriority="high" decoding="async">
+    </a>
+    {{ with $cover.caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+  </figure>
+
+    <div class="project-prose">{{ .Content }}</div>
+
+  {{ with .Params.examples }}
+  <section class="project-examples" aria-labelledby="examples-title">
+    <h2 id="examples-title">Examples</h2>
+    <div class="project-examples-grid">
+      {{ range . }}
+      <a class="project-example" href="{{ .url }}">
+        <span class="project-example-kind">{{ .kind }}</span>
+        <h3 class="project-example-title">{{ .title }}</h3>
+        <p class="project-example-description">{{ .description }}</p>
+        <span class="project-example-action">{{ .action }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{ with .Params.gallery }}
+  <section class="project-gallery" aria-labelledby="gallery-title">
+    <h2 id="gallery-title">Gallery</h2>
+    {{ range . }}
+    <figure>
+      <a class="project-gallery-image image-zoom" data-image-viewer href="{{ partial "portfolio/image-url.html" (dict "page" $ "image" .image) }}" aria-label="Enlarge image: {{ .alt }}"{{ with .caption }} data-image-caption="{{ . }}"{{ end }}>
+        <img src="{{ partial "portfolio/image-url.html" (dict "page" $ "image" .image) }}" alt="{{ .alt }}" loading="lazy" decoding="async">
+      </a>
+      {{ with .caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
+    {{ end }}
+  </section>
+  {{ end }}
+  </div>
+
+  {{ if $hasOutline }}
+  <aside class="project-outline" aria-label="On this page">
+    <p>On this page</p>
+    {{ $toc | safeHTML }}
+  </aside>
+  {{ end }}
+  </div>
+</article>
+
+{{ $projects := .Parent.RegularPages.ByWeight }}
+{{ if eq $collection.key "documentation" }}
+  {{ $projects = where $projects "Params.collection" "documentation" }}
+{{ else }}
+  {{ $projects = where $projects "Params.collection" "ne" "documentation" }}
+{{ end }}
+{{ $current := . }}
+{{ $next := false }}
+{{ range $index, $project := $projects }}
+  {{ if eq .RelPermalink $current.RelPermalink }}
+    {{ $next = index $projects (mod (add $index 1) (len $projects)) }}
+  {{ end }}
+{{ end }}
+<nav class="project-navigation" aria-label="More projects">
+  <a class="project-back" href="{{ $collectionURL }}">Back to {{ $collection.title }}</a>
+  {{ if and $next (gt (len $projects) 1) }}
+  <a class="project-next" href="{{ $next.RelPermalink }}"><span>Next project</span><strong>{{ $next.Title }}</strong></a>
+  {{ end }}
+</nav>
+{{ end }}

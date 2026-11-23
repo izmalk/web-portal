@@ -4,7 +4,7 @@
 (() => {
     function initializeToc() {
         const toc = document.getElementById("TableOfContents");
-        const sections = document.querySelector("main.content .posts, main.content .post");
+        const sections = document.querySelector("main.content .posts, main.content .post, main.content .project-detail");
         if (!toc || !sections) return;
 
         function headingId(hash) {
@@ -15,7 +15,7 @@
             }
         }
 
-        // Track linked sections: headings in articles, or post previews on the home page.
+        // Track linked sections: headings in articles and projects, or home-page previews.
         const entries = Array.from(toc.querySelectorAll("a[href]"), link => {
             const heading = document.getElementById(headingId(link.hash));
             const item = link.closest("li");
@@ -26,6 +26,7 @@
 
         const entriesById = new Map(entries.map(entry => [entry.heading.id, entry]));
         const content = sections.closest("main.content");
+        const project = sections.matches(".project-detail");
         const label = document.getElementById("contents");
         if (label) label.textContent = "Contents";
 
@@ -73,7 +74,11 @@
             const readingLine = position.top + 24;
             let current = entries[0];
             for (const entry of entries) {
-                if (entry.heading.getBoundingClientRect().top > readingLine) break;
+                // Project anchors stop at their CSS scroll margin. Use that inset
+                // after smooth navigation settles, allowing for pixel rounding.
+                const margin = project ? parseFloat(getComputedStyle(entry.heading).scrollMarginTop) || 0 : 0;
+                const line = project ? position.top + Math.max(24, margin + 1) : readingLine;
+                if (entry.heading.getBoundingClientRect().top > line) break;
                 current = entry;
             }
             if (position.maxScroll > 0 && position.maxScroll - position.scrollTop <= 1) {

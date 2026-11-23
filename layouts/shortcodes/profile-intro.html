@@ -1,6 +1,8 @@
 <div class="profile-intro">
   <figure class="profile-portrait">
-    <img src="{{ .Get "src" | relURL }}" alt="{{ .Get "alt" }}" width="1024" height="766" decoding="async">
+    <a class="image-zoom" data-image-viewer href="{{ .Get "src" | relURL }}" aria-label="Enlarge image: {{ .Get "alt" }}">
+      <img src="{{ .Get "src" | relURL }}" alt="{{ .Get "alt" }}" width="1024" height="766" decoding="async">
+    </a>
   </figure>
   <div class="profile-intro-text">
     {{ .Page.RenderString (dict "display" "block") .Inner }}

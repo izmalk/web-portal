@@ -1,0 +1,6 @@
+{{- /* Hugo can mark images inside Markdown links as IsBlock too. Unwrap only
+      our image hook's markup so the author's outer link stays authoritative. */ -}}
+{{- $text := .Text | replaceRE `(?s)<figure class="image-block">\s*<a\b[^>]*data-image-viewer[^>]*>\s*(<img\b[^>]*>)\s*</a>\s*(?:<figcaption>.*?</figcaption>)?\s*</figure>` `$1` -}}
+{{- $imageLink := and (strings.Contains $text "<img ") (findRE `(?i)\.(avif|bmp|gif|jpe?g|png|svg|tiff?|webp)([?#].*)?$` .Destination) -}}
+<a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if and (strings.HasPrefix .Destination "http") (not $imageLink) }} target="_blank"{{ end }}>{{ $text | safeHTML }}</a>
+{{- /* Remove trailing whitespace for links embedded in prose. */ -}}

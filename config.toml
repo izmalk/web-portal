@@ -91,5 +91,7 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
     tags = 'tags'
 
 [markup]
+    [markup.goldmark.parser]
+        wrapStandAloneImageWithinParagraph = false
     [markup.highlight]
         noClasses = false

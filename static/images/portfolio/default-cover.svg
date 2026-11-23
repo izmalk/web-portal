@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Documentation project</title>
+  <desc id="desc">A document and code brackets in a geometric emerald composition.</desc>
+  <rect width="1200" height="750" fill="#17352e"/>
+  <circle cx="600" cy="375" r="265" fill="#204a3e"/>
+  <rect x="430" y="160" width="340" height="430" rx="18" fill="#dff2e9"/>
+  <path d="M490 250h175m-175 50h220m-220 50h150" fill="none" stroke="#508977" stroke-width="15" stroke-linecap="round"/>
+  <path d="m530 430-45 45 45 45m140-90 45 45-45 45m-55-105-30 120" fill="none" stroke="#126b45" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
