@@ -1,6 +1,6 @@
 ---
 title: "Ulwazi"
-description: "A Sphinx theme built on the Vanilla Framework, bringing a consistent reading experience to technical documentation."
+description: "A Sphinx theme built on the Vanilla Framework, bringing a consistent reading experience to Canonical's documentation."
 weight: 10
 collection: "tools"
 featured: true
@@ -45,16 +45,31 @@ gallery:
 
 ## Project summary
 
-Ulwazi brings the Vanilla Framework's visual language to Sphinx documentation. Built on sphinx-basic-ng, it connects an established documentation generator with the design framework used across Canonical's web presence.
+Ulwazi brings the [Vanilla Framework](https://vanillaframework.io/)'s visual language to Canonical's documentation. Built on `sphinx-basic-ng`, it connects an established documentation generator (Sphinx) with the design framework used across Canonical's web presence and UI.
 
-The theme combines templates, styles and navigation behaviour in a reusable package. It supports a generic Vanilla appearance and configuration for Canonical's documentation sites.
+The theme combines templates, styles and navigation behaviour in a reusable [package](https://pypi.org/project/ulwazi/). It supports a generic Vanilla appearance and configuration for documentation features.
 
 ## My involvement
 
-I'm the project's main maintainer and author. As part of my documentation engineering work at Canonical, I bring together the reading interface and the authoring workflow: page structure, navigation, reusable templates, configuration and local preview.
+Since 2025, I'm the project's main maintainer and author. As part of my documentation engineering work at Canonical, I bring together the reading interface and the authoring workflow: page structure, navigation, reusable templates, configuration and local preview.
+
+Together with my colleagues, in 2026:
+
+- We added a comprehensive test suite (120+ tests)
+- Manually tested on our real documentation sets, created and fixed many small issues
+- Improved documentation to cover migration, configuration, usage, and troubleshooting
+- Implemented Ulwazi as the default theme in the [Sphinx Stack](https://github.com/canonical/sphinx-stack) for all Canonical's documentation by default
 
 ## Main challenges
 
-A documentation theme has to connect Sphinx's content model with the Vanilla Framework while helping readers move between topics and find their place within a page. The layout needs to remain usable across different kinds of technical content and different screen sizes.
+Our initial implementation of Vanilla Framework met serious friction, as it is not optimised for documetnation content. We had to do a few experiments, demonstrate the results and collaborate with designers to create a new typography system, accomodating for denser and strictly formated documentation content.
+
+A documentation theme has to connect Sphinx's content model with the Vanilla Framework while helping users move between topics and find what they are looking for. The layout needs to remain usable across different kinds of technical content and different screen sizes.
+
+We invited more people to contributre to the theme and to ensure the quality of the theme with external contributions and the rise of AI-assisted tools, we created a comprehensive test-suite, covering many aspects of our styling, features, etc. Test coverage at the moment of writing:
+
+- Python: 78%
+- JS: 59%
+- Features: 94%
 
 The sample documentation serves as both a guide and a working demonstration. Its pages exercise the theme's components, while the local preview workflow lets changes to content, templates and styles be reviewed together. Configuration keeps generic Vanilla styling and Canonical-specific needs within the same theme.

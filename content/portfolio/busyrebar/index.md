@@ -1,13 +1,21 @@
 ---
-title: "BusyRebar"
+title: "BusyReBar"
 description: "A build write-up about creating a wireless LED matrix repeater for the BUSY Bar, covering hardware, software, and design trade-offs."
 weight: 70
 collection: "documentation"
 category: "Blog post"
 role: "Builder and author, personal project"
-image: "/images/busy-led.jpg"
+image: "busy-led-retouched.webp"
 image_alt: "BusyRebar's wall-mounted RGB LED matrix displaying a BUSY Bar timer."
-image_caption: "BusyRebar repeating the BUSY Bar display. Photo from the project blog post."
+image_caption: "The original project photograph, straightened and colour-corrected with AI."
+cover_source: "busy-led-retouched.webp"
+cover_fit: "contain"
+cover_accent: "#6CD8F3"
+cover_label: ""
+cover_badge: "DIY build"
+cover_note: "Hardware build · wireless LED display · documented setup"
+cover_alt: "BusyRebar's wall-mounted RGB LED matrix showing a timer, with cyan decorative framing."
+cover_caption: "The original project photograph, straightened and colour-corrected with AI, in the shared portfolio frame."
 links:
   - label: "Read blog post"
     url: "/posts/busyrebar/"
@@ -19,20 +27,25 @@ examples:
     description: "Read the parts list, assembly notes and power measurements from the project."
     action: "Read the hardware section"
     url: "/posts/busyrebar/#bill-of-materials"
-  - kind: "Implementation"
-    title: "Trace a frame from bar to panel"
-    description: "Follow the image through the Linux bridge and wireless LED controller."
-    action: "Explore the workflow"
-    url: "/posts/busyrebar/#how-it-works"
+  - kind: "Project README"
+    title: "Set up and configure BusyReBar"
+    description: "Explore the architecture, screen-scaling options, setup steps and configuration reference."
+    action: "Read the README"
+    url: "https://github.com/izmalk/busyrebar/blob/main/README.md"
 gallery:
-  - image: "/images/busy-power.jpg"
-    alt: "A USB power meter connected to BusyRebar, showing voltage and current during operation."
-    caption: "Measuring the panel's power consumption. Photo from the project blog post."
+  - image: "busy-power-cropped.webp"
+    alt: "Close-up of a USB power meter and its USB connectors, with the voltage and current readings visible."
+    caption: "Measuring the panel's power consumption. AI-assisted crop of the project photograph."
+  - image: "data-loop-dark.webp"
+    alt: "Sequence diagram of the BusyReBar data loop: the Linux bridge fetches frames from BUSY Bar over HTTP, scales them and applies brightness, then sends RGB bytes over UDP to an Interstate 75 W receiver driving the LED matrix."
+    caption: "Data loop from the project's GitHub README, captured in dark mode on 23 November 2026."
 ---
 
 ## Project summary
 
-BusyRebar is a wireless LED matrix repeater for the BUSY Bar. A Python bridge on a Linux host fetches the screen image, adapts it for a 64×32 RGB LED matrix, and sends the pixels over Wi-Fi to a Pimoroni Interstate 75 W controller.
+This is a pet project of mine, that I built for myself.
+
+BusyRebar is a wireless LED matrix repeater for the [BUSY Bar](https://busy.app/). A Python bridge on a Linux host fetches the screen image, adapts it for a 64×32 RGB LED matrix, and sends the pixels over Wi-Fi to a Pimoroni Interstate 75 W controller.
 
 The accompanying build write-up covers the hardware, assembly, software configuration, brightness schedule and background service setup, with photographs from the project.
 

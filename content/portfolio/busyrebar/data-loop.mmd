@@ -1,0 +1,13 @@
+sequenceDiagram
+    participant B as BUSY Bar (72x16)
+    participant H as Linux Host (Bridge)
+    participant P as Interstate 75 W (Receiver)
+    participant M as LED Matrix (64x32)
+
+    loop Every 0.25s (4 FPS)
+        H->>B: HTTP GET (Fetch Framebuffer)
+        B-->>H: Returns raw 72x16 RGB image bytes
+        Note over H: Scales to 64x14 (Bilinear)<br/>Applies brightness schedule
+        H->>P: UDP Push (6,144 bytes on Port 4048)
+        P->>M: Writes directly to HUB75 LEDs
+    end

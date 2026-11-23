@@ -293,6 +293,8 @@ captures as interfaces; neither is a substitute for exercising the tool itself.
 An entry presenting a build article, such as BusyRebar, may use **Project summary**,
 **My involvement** and **Main challenges**. Explain the project and the author's
 writing/build contribution, then link to useful sections of the article rather
-than forcing four Diátaxis samples. Use genuine project photographs with their
-original colours and accurate captions. Reuse the site's existing photos where
-possible instead of introducing duplicate copies.
+than forcing four Diátaxis samples. Use genuine project photographs with accurate
+captions. When a retouched preview is requested, retain the original photograph
+and identify any straightening or colour correction in the preview's caption.
+The shared cover frame can also present project photographs. Reuse the site's
+existing photos where possible instead of introducing duplicate copies.
