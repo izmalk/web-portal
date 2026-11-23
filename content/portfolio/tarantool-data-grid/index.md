@@ -1,6 +1,6 @@
 ---
 title: "Tarantool Data Grid"
-description: "Developer and operations documentation connecting data models, application APIs, and cluster administration."
+description: "A master data solution built on an ultra-fast in-memory database with built-in application server."
 weight: 24
 collection: "documentation"
 category: "Product documentation"
@@ -46,12 +46,14 @@ The documentation set includes an application development guide, an operations g
 
 ## My involvement
 
-I joined the Tarantool team at Mail.Ru Group, later renamed VK, in 2019 as a Senior Technical Writer. I wrote documentation in English and translated it into Russian. My work on Tarantool preceded my move into documentation team leadership for Private Cloud in 2020.
+I joined the Tarantool team at Mail.Ru Group, later renamed VK, in 2019 as a Senior Technical Writer. I wrote documentation in English and managed localisation for Russian. My work on Tarantool preceded my move into documentation team leadership for Private Cloud in 2020.
+
+During this period I also managed documentation for security certification of this product, resulting in succefully passing a security audit.
 
 The samples here show the developer and administrator material from that period, rather than the substantially newer documentation now available on the product website.
 
 ## Main challenges
 
-The documentation needed to connect developers' concepts with the controls and procedures used to operate a cluster. Its scope spans domain modelling, execution environments, repository APIs and testing, as well as installation, cluster configuration, security, logging and metrics.
+The documentation needed to connect developers' concepts with the controls and procedures used to operate a cluster. Its scope spans domain modelling, execution environments, APIs and testing, as well as installation, cluster configuration, security, logging and metrics.
 
 The gallery shows two complementary ways to make that material concrete: an annotated interface identifies navigation and cluster controls, while an Avro schema example supports the explanation of domain models. Writing in English and translating into Russian also required keeping the technical concepts and terminology consistent across both languages.
