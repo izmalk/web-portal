@@ -192,6 +192,30 @@ Tags and filtering remain future additions. Each page already supplies a title
 and description to the theme's existing canonical, sitemap, and social metadata;
 the prototype adds no SEO service or dependency.
 
+## Blog image sources
+
+The screenshots for [Giving my personal website a long-overdue redesign](content/posts/website-redesign/index.md)
+are stored alongside the post. All five were captured on 23 November 2026 at
+1440 × 1060 CSS pixels and 2× density, then saved as lossless WebP images
+(2880 × 2120 pixels). They show local builds of the repository, with page assets
+served from the corresponding build:
+
+- `before-about.webp`: `/about/` from the last revision before the redesign,
+  [c45805e](https://github.com/izmalk/web-portal/commit/c45805e6ddf0315459e257f724b6929ec07d1afe)
+  (12 November 2026), preserving the Initio theme's original light appearance.
+  Its external stylesheet and font dependencies were cached locally without
+  changing their contents for the capture.
+- `after-about-dark.webp` and `after-about-light.webp`: `/about/` in the new
+  design's dark and light modes, respectively, from
+  [be57aec](https://github.com/izmalk/web-portal/commit/be57aecc2156f3ff5eeed653caec672ace6ffd0e)
+  (23 November 2026).
+- `portfolio.webp` and `portfolio-kafka.webp`: `/portfolio/` and
+  `/portfolio/charmed-kafka/`, respectively, in dark mode at the same
+  `be57aec` revision.
+
+These are newly captured reconstructions of the identified revisions, rather
+than screenshots saved at the time those revisions were published.
+
 ## Image viewer
 
 Block images throughout the site use a shared native `<dialog>` viewer. It
