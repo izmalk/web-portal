@@ -5,7 +5,7 @@ hideToc: true
 ---
 
 This is a catalogue of selected projects in documentation engineering, developer experience,
-and open source. It's not everything I did, but a curated list of achievements.
+and open source. It's not everything I've done, but a curated list of achievements.
 
-For your convenience, I separated examples of my work into categories for written content
-(documentation and other text) and tools/automation.
+For your convenience, I've separated examples of my work into categories for written content
+(documentation and other texts) and tools and automation.

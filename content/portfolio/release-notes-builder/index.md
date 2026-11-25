@@ -43,13 +43,13 @@ Release Notes Builder generates structured release notes for Canonical Data & AI
 
 An accompanying agent skill coordinates the broader product-level workflow from the product's own workspace, where it can consult metadata, existing documentation and previous release notes.
 
-The deterministic script ensures complete coverage of changes and factual correctness while agentic skill provides convenience and creativity for human readable summary.
+The deterministic script ensures complete coverage of changes and factual correctness, while the agent skill provides convenience and creativity for a human-readable summary.
 
 ## My involvement
 
-I developed this project by myself for release-note generation in my Charmed Apache Kafka work. My focus is a strict factual basis in GitHub API data and a consistent document format, with a mostly deterministic workflow that produces a draft for editorial review.
+I developed this project myself for release-note generation in my Charmed Apache Kafka work. My focus is a strict factual basis in GitHub API data and a consistent document format, with a mostly deterministic workflow that produces a draft for editorial review.
 
-The initial success made me expand the application of this tool to other of my products.
+The initial success led me to apply this tool to other products I work on.
 
 ## Main challenges
 
@@ -57,4 +57,6 @@ Release notes need to connect engineering changes with information a product use
 
 For products spanning several repositories, one can use auto-detection logic or an explicit component list that defines what the draft covers. Reference names are resolved against the repository, and uncertainty about scope is reported. Product-specific templates preserve the expected document structure.
 
-The workflow can record selected components, resolved references, evidence, exclusions and blockers in a structured report. Existing release-note files are protected from accidental overwriting and used to create a template for new ones. The resulting draft and review trail provide a repeatable starting point for editorial work before publication.
+The workflow can record selected components, resolved references, evidence, exclusions and blockers in a structured report. Existing release-note files are protected from accidental overwriting and used to create a template for new ones.
+
+My main concern was reproducibility, given the non-deterministic nature of LLM output. When creating the accompanying skill, I provided clear criteria and examples of good and poor output. In my tests, many consecutive runs on the same content produced the same results.

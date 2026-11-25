@@ -1,6 +1,6 @@
 ---
 title: "Tarantool Data Grid"
-description: "A master data solution built on an ultra-fast in-memory database with built-in application server."
+description: "A master data solution built on an ultra-fast in-memory database with a built-in application server."
 weight: 24
 collection: "documentation"
 category: "Product documentation"
@@ -50,7 +50,7 @@ The documentation set includes an application development guide, an operations g
 
 I joined the Tarantool team at Mail.Ru Group, later renamed VK, in 2019 as a Senior Technical Writer. I wrote documentation in English and managed localisation for Russian. My work on Tarantool preceded my move into documentation team leadership for Private Cloud in 2020.
 
-During this period I also managed documentation for security certification of this product, resulting in succefully passing a security audit.
+During this period, I also managed documentation for the security certification of this product, which successfully passed a security audit.
 
 The samples here show the developer and administrator material from that period, rather than the substantially newer documentation now available on the product website.
 

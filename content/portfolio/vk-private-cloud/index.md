@@ -55,32 +55,31 @@ gallery:
 
 ## Product summary
 
-VK Private Cloud provides cloud services on infrastructure in a customer's own data centre (on premise). Its documentation has to serve several audiences: administrators operating the platform, teams integrating its services, and specialists checking that it meets requirements.
+VK Private Cloud provides cloud services on infrastructure in a customer's own data centre (on premises). Its documentation has to serve several audiences: administrators operating the platform, teams integrating its services, and specialists checking that it meets requirements.
 
 The samples here come from the August 2022 user guide, administrator guide, technical specification and test programme and methodology. They cover architecture, deployment, administration, product requirements and the checks used during formal acceptance tests. The current documentation linked above is a newer set that has evolved since my work on the product.
 
 ## My involvement
 
-I joined Mail.Ru Group, later renamed VK, in 2019 as a Senior Technical Writer on the Tarantool team. In 2020, I became Team Leader for the Private Cloud documentation team, recruiting and training colleagues, planning and coordinating documentation work across the product, as well as developing standrads and automation.
+I joined Mail.Ru Group, later renamed VK, in 2019 as a Senior Technical Writer on the Tarantool team. In 2020, I became Team Leader for the Private Cloud documentation team, recruiting and training colleagues, planning and coordinating documentation work across the product, as well as developing standards and automation.
 
 In 2022, my responsibilities expanded to a second documentation team, covering both Private Cloud and Public Cloud products. This entry focuses on the Private Cloud material from that period.
 
 ## Main challenges
 
-When I just joined the Private CLoud documentation team, their documentation was a mess:
+When I first joined the Private Cloud documentation team, the documentation was a mess:
 
-- Stored on a confluence page as DOCX and PDFs
-- Produced in MS Office suite
-- Including versioning via filename
+- Stored on a Confluence page as DOCX and PDF files
+- Produced in the Microsoft Office suite
 - Versioned through filenames
 - Updated manually
-- No concurrent changes supported
+- No support for concurrent changes
 
-What I did in my first couple of weeks: I migrated all the existing content to a docs-as-code solution based on GitLab and Asciidoc.
-That not only ensured consistent styling, but also helped me ensure proper transparent versioning and concurrent collaboration.
+What I did in my first couple of weeks: I migrated all the existing content to a docs-as-code solution based on GitLab and AsciiDoc.
+That ensured consistent styling, transparent versioning and concurrent collaboration.
 
 The documentation had to support initial deployment, everyday administration and formal verification of a complex platform. The administrator guide combines architectural explanations with procedures for access management, compute, storage, networking, managed services and platform administration, alongside OpenStack command reference material and Terraform examples.
 
-The examples below are from an older PDF version that were built by my Asciidoctor-based builder back in the days.
-The documentation included such documetns as: administrator guide, user guide, Test programme and methodology, etc.
+The examples below are from older PDFs built by my Asciidoctor-based builder at the time.
+The documentation included an administrator guide, a user guide, and a test programme and methodology.
 Together, the samples below show the range of material the documentation team supported.

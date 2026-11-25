@@ -15,9 +15,9 @@ I like to think of myself as a **pathfinder** through rough UX terrain. I explor
 
 ## What I do
 
-I specialize in developer documentation for complex products, including cloud platforms, databases and services.
+I specialise in developer documentation for complex products, including cloud platforms, databases and services.
 
-Good documentation starts with understanding the people who will use it. I research audiences and user journeys, talk to subject-matter experts, and organize information around the tasks readers need to complete.
+Good documentation starts with understanding the people who will use it. I research audiences and user journeys, talk to subject-matter experts, and organise information around the tasks readers need to complete.
 
 I prefer a docs-as-code approach, using Git, lightweight markup languages and static site generators. I use reader feedback and metrics to improve documentation over time.
 
