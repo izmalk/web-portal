@@ -51,7 +51,7 @@ Starter Pack Scanner runs a modular set of checks against repositories using Can
 
 This is one of my personal documentation automation projects. Its scope is the supporting infrastructure around documentation: repository configuration, publication URLs and discovery resources. The interfaces expose the same underlying checks for individual investigations and wider reviews.
 
-My main goal was to save effort and raise reliability of quality control.
+My main goal was to save effort and improve the reliability of quality control.
 
 ## Main challenges
 
@@ -61,8 +61,6 @@ It can be hard to infer the published documentation address from its repository.
 
 Repository configuration and the published site can diverge. The scanner clones a target repository into a temporary directory, identifies the documentation root and runs the selected checks. Live-site checks inspect published pages and discovery resources, including metadata and the links exposed through `llms.txt`.
 
-A dedicated migration group checks documentation moving from Read the Docs hosting domain to Canonical's own domains. It covers configuration and live behaviour such as canonical URLs, sitemaps, redirects and HTTP responses for missing pages. Both sources contribute to the same report.
+A dedicated migration group checks documentation moving from the Read the Docs hosting domain to Canonical's own domains. It covers configuration and live behaviour such as canonical URLs, sitemaps, redirects and HTTP responses for missing pages. Both sources contribute to the same report.
 
 The local web interface presents findings and guidance, while batch YAML input records the options for several repositories in one place. Reports are cached on disk with their generation time, and a fresh scan can bypass the cache. A common check interface and CLI exit codes let the same workflow support interactive and automated reviews.
-
-My main concern was reproducable results, give non-deterministic nature of LLMs output. While creating this skill I made sure to provide clear criteria and examples of good and bad. My tests showed results to be the same for many consecutive runs on the same content.

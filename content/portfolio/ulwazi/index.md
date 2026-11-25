@@ -51,22 +51,22 @@ The theme combines templates, styles and navigation behaviour in a reusable [pac
 
 ## My involvement
 
-Since 2025, I'm the project's main maintainer and author. As part of my documentation engineering work at Canonical, I bring together the reading interface and the authoring workflow: page structure, navigation, reusable templates, configuration and local preview.
+I've been the project's main maintainer and author since 2025. As part of my documentation engineering work at Canonical, I bring together the reading interface and the authoring workflow: page structure, navigation, reusable templates, configuration and local preview.
 
-Together with my colleagues, in 2026:
+In 2026, my colleagues and I:
 
-- We added a comprehensive test suite (120+ tests)
-- Manually tested on our real documentation sets, created and fixed many small issues
+- Added a comprehensive test suite (120+ tests)
+- Manually tested it on our real documentation sets, reporting and fixing many small issues
 - Improved documentation to cover migration, configuration, usage, and troubleshooting
-- Implemented Ulwazi as the default theme in the [Sphinx Stack](https://github.com/canonical/sphinx-stack) for all Canonical's documentation by default
+- Implemented Ulwazi as the default theme in the [Sphinx Stack](https://github.com/canonical/sphinx-stack) for all Canonical's documentation
 
 ## Main challenges
 
-Our initial implementation of Vanilla Framework met serious friction, as it is not optimised for documetnation content. We had to do a few experiments, demonstrate the results and collaborate with designers to create a new typography system, accomodating for denser and strictly formated documentation content.
+Our initial implementation of the Vanilla Framework ran into serious friction, as it is not optimised for documentation content. We had to do a few experiments, demonstrate the results and collaborate with designers to create a new typography system, accommodating denser, strictly formatted documentation content.
 
 A documentation theme has to connect Sphinx's content model with the Vanilla Framework while helping users move between topics and find what they are looking for. The layout needs to remain usable across different kinds of technical content and different screen sizes.
 
-We invited more people to contributre to the theme and to ensure the quality of the theme with external contributions and the rise of AI-assisted tools, we created a comprehensive test-suite, covering many aspects of our styling, features, etc. Test coverage at the moment of writing:
+We invited more people to contribute to the theme. To ensure its quality with more external contributions and growing use of AI-assisted tools, we created a comprehensive test suite covering styling, features and other aspects of the theme. Test coverage at the time of writing:
 
 - Python: 78%
 - JS: 59%

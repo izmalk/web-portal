@@ -1,12 +1,12 @@
 ---
-title: "BusyRebar: a LED screen repeater for the BUSY Bar"
+title: "BusyRebar: an LED screen repeater for the BUSY Bar"
 date: 2026-11-12T00:00:00Z
 draft: false
 ---
 
-My [BUSY Bar](https://busy.app/) belongs on my desk. That is where I can reach its buttons, use its timers, and read the secondary (black\&white) display. But the best position for me to reach is not necessarily the best position for someone else to see its beautiful main (color) screen.
+My [BUSY Bar](https://busy.app/) belongs on my desk. That is where I can reach its buttons, use its timers, and read the secondary (black-and-white) display. But the best position for me to reach is not necessarily the best position for someone else to see its beautiful main (colour) screen.
 
-Turning it towards the doorway makes it less convenient to use. Moving it outside the room would defeat the point of having it on my desk. So I want another screen that could show the same status somewhere more visible, near the entrance to my home office room, ideally, outside of it.
+Turning it towards the doorway makes it less convenient to use. Moving it outside the room would defeat the point of having it on my desk. So I wanted another screen that could show the same status somewhere more visible, near the entrance to my home office, ideally outside it.
 
 That became **BusyRebar**: a wireless LED matrix repeater for the BUSY Bar. The name comes from “BUSY Bar repeater”.
 
@@ -16,7 +16,7 @@ The project uses a 64×32 RGB LED panel, a Pimoroni Interstate 75 W, and a Pytho
 
 ## **How it works**
 
-The repeater has two main components: repeater Python script running on a Linux host and LED panel with a controller.
+The repeater has two main components: a repeater Python script running on a Linux host and an LED panel with a controller.
 
 The BUSY Bar needs to be configured for Wi-Fi and HTTP access. The host machine runs `repeater.py` that fetches a screen frame through `busylib` ([PyPI](https://pypi.org/project/busylib/)), transforms the image with Pillow, applies a brightness setting, and sends the resulting pixels over the local network. The LED panel controller (Interstate 75 W) runs `main.py`, receives those pixels over Wi-Fi, and draws them on the matrix.
 
@@ -35,19 +35,19 @@ The script pauses for 0.25 seconds after each fetch-and-send cycle. That gives i
 
 ## **The awkward part: image resizing from 72 pixels into 64**
 
-The BUSY Bar’s main display is 72×16 pixels. Most Led matrix panels have sizes in a power of 2. The panel used here is 64×32: narrower, but twice as tall as BusyBar main (color) screen. There is no way to fit all 72 columns into 64 columns while keeping every pixel unchanged.
+The BUSY Bar’s main display is 72×16 pixels. Most LED matrix panels have dimensions that are powers of two. The panel used here is 64×32: narrower, but twice as tall as the BUSY Bar's main (colour) screen. There is no way to fit all 72 columns into 64 columns while keeping every pixel unchanged.
 
-The script offers two ways to deal with that, see below.
+The script can crop and scale the image as described below.
 
 ### **Optionally crop, then scale**
 
 The BUSY Bar's 72×16 display resolution must be adapted to fit the LED panel's 64×32 matrix. The script handles this by optionally cropping outer pixels before scaling the image to the target size.  
 If `ENABLE_CROP = True`, the script crops columns from each side, removing outer details to keep central elements larger.  
-The image is then scaled using bilinear or nearest-neighbor interpolation to fit the target dimensions (e.g., 64×32) and centered using vertical and horizontal offsets.
+The image is then scaled using bilinear or nearest-neighbour interpolation to fit the target dimensions (e.g., 64×32) and centred using vertical and horizontal offsets.
 
 ## **Bill of materials**
 
-The core hardware combination I’ve got is a **P4 64×32 HUB75 RGB matrix** and a **Pimoroni Interstate 75 W with RP2350**. P4 means a 4 mm pixel pitch; the panel size is 256×128 mm which makes it easy to read from a far.
+The core hardware combination I’ve got is a **P4 64×32 HUB75 RGB matrix** and a **Pimoroni Interstate 75 W with RP2350**. P4 means a 4 mm pixel pitch; the panel size is 256×128 mm, which makes it easy to read from afar.
 
 You will also need:
 
@@ -55,17 +55,17 @@ You will also need:
 - The LED panel’s own default power cable.
 - A reliable 5 V power supply.
 - A long USB-C cable.
-- Any machine (Raspberry Pi?) to run the bridge (the [repeater.py](http://repeater.py) script).
+- Any machine (Raspberry Pi?) to run the bridge (the [`repeater.py`](https://github.com/izmalk/busyrebar/blob/main/repeater.py) script).
 - A 2.4 GHz Wi-Fi network.
-- Optionally, smoked grey acrylic sheet and a plastic case for mounting hardware.
+- Optionally, a smoked grey acrylic sheet and a plastic case for mounting hardware.
 
 ### **Assembly**
 
 Assembly is very simple: connect Interstate 75 W to the LED panel, including the power connection, then plug in a USB Type-C cable to power it up.
 
-Power demand depends on the panel, brightness, and displayed content. The most common symptoms of power deficit are the panel’s controller restarts and/or failing to connect to your Wi-Fi.
+Power demand depends on the panel, brightness, and displayed content. The most common symptoms of insufficient power are controller restarts and/or failure to connect to Wi-Fi.
 
-A supply that works for sparse text is not proof that it will handle a full white screen or additional panels. My single 64x32 panel setup works with 5V / 2A power adapter, consuming about 0.25A during usual work (not full brightness).
+A supply that works for sparse text is not proof that it will handle a full white screen or additional panels. My single 64×32 panel setup works with a 5 V / 2 A power adapter, consuming about 0.25 A during normal use (not at full brightness).
 
 ![BusyRebar LED panel power consumption measurement](/images/busy-power.jpg)
 
@@ -206,4 +206,4 @@ Those are useful improvements for a future version: show a clear disconnected st
 For now, the idea remains simple: leave the BUSY Bar where its controls are useful, and put a copy of its screen where other people can see it. The resizing is imperfect and the extra host is a dependency, but the two-script design makes both the behaviour and the compromises easy to inspect.
 
 The code is available in the [BusyRebar repository](https://github.com/izmalk/busyrebar).  
-If you give BusyRebar a try, any feedback and feature requests are always welcome\!
+If you give BusyRebar a try, any feedback and feature requests are always welcome!

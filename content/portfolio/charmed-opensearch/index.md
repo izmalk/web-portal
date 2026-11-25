@@ -77,7 +77,7 @@ of core concepts.
 
 ## My involvement
 
-I'm responsible for all documentation for this product since 2025:
+I've been responsible for all documentation for this product since 2025:
 managing our plans, standards and automation, as well as reviewing all content changes
 and writing new documents.
 
