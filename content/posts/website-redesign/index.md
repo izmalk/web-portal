@@ -1,5 +1,5 @@
 ---
-title: "Giving my personal website a long-overdue redesign"
+title: "My website redesign: clearer pages and a new portfolio"
 date: 2026-11-23T00:00:00Z
 draft: false
 description: "A couple of weeks spent redesigning my personal website, rewriting its pages and finally building a proper portfolio."
@@ -14,11 +14,11 @@ That meant a new design, rewritten and reorganised pages, a new Public profile, 
 
 ## A website that had fallen behind
 
-I put the previous version of this site together in 2022. Apart from occasional posts and additions, it had barely changed since 2024. My work had moved on, but the site was still doing much the same job, in much the same way.
+I put the previous version of this site together in 2022. Apart from occasional posts and additions, it had barely changed since then. My work had moved on, but the site was still doing much the same job, in much the same way.
 
 It had a large header, a conventional top menu and separate pages for different parts of my professional background. The information was there, but it needed a fresh look and a better structure.
 
-![The old About page, with a large photographic header, circular portrait and horizontal navigation above the About section.](before-about.webp "Before: the About page from the last revision before the redesign, dated 12 November 2026. Rebuilt locally and captured on 23 November 2026.")
+![The old About page, with a large photographic header, circular portrait and horizontal navigation above the About section.](before-about.webp "Before: the About page from the last revision before the redesign.")
 
 I wanted someone arriving at the site to be able to answer a few questions quickly: What kind of work do I do? Where can they see examples? Can they find my talks, or book a mentorship session?
 
@@ -28,11 +28,11 @@ The site still uses Hugo, but I replaced the old Initio theme with Poison and ad
 
 The sidebar brings the main destinations together. Longer pages have a local contents list, with the current section highlighted as you scroll. The home page now leads with blog post previews, giving new writing a more visible place on the site.
 
-![The redesigned About page in dark mode, with a slate sidebar, emerald navigation highlight, portrait and introductory text.](after-about-dark.webp "After: the rewritten About page in the new dark design, captured locally on 23 November 2026.")
+![The redesigned About page in dark mode, with a slate sidebar, emerald navigation highlight, portrait and introductory text.](after-about-dark.webp "After: the rewritten About page in the new dark design.")
 
 Dark mode is the default, and there is a light mode for readers who prefer it. Both use the same palette and navigation. I also worked through the smaller-screen layout, where the sidebar and contents need to make room for reading.
 
-![The redesigned About page in light mode, with a near-white reading area and the same dark sidebar and emerald accents.](after-about-light.webp "The same page in light mode, captured at the same desktop viewport on 23 November 2026.")
+![The redesigned About page in light mode, with a near-white reading area and the same dark sidebar and emerald accents.](after-about-light.webp "The same page in light mode.")
 
 ## Rewriting and reorganising the pages
 
@@ -49,13 +49,13 @@ In August 2022, I wrote a [Portfolio post]({{< ref "/posts/portfolio" >}}) sayin
 
 The new [Portfolio]({{< ref "/portfolio" >}}) has two collections: **Documentation and other texts**, and **Tools and automation**. The first includes work on Kafka, OpenSearch, TypeDB, VK Private Cloud and Tarantool Data Grid, as well as my BusyRebar build article. The second brings together Ulwazi and tools for testing, reviewing and publishing documentation.
 
-![The new Portfolio catalogue, showing collection navigation and documentation project cards with framed screenshots.](portfolio.webp "The new Portfolio catalogue in dark mode, captured locally on 23 November 2026.")
+![The new Portfolio catalogue, showing collection navigation and documentation project cards with framed screenshots.](portfolio.webp "The new Portfolio catalogue in dark mode.")
 
 Each project has its own page explaining the product or problem, my involvement, and the main challenges. There are links to specific examples and galleries of real documentation, interfaces or output, so readers can inspect the work for themselves.
 
 The [Kafka page]({{< ref "/portfolio/charmed-kafka" >}}), for example, connects the account of my work with a tutorial, a deployment guide, reference material and an explanation of the components. It gives those samples context: what I worked on and the decisions behind it.
 
-![The Kafka portfolio page, with resource links, a framed documentation screenshot and local contents navigation.](portfolio-kafka.webp "A project page inside the Portfolio: Charmed Apache Kafka, captured locally on 23 November 2026.")
+![The Kafka portfolio page, with resource links, a framed documentation screenshot and local contents navigation.](portfolio-kafka.webp "A project page inside the Portfolio: Charmed Apache Kafka.")
 
 Some work needs historical context. Older samples use archived documentation or excerpts from the original documents, with dates and captions distinguishing them from newer live documentation. I also wanted the descriptions to make my own contribution clear within work done by a team.
 
